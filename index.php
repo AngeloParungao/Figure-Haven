@@ -72,12 +72,12 @@
         </section>
 
         <section id="about-us-section">
-            <div>
-                <h4>ABOUT US</h4>
+            <div id="about-us">
+                <h5>ABOUT US</h5>
                 <p>Figure is a pre order page offering you your favorite anime statues. We do have some on hand available for walk in purchase at our store.</p>
             </div>
-            <div>
-                <h4>FIND US ON</h4>
+            <div id="find-us">
+                <h5>FIND US ON</h5>
                 <div class="media-icon">
                     <i class="fa-brands fa-facebook"></i>
                     <i class="fa-brands fa-instagram"></i>
@@ -86,16 +86,23 @@
                     <i class="fa-brands fa-pinterest"></i>
                 </div>
             </div>
-            <div>
-                <h4>CONTACT</h4>
+            <div id="contact-us">
+                <h5>CONTACT</h5>
                 <div class="contact-icon">
                     <i class="fa-brands fa-facebook-messenger"></i>
                     <i class="fa-solid fa-envelope"></i>
                 </div>
             </div>
+            <div id="developers">
+                <h5>DEVELOPERS</h5>
+                <span>Angelo Miguel L. Parungao</span>
+                <span>Andrei John Poma</span>
+            </div>
         </section>
-        <div>
-            © 2024 Resin Grounds Ph Powered by Shopify
+        <div id="rights">
+            <span>
+                © 2024 Figure Haven
+            </span>
         </div>
     </body>
 </html>
