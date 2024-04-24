@@ -12,26 +12,24 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <!--
+    
         <div class="navbar">
         </div>
-        <video src="../video/Enemy「AMV」Anime Mix.mp4" autoplay muted></video>-->
+        <video src="../video/Enemy「AMV」Anime Mix.mp4" autoplay muted></video>
+
         <div id="wrapper">
             <div class="form-container">
-                <div id="form-image"></div>
-                <div id="forms">
-                    <div id="login-form">
-        
-                    </div>
-                    <div id="register-form">
-        
-                    </div>
+                <div id="login-form">
+                    <span>LOGIN</span>
+                    <form action="../backend/index.php" method="POST" id="userForm">
+                        <input type="text" name="name" placeholder="Username">
+                        <input type="password" name="email" placeholder="Password">
+                        <button>LOGIN</button>
+                    </form>
                 </div>
-                <form action="../backend/index.php" method="POST" id="userForm">
-                    <input type="text" name="name">
-                    <input type="text" name="email">
-                    <input type="submit">
-                </form>
+                <div id="register-form">
+                    
+                </div>
             </div>
         </div>
 </body>
