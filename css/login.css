@@ -1,7 +1,13 @@
+#video-background{
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    z-index: -1;
+}
+
 video{
     width: 100%;
-    position: absolute;
-    z-index: -1;
 }
 
 #wrapper{
@@ -16,7 +22,9 @@ video{
 
 .form-container{
     display: flex;
-    backdrop-filter: blur 2rem;
+    align-items: center;
+    gap: 2rem;
+    width: 20rem;
     overflow: hidden;
 }
 
@@ -25,6 +33,8 @@ video{
     flex-direction: column;
     align-items: center;
     gap: 3rem;
+
+    transition: 0.5s ease-in-out;
 }
 
 .form-container #login-form span{
@@ -61,4 +71,71 @@ video{
     margin-top: 1rem;
     border-radius: 0.3rem;
     cursor: pointer;
+}
+
+.form-container #login-form #create_account{
+    color: white;
+    background-color: transparent;
+    margin-top: -1.5rem;
+    border: none;
+}
+
+
+
+
+
+
+
+
+
+.form-container #register-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+
+    transition: 0.5s ease-in-out;
+}
+
+.form-container #register-form span{
+    color: white;
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+.form-container #register-form #registerForm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.8rem;
+}
+
+.form-container #register-form #registerForm input{
+    height: 2.3rem;
+    width: 20rem;
+    padding: 0.8rem;
+    border-radius: 0.3rem;
+    border: none;
+}
+
+.form-container #register-form #registerForm input:focus{
+    outline-color: red;
+}
+
+.form-container #register-form #registerForm button{
+    height: 1.8rem;
+    width: 18rem;
+    border: none;
+    color: white;
+    background-color: rgb(219, 66, 66);
+    margin-top: 1rem;
+    border-radius: 0.3rem;
+    cursor: pointer;
+}
+
+.form-container #register-form #login_account{
+    color: white;
+    background-color: transparent;
+    margin-top: -1.5rem;
+    border: none;
 }

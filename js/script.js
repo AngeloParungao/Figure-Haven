@@ -104,16 +104,6 @@ function display(details){
   });
 }
 
-document.getElementById("register").onclick = function(){
-  document.querySelector(".login-form").classList.add('non-active');
-  document.querySelector(".register").classList.remove('non-active');
-  document.querySelector(".register").classList.add('active');
-}
-
-document.getElementById("back").onclick = function(){
-  document.querySelector(".login-form").classList.remove('non-active');
-  document.querySelector(".register").classList.remove('active');
-}
 
 window.onscroll = function() {scrollFunction()};
 

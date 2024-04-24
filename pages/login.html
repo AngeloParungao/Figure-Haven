@@ -15,7 +15,9 @@
     
         <div class="navbar">
         </div>
-        <video src="../video/Enemy「AMV」Anime Mix.mp4" autoplay muted></video>
+        <div id="video-background">
+            <video src="../video/Enemy「AMV」Anime Mix.mp4" autoplay muted></video>
+        </div>
 
         <div id="wrapper">
             <div class="form-container">
@@ -26,11 +28,30 @@
                         <input type="password" name="email" placeholder="Password">
                         <button>LOGIN</button>
                     </form>
+                    <button id="create_account">Create Account</button>
                 </div>
                 <div id="register-form">
-                    
+                    <span>SIGN-UP</span>
+                    <form action="../backend/index.php" method="POST" id="registerForm">
+                        <input type="text" name="name" placeholder="Username">
+                        <input type="text" name="name" placeholder="Username">
+                        <input type="text" name="name" placeholder="Username">
+                        <input type="text" name="name" placeholder="Username">
+                        <input type="password" name="email" placeholder="Password">
+                        <button>REGISTER</button>
+                    </form>
+                    <button id="login_account">Already have an account</button>
                 </div>
             </div>
         </div>
+
+        <script>
+            document.getElementById("create_account").onclick = () => {
+                document.getElementById("login-form").style.marginLeft = "-22rem";
+            }
+            document.getElementById("login_account").onclick = () => {
+                document.getElementById("login-form").style.marginLeft = "0";
+            }
+        </script>
 </body>
 </html>
