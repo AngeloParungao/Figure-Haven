@@ -5,12 +5,26 @@ $method = $_SERVER["REQUEST_METHOD"];
 
 switch($method) {
     case "POST":
-        $name = $_POST['name'];
+        $fullname = $_POST['fullname'];
+        $address = $_POST['address'];
         $email = $_POST['email'];
+        $contact = $_POST['contact'];
+        $username = $_POST['username'];
+        $password = $_POST['password'];
+        $account_type = "user";
 
-        $sql = "INSERT INTO users (name, email) VALUES (?, ?)";
+        // You can remove the following line if you're not actually converting $contact to an integer
+        $contact = (int)$contact;
+
+        $sql = "INSERT INTO users (user_fullname, address, email, contact_number, username, password, account_type) VALUES (?, ?, ?, ?, ?, ?, ?)";
         $stmt = $conn->prepare($sql);
-        $stmt->bind_param("ss", $name, $email);
+        $stmt->bind_param("sssssss", $fullname, $address, $email, $contact, $username, $password, $account_type);
+
+        if ($stmt->execute()) {
+            echo json_encode(["message" => "success"]);
+        } else {
+            echo json_encode(["error" => $conn->error]);
+        }
         break;
     case "GET":
         $sql = "SELECT * FROM users";

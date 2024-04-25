@@ -32,7 +32,7 @@ video{
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 3rem;
+    gap: 1.5rem;
 
     transition: 0.5s ease-in-out;
 }
@@ -76,8 +76,9 @@ video{
 .form-container #login-form #create_account{
     color: white;
     background-color: transparent;
-    margin-top: -1.5rem;
+    margin-top: -0.5rem;
     border: none;
+    cursor: pointer;
 }
 
 
@@ -92,7 +93,7 @@ video{
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 3rem;
+    gap: 1.5rem;
 
     transition: 0.5s ease-in-out;
 }
@@ -107,7 +108,7 @@ video{
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1.8rem;
+    gap: 1.3rem;
 }
 
 .form-container #register-form #registerForm input{
@@ -136,6 +137,7 @@ video{
 .form-container #register-form #login_account{
     color: white;
     background-color: transparent;
-    margin-top: -1.5rem;
+    margin-top: -0.5rem;
     border: none;
+    cursor: pointer;
 }

@@ -1,3 +1,3 @@
 <?php
-    $conn = new mysqli('localhost','root','','users');
+    $conn = new mysqli('localhost','root','','dbfigurehaven');
 ?>

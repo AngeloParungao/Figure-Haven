@@ -1,9 +1,15 @@
+let userID = localStorage.getItem('userID') || '';
+let username;
+//localStorage.clear();
+
+//------REGISTER
 function addUser() {
-  let form = document.getElementById("userForm");
+  let form = document.getElementById("registerForm");
   let formData = new FormData(form);
 
   let xhr = new XMLHttpRequest();
   xhr.open("POST", "../backend/index.php", true);
+
   xhr.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
           console.log("User added successfully");
@@ -12,18 +18,47 @@ function addUser() {
   xhr.send(formData);
 }
 
+
+//------LOGIN
 function fetchUsers() {
-  let xhr = new XMLHttpRequest();
-  xhr.open("GET", "../backend/index.php", true);
-  xhr.onreadystatechange = function() {
-      if (this.readyState == 4 && this.status == 200) {
-          let users = JSON.parse(xhr.responseText);
-          // Handle the users data (e.g., display it on the webpage)
-          console.log(users);
-      }
-  };
-  xhr.send();
+    let username = document.getElementById('username').value;
+    let password = document.getElementById('password').value;
+
+    let xhr = new XMLHttpRequest();
+    xhr.open("GET", "../backend/index.php", true);
+    xhr.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            let users = JSON.parse(xhr.responseText);
+            let found = false;
+            // Loop through the users array to check for matching credentials
+            users.forEach(function(user) {
+                if (user.username === username && user.password === password) {
+                    found = true;
+                    userID = user.id; // Set the userID variable to the matched user's ID
+                    // Store userID in localStorage
+                    localStorage.setItem('userID', userID);
+                    localStorage.setItem('username', user.username);
+                }
+            });
+
+            if (found) {
+                // Credentials are valid
+                alert("Login successful!");
+                window.open('../index.html','_self');
+
+            } else {
+                // Credentials are invalid
+                alert("Invalid username or password.");
+            }
+        }
+    };
+    xhr.send();
 }
+
+
+
+
+
 
 let details = [];
 
