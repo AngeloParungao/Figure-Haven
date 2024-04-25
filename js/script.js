@@ -1,6 +1,5 @@
-let userID = localStorage.getItem('userID') || '';
-let username;
 //localStorage.clear();
+
 
 //------REGISTER
 function addUser() {
@@ -44,7 +43,7 @@ function fetchUsers() {
             if (found) {
                 // Credentials are valid
                 alert("Login successful!");
-                window.open('../index.html','_self');
+                window.open('../index.php','_self');
 
             } else {
                 // Credentials are invalid
@@ -145,20 +144,26 @@ window.onscroll = function() {scrollFunction()};
 function scrollFunction() {
   if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
     document.querySelector(".navbar").classList.add("scrolled");
-    document.querySelectorAll(".links > ul > li").forEach(function(item) {
-        item.classList.add("font-change");
+    document.querySelectorAll(".links > #anchors > .link").forEach(function(item) {
+      item.style.color = 'black';
     });
     document.querySelector(".bar").classList.remove("black");
     document.querySelector(".bar").classList.add("white");
     document.querySelector("#logo > h5").classList.add("font-change");
     document.querySelector(".links > div > i").style.color = "black";
+    document.querySelector("#logged-out").style.color = "black";
+    document.querySelector("#logged-in").style.color = "black";
+    document.querySelector("#nav-profile > i").style.color = "black";
   } else {
     document.querySelector(".navbar").classList.remove("scrolled");
-    document.querySelectorAll(".links > ul > li").forEach(function(item) {
-        item.classList.remove("font-change");
+    document.querySelectorAll(".links > #anchors > .link").forEach(function(item) {
+      item.style.color = 'white';
     });
     document.querySelector(".bar").classList.add("black");
     document.querySelector("#logo > h5").classList.remove("font-change");
     document.querySelector(".links > div > i").style.color = "white";
+    document.querySelector("#logged-out").style.color = "white";
+    document.querySelector("#logged-in").style.color = "white";
+    document.querySelector("#nav-profile > i").style.color = "white";
   }
 };

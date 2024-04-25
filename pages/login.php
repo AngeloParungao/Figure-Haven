@@ -8,13 +8,12 @@
     <link rel="stylesheet" href="../css/login.css">
     <link rel="icon" href="../images/logo.png" type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
     <script src="../js/script.js"></script>
-    <script src="../js/addcomponents.js"></script>
 </head>
 <body>
 
-        <div class="navbar"></div>
+        <?php include '../components/navbar.php'?>
+
         <div id="video-background">
             <video src="../video/Enemy「AMV」Anime Mix.mp4" autoplay muted></video>
         </div>
@@ -24,8 +23,8 @@
                 <div id="login-form">
                     <span>LOGIN</span>
                     <form action="" method="GET" id="userForm">
-                        <input type="text" name="name" placeholder="Username" id="username" required>
-                        <input type="password" name="email" placeholder="Password" id="password" required>
+                        <input type="text" name="username" placeholder="Username" id="username" required>
+                        <input type="password" name="password" placeholder="Password" id="password" required>
                         <button onclick="fetchUsers()">LOGIN</button>
                     </form>
                     <button id="create_account">Create Account</button>
