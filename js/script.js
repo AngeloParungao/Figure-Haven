@@ -55,43 +55,96 @@ function fetchUsers() {
 }
 
 
+function catalog(){
+  let catalog = [];
+
+  let xml = new XMLHttpRequest();
+
+  xml.onreadystatechange = function(){
+      if(this.readyState == 4 && this.status == 200){
+          let animeList = this.responseXML;
 
 
+          let anime = animeList.getElementsByTagName("anime");
 
-
-let details = [];
-
-let xml = new XMLHttpRequest();
-
-xml.onreadystatechange = function(){
-    if(this.readyState == 4 && this.status == 200){
-        let product = this.responseXML;
-
-
-        let figure = product.getElementsByTagName("figure");
-
-        for(let i = 0; i < figure.length; i++){
-            let detail = {
-              name : figure[i].getElementsByTagName("name")[0].childNodes[0].nodeValue,
-              price : figure[i].getElementsByTagName("price")[0].childNodes[0].nodeValue,
-              category : figure[i].getElementsByTagName("category")[0].childNodes[0].nodeValue,
-              anime : figure[i].getElementsByTagName("anime")[0].childNodes[0].nodeValue,
-              category : figure[i].getElementsByTagName("category")[0].childNodes[0].nodeValue,
-              sales: figure[i].getElementsByTagName("sales")[0].childNodes[0].nodeValue,
-              location : figure[i].getElementsByTagName("location")[0].childNodes[0].nodeValue,
-            };
-          details.push(detail);
-        }
-    } 
-    display(details);
+          for(let i = 0; i < anime.length; i++){
+              let detail = {
+                name : anime[i].getElementsByTagName("name")[0].childNodes[0].nodeValue,
+                location : anime[i].getElementsByTagName("location")[0].childNodes[0].nodeValue,
+              };
+            catalog.push(detail);
+          }
+      } 
+      displayCatalog(catalog);
+  }
+  xml.open("GET","http://localhost/action-figure/catalog.xml",true);
+  xml.send();
 }
-xml.open("GET","figures.xml",true);
-xml.send();
+
+function displayCatalog(catalog){
+  let dom = document.querySelector(".catalog-container");
+
+  catalog.forEach(function(anime){
+    let container = document.createElement("div");
+    container.classList.add('catalog');
+
+    let img = document.createElement("img");
+    img.src = anime.location;
+
+    let div = document.createElement("div");
+    let name = document.createElement("span");
+    name.textContent = anime.name;
+
+    div.appendChild(name);
+    container.appendChild(img);
+    container.appendChild(div);
+    dom.appendChild(container);
+
+    container.onclick = function() {
+      console.log("Product clicked:", anime.name);
+      // You can perform any action here when a product is clicked
+    };
+  });
+}
+
+
+
+
+
+function getProduct(){
+  let details = [];
+  
+  let xml = new XMLHttpRequest();
+  
+  xml.onreadystatechange = function(){
+      if(this.readyState == 4 && this.status == 200){
+          let product = this.responseXML;
+  
+  
+          let figure = product.getElementsByTagName("figure");
+  
+          for(let i = 0; i < figure.length; i++){
+              let detail = {
+                name : figure[i].getElementsByTagName("name")[0].childNodes[0].nodeValue,
+                price : figure[i].getElementsByTagName("price")[0].childNodes[0].nodeValue,
+                category : figure[i].getElementsByTagName("category")[0].childNodes[0].nodeValue,
+                anime : figure[i].getElementsByTagName("anime")[0].childNodes[0].nodeValue,
+                category : figure[i].getElementsByTagName("category")[0].childNodes[0].nodeValue,
+                sales: figure[i].getElementsByTagName("sales")[0].childNodes[0].nodeValue,
+                location : figure[i].getElementsByTagName("location")[0].childNodes[0].nodeValue,
+              };
+            details.push(detail);
+          }
+      } 
+      display(details);
+  }
+  xml.open("GET","figures.xml",true);
+  xml.send();
+}
 
 
 
 function display(details){
-  console.log(details);
   let top_sales = document.querySelector("#items");
   let dom = document.querySelector(".products-container");
 

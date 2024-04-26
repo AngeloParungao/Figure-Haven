@@ -1,0 +1,68 @@
+#about-us-section{
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    height: 60%;
+    width: 100%;
+    padding: 5%;
+    background-color: rgb(71, 71, 71);
+    color: white;
+}
+
+#about-us-section #about-us{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 15rem;
+}
+
+#about-us-section #about-us p{
+    font-size: 0.8rem;
+}
+
+#about-us-section #find-us{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 10rem;
+}
+
+#about-us-section #find-us .media-icon{
+    display: flex;
+    gap: 1rem;
+    width: 15rem;
+}
+
+#about-us-section #contact-us{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 8rem;
+}
+
+#about-us-section #contact-us .contact-icon{
+    display: flex;
+    gap: 1rem;
+}
+
+#about-us-section #developers{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 13rem;
+}
+
+#about-us-section #developers span{
+    font-size: 0.8rem;
+}
+
+#rights{
+    display: flex;
+    justify-content: center;
+    background-color: rgb(71, 71, 71);
+}
+
+#rights{
+    color: white;
+    font-size: 0.8rem;
+}

@@ -15,8 +15,8 @@
             </div>
             <div class="links">
                 <div id="anchors">
-                    <a class="link" href="#">Home</a>
-                    <a class="link" href="#">Catalog</a>
+                    <a class="link" href="http://localhost/action-figure/index.php">Home</a>
+                    <a class="link" href="http://localhost/action-figure/pages/catalog.php">Catalog</a>
                     <a class="link" href="#">About Us</a>
                     <a class="link" href="#">FAQs</a>
                 </div>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<catalog>
+    <anime>
+        <name>One Piece</name>
+        <location>http://localhost/action-figure/catalog-image/one piece-logo.jpg</location>
+    </anime>
+
+    <anime>
+        <name>Jujutsu Kaisen</name>
+        <location>http://localhost/action-figure/catalog-image/jujutsu-logo.jpg</location>
+    </anime>
+
+    <anime>
+        <name>Demon Slayer</name>
+        <location>http://localhost/action-figure/catalog-image/Demon-Slayer-Logo.png</location>
+    </anime>
+
+    <anime>
+        <name>Naruto</name>
+        <location>http://localhost/action-figure/catalog-image/naruto.png</location>
+    </anime>
+
+    <anime>
+        <name>Slam Dunk</name>
+        <location>http://localhost/action-figure/catalog-image/slamdunk.png</location>
+    </anime>
+
+    <anime>
+        <name>Bleach</name>
+        <location>http://localhost/action-figure/catalog-image/bleach.png</location>
+    </anime>
+
+    <anime>
+        <name>Dragon Ball</name>
+        <location>http://localhost/action-figure/catalog-image/dragonball.png</location>
+    </anime>
+</catalog>
