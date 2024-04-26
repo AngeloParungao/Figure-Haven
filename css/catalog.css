@@ -6,6 +6,8 @@
 
 body{
     font-family: 'Poppins', serif;
+    background-image: url(../images/japanese_bg.png);
+    background-size: cover;
     height: 100vh;
 }
 
@@ -23,7 +25,6 @@ body::-webkit-scrollbar-thumb {
     padding: 5rem 4rem;
     line-height: 4rem;
     color: white;
-    background-color: black;
 }
 
 #catalog #search-bar{
@@ -57,8 +58,6 @@ body::-webkit-scrollbar-thumb {
     flex-wrap: wrap;
     margin-top: 1.5rem;
     padding: 3rem 0 3rem 0;
-    border-top: 0.2rem solid rgb(27, 27, 27);
-    border-bottom: 0.2rem solid rgb(27, 27, 27);
     gap: 1rem;
 }
 

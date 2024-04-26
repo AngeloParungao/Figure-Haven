@@ -66,7 +66,7 @@ body::-webkit-scrollbar-thumb {
 #product-section .product-container .filtered{
     height: 18rem;
     width: 16rem;
-    border-radius: 0.5rem;
+    border-radius: 0.4rem;
     background-color: white;
     border: 0.2rem solid rgba(71, 71, 71, 0.253);
     backdrop-filter: blur(1rem);
