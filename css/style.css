@@ -11,12 +11,12 @@ body{
     font-family: 'Poppins', serif;
 }
 
-::-webkit-scrollbar{
+body::-webkit-scrollbar{
     width: 0.5rem; /* Set the width of the scrollbar */
     background-color: rgb(68, 68, 68);
 }
 
-::-webkit-scrollbar-thumb {
+body::-webkit-scrollbar-thumb {
     background-color: #d30000; /* Set the background color of the scrollbar thumb */
     border-radius: 2rem; /* Set the border radius of the scrollbar thumb */
 }

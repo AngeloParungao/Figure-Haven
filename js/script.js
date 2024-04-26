@@ -1,7 +1,7 @@
 //localStorage.clear();
 
 
-//------REGISTER
+//---------REGISTER---------//
 function addUser() {
   let form = document.getElementById("registerForm");
   let formData = new FormData(form);
@@ -18,7 +18,7 @@ function addUser() {
 }
 
 
-//------LOGIN
+//--------LOGIN---------//
 function fetchUsers() {
     let username = document.getElementById('username').value;
     let password = document.getElementById('password').value;
@@ -55,15 +55,15 @@ function fetchUsers() {
 }
 
 
+
+//------------CATALOG.PHP------------//
 function catalog(){
   let catalog = [];
-
   let xml = new XMLHttpRequest();
 
   xml.onreadystatechange = function(){
       if(this.readyState == 4 && this.status == 200){
           let animeList = this.responseXML;
-
 
           let anime = animeList.getElementsByTagName("anime");
 
@@ -74,15 +74,28 @@ function catalog(){
               };
             catalog.push(detail);
           }
+          
+          // Initially display the full catalog
+          displayCatalog(catalog);
       } 
-      displayCatalog(catalog);
   }
   xml.open("GET","http://localhost/action-figure/catalog.xml",true);
   xml.send();
+
+  let search = document.getElementById("catalog-search");
+  search.addEventListener("keyup", function(){
+    let value = search.value.trim().toLowerCase(); // Trim whitespace and convert the search value to lowercase for case-insensitive comparison
+    let filteredCatalog = catalog.filter(function(anime){
+      return anime.name.toLowerCase().includes(value); // Check if the anime name includes the search value
+    });
+    // Update the displayed catalog with the filtered catalog
+    displayCatalog(filteredCatalog);
+  });
 }
 
 function displayCatalog(catalog){
   let dom = document.querySelector(".catalog-container");
+  dom.innerHTML = ''; // Clear existing catalog elements
 
   catalog.forEach(function(anime){
     let container = document.createElement("div");
@@ -102,6 +115,7 @@ function displayCatalog(catalog){
 
     container.onclick = function() {
       console.log("Product clicked:", anime.name);
+      window.location.href = 'products.php?anime=' + encodeURIComponent(anime.name);
       // You can perform any action here when a product is clicked
     };
   });
