@@ -80,9 +80,7 @@ body::-webkit-scrollbar-thumb {
         opacity: 1;
     }
 }
-#catalog .catalog-container .catalog:hover{
-    transform: scale(1.05);
-}
+
 
 #catalog .catalog-container .catalog img{
     height: 100%;
@@ -95,17 +93,34 @@ body::-webkit-scrollbar-thumb {
     color: black;
     position: absolute;
     margin-top: -5.7rem;
-    padding: 0 0.5rem;
+    padding: 0 1.5rem;
     width: 23rem;
-    height: 5rem;
+    height: 100%;
     background-color: rgba(71, 71, 71, 0.253); 
     border-bottom-left-radius: 0.5rem;
     border-bottom-right-radius: 0.5rem;
     color:white;
-    backdrop-filter: blur(1rem);
+    backdrop-filter: blur(1.5rem);
+
+    transition: 0.5s ease-in-out;
 }
+
+#catalog .catalog-container .catalog:hover div{
+    margin-top: -15rem;
+}
+
 
 #catalog .catalog-container .catalog div span{
     height: 1rem;
     font-size: 0.9rem;
+}
+
+#catalog .catalog-container .catalog div p{
+    font-size: 0.9rem;
+    margin-top: 4rem;
+    line-height: 1rem;
+}
+
+#catalog .catalog-container .catalog:hover div span{
+    font-size: 1.3rem;
 }

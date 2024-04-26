@@ -3,36 +3,56 @@
 <catalog>
     <anime>
         <name>One Piece</name>
+        <description>One Piece is the name the world gave to all the treasure gained by the 
+        Pirate King Gol D. Roger. At least a portion of it once belonged to Joy Boy during 
+        the Void Century. The treasure is said to be of unimaginable value, and is currently 
+        located on the final island of the Grand Line: Laugh Tale.</description>
         <location>http://localhost/action-figure/catalog-image/one piece-logo.jpg</location>
     </anime>
 
     <anime>
         <name>Jujutsu Kaisen</name>
+        <description>Jujutsu Kaisen is the story of Yuji Itadori, an easygoing high school 
+        student who joins the occult club at school. When they accidentally summon grotesque 
+        creatures by messing with a cursed object, Itadori fights to save his friends' lives.</description>
         <location>http://localhost/action-figure/catalog-image/jujutsu-logo.jpg</location>
     </anime>
 
     <anime>
         <name>Demon Slayer</name>
+        <description>It is a Japanese manga series written and illustrated by Koyoharu Gotōge, 
+        and it is about Tanjiro Kamado, a young boy who becomes a demon slayer after his family 
+        is slaughtered and his younger sister Nezuko is turned into a demon.</description>
         <location>http://localhost/action-figure/catalog-image/Demon-Slayer-Logo.png</location>
     </anime>
 
     <anime>
         <name>Naruto</name>
+        <description>It tells the story of Naruto Uzumaki, a young ninja who seeks recognition 
+        from his peers and dreams of becoming the Hokage, the leader of his village</description>
         <location>http://localhost/action-figure/catalog-image/naruto.png</location>
     </anime>
 
     <anime>
         <name>Slam Dunk</name>
+        <description>The story follows Hanamichi Sakuragi, who falls in love with a girl named Haruko Akagi, 
+        and decides to enter the Shohoku High School Basketball Team in order to attract her, as she is 
+        already in love with another Shohoku player, Kaede Rukawa.</description>
         <location>http://localhost/action-figure/catalog-image/slamdunk.png</location>
     </anime>
 
     <anime>
         <name>Bleach</name>
+        <description>High school student Ichigo Kurosaki, who has the ability to see ghosts, gains soul 
+        reaper powers from Rukia Kuchiki and sets out to save the world from "Hollows".</description>
         <location>http://localhost/action-figure/catalog-image/bleach.png</location>
     </anime>
 
     <anime>
         <name>Dragon Ball</name>
+        <description>Dragon Ball tells the tale of a young warrior by the name of Son Goku, a young 
+        peculiar boy with a tail who embarks on a quest to become stronger and learns of the Dragon Balls, 
+        when, once all 7 are gathered, grant any wish of choice.</description>
         <location>http://localhost/action-figure/catalog-image/dragonball.png</location>
     </anime>
 </catalog>

@@ -198,7 +198,7 @@ section #content h1{
     border-bottom-left-radius: 0.5rem;
     border-bottom-right-radius: 0.5rem;
     color:white;
-    backdrop-filter: blur(1rem);
+    backdrop-filter: blur(1.5rem);
 }
 
 #products .products-container div span:nth-child(1){

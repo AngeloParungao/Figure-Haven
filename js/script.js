@@ -70,6 +70,7 @@ function catalog(){
           for(let i = 0; i < anime.length; i++){
               let detail = {
                 name : anime[i].getElementsByTagName("name")[0].childNodes[0].nodeValue,
+                description : anime[i].getElementsByTagName("description")[0].childNodes[0].nodeValue,
                 location : anime[i].getElementsByTagName("location")[0].childNodes[0].nodeValue,
               };
             catalog.push(detail);
@@ -106,9 +107,12 @@ function displayCatalog(catalog){
 
     let div = document.createElement("div");
     let name = document.createElement("span");
+    let description = document.createElement("p");
     name.textContent = anime.name;
+    description.textContent = anime.description;
 
     div.appendChild(name);
+    div.appendChild(description);
     container.appendChild(img);
     container.appendChild(div);
     dom.appendChild(container);
@@ -199,7 +203,14 @@ function display(details){
     dom.appendChild(product);
 
     product.onclick = function() {
-      console.log("Product clicked:", figure.name);
+
+      if(localStorage.getItem('userID') == null){
+        window.open('http://localhost/action-figure/pages/login.php','_self');
+        alert("Please Sign-up/Login first");
+      }
+      else{
+        alert("Product clicked:"+ figure.name);
+      }
       // You can perform any action here when a product is clicked
     };
   });
