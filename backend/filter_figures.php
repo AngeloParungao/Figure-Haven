@@ -15,6 +15,7 @@ if (isset($_GET['anime'])) {
             // Add the figure to the filtered list
             $filteredFigures[] = [
                 'name' => (string) $figure->name,
+                'location' => (string) $figure->location,
             ];
         }
     }

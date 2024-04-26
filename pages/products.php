@@ -13,6 +13,10 @@
     <?php include '../components/navbar.php'?>   
 
     <section id="product-section">
+        <div id="search-bar">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" id="search" placeholder="Search">
+        </div>
         <div class="product-container">
         </div>
     </section>
