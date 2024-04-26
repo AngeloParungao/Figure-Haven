@@ -6,6 +6,7 @@
 
 body{
     font-family: 'Poppins', serif;
+    height: 100vh;
 }
 
 body::-webkit-scrollbar{
@@ -55,8 +56,9 @@ body::-webkit-scrollbar-thumb {
     justify-content: center;
     flex-wrap: wrap;
     margin-top: 1.5rem;
-    padding-top: 3rem;
-    border-top: 0.3rem solid rgb(167, 157, 104);
+    padding: 3rem 0 3rem 0;
+    border-top: 0.2rem solid rgb(27, 27, 27);
+    border-bottom: 0.2rem solid rgb(27, 27, 27);
     gap: 1rem;
 }
 
@@ -64,7 +66,7 @@ body::-webkit-scrollbar-thumb {
 #catalog .catalog-container .catalog{
     height: 18rem;
     width: 23rem;
-    border-radius: 0.5rem;
+    border-radius: 0.4rem;
     background-color: white;
     border: 0.2rem solid rgba(71, 71, 71, 0.253);
     backdrop-filter: blur(1rem);
