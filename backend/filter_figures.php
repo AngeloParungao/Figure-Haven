@@ -19,6 +19,8 @@ if (isset($_GET['anime'])) {
                 'category' => (string) $figure->category,
                 'anime' => (string) $figure->anime,
                 'location' => (string) $figure->location,
+                'description' => (string) $figure->description,
+
             ];
         }
     }

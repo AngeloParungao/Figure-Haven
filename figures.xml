@@ -3,118 +3,150 @@
 <figures>
     <figure>
         <name>Denji</name>
-        <price>10000</price>
+        <price>₱ 10000</price>
         <category>Resin</category>
         <anime>Chainsaw Man</anime>
         <sales>400</sales>
         <location>http://localhost/action-figure/products-images/denji.jpg</location>
+        <description>hi</description>
+        <stock>10</stock>
     </figure>
 
     <figure>
         <name>Luffy's Gear 5</name>
-        <price>683</price>
+        <price>₱ 683</price>
         <category>Funko Pop</category>
         <anime>One Piece</anime>
         <sales>1000</sales>
         <location>http://localhost/action-figure/products-images/POP! LUFFY GEAR 5.png</location>
+        <description>hi</description>
+        <stock>20</stock>
     </figure>
 
     <figure>
         <name>Jotaro Kujo vs Dio Brando</name>
-        <price>37183</price>
+        <price>₱ 37183</price>
         <category>Resin</category>
         <anime>Jujutsu Kaisen</anime>
         <sales>400</sales>
         <location>http://localhost/action-figure/products-images/Jojo's Bizarre Adventure - Jotaro Kujo vs Dio Brando by Chikara Studio.jpg</location>
+        <description>hi</description>
+        <stock>8</stock>
     </figure>
 
     <figure>
         <name>Nico Robin Devil Form</name>
-        <price>20021</price>
+        <price>₱ 20021</price>
         <category>Resin</category>
         <anime>One Piece</anime>
         <sales>600</sales>
         <location>http://localhost/action-figure/products-images/One Piece - MY Studio Nico Robin Devil Form.jpg</location>
+        <description>hi</description>
+        <stock>15</stock>
     </figure>
 
     <figure>
         <name>Katakuri</name>
-        <price>683</price>
+        <price>₱ 683</price>
         <category>Funko Pop</category>
         <anime>One Piece</anime>
         <sales>300</sales>
         <location>http://localhost/action-figure/products-images/POP! KATAKURI BOX.png</location>
+        <description>hi</description>
+        <stock>10</stock>
     </figure>
 
     <figure>
         <name>Megumi Fushigoro</name>
-        <price>21840</price>
+        <price>₱ 21840</price>
         <category>Resin</category>
         <anime>Jujutsu Kaisen</anime>
         <sales>1500</sales>
         <location>http://localhost/action-figure/products-images/megumi Fushiguro.jpg</location>
+        <description>hi</description>
+        <stock>18</stock>
     </figure>
 
     <figure>
         <name>Rorono Zoro</name>
-        <price>853</price>
+        <price>₱ 853</price>
         <category>Funko Pop</category>
         <anime>One Piece</anime>
         <sales>900</sales>
         <location>http://localhost/action-figure/products-images/POP! RORONOA ZORO (GLOW).png</location>
+        <description>hi</description>
+        <stock>20</stock>
     </figure>
 
     <figure>
         <name>Unif Ver. Marin Kitagawa</name>
-        <price>7750</price>
+        <price>₱ 7750</price>
         <category>Resin</category>
         <anime>My Dress-up Darling</anime>
         <sales>800</sales>
         <location>http://localhost/action-figure/products-images/uniform ver. marin kitagawa.jpg</location>
+        <description>hi</description>
+        <stock>10</stock>
     </figure>
 
     <figure>
         <name>Sangoro in Wano outfit</name>
-        <price>683</price>
+        <price>₱ 683</price>
         <category>Funko Pop</category>
         <anime>One Piece</anime>
         <sales>300</sales>
         <location>http://localhost/action-figure/products-images/POP! SANGORO IN WANO OUTFIT.png</location>
+        <description>hi</description>
+        <stock>15</stock>
     </figure>
 
     <figure>
         <name>Uzui Tengen</name>
-        <price>60000</price>
+        <price>₱ 60000</price>
         <category>Resin</category>
         <anime>Demon Slayer</anime>
+        <description>hi</description>
         <sales>1000</sales>
         <location>http://localhost/action-figure/products-images/Uzui tengen.jpg</location>
+        <description>hi</description>
+        <stock>5</stock>
     </figure>
 
     <figure>
         <name>Yuji Itadori</name>
-        <price>853</price>
+        <price>₱ 853</price>
         <category>Funko Pop</category>
         <anime>Jujutsu kaisen</anime>
         <sales>700</sales>
         <location>http://localhost/action-figure/products-images/POP! YUJI ITADORI WITH DIVERGENT FISTS (GLOW) BOX.png</location>
+        <description>hi</description>
+        <stock>15</stock>
     </figure>
 
     <figure>
         <name>Toji Fushigoro</name>
-        <price>25742</price>
+        <price>₱ 25742</price>
         <category>Resin</category>
         <anime>Jujutsu kaisen</anime>
         <sales>700</sales>
         <location>http://localhost/action-figure/products-images/Jujutsu Kaisen - Hero Collectible Studio Toji Fushiguro.jpg</location>
+        <description>hi</description>
+        <stock>8</stock>
     </figure>
 
     <figure>
         <name>Nezuko Kamado</name>
-        <price>53299</price>
+        <price>₱ 53299</price>
         <category>Resin</category>
         <anime>Demon Slayer</anime>
         <sales>700</sales>
         <location>http://localhost/action-figure/products-images/nezuko.jpg</location>
+        <description>Step into the realm of unparalleled craftsmanship with Infinity Studios' magnificent creation, crafted from a fusion 
+        of Resin, PU, Polystone, and enhanced with LED illumination. In an impressive 1/4 scale, this masterpiece stands majestically at 
+        an estimated H60 * D58 * L45cm, commanding attention with its sheer presence.Limited to a mere 199 pieces worldwide, each meticulously
+         crafted to perfection, this masterpiece promises to be a prized possession for the discerning collector. Set to embark on its journey 
+         in Q1 (March) 2025, secure your opportunity to own a piece of artistry that transcends boundaries and captivates the senses with Infinity 
+         Studios' unparalleled creation.</description>
+        <stock>20</stock>
     </figure>
 </figures>

@@ -11,7 +11,24 @@
 </head>
 <body>
     <?php include '../components/navbar.php'?>   
-
+    
+    <section id="product-clicked">
+        <div class="product">
+            <div id="left">
+                <div id="details">
+                    <span id="name"></span>
+                    <span id="anime"></span>
+                    <span id="price"></span>
+                    <p id="description"></p>
+                </div>
+                <button id="addToCart">Add to Cart</button>
+                <button id="buyNow">Buy Now</button>
+            </div>
+            <div id="right">
+                <img id="image" src="" alt="">
+            </div>
+        </div>  
+    </section>
     <section id="product-section">
         <div id="search-bar">
             <i class="fa-solid fa-magnifying-glass"></i>
@@ -20,6 +37,7 @@
         <div class="product-container">
         </div>
     </section>
+
 
     <?php include '../components/footer.php'?>
 </body>

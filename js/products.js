@@ -45,6 +45,7 @@ function getAnimeNameFromUrl() {
   function display(products){
     let dom = document.querySelector(".product-container");
     dom.innerHTML = ''; // Clear existing product elements
+
   
     console.log(products);
   
@@ -71,6 +72,7 @@ function getAnimeNameFromUrl() {
       container.appendChild(img);
       container.appendChild(div);
       dom.appendChild(container);
+
   
       container.onclick = function() {
         if(localStorage.getItem('userID') == null){
@@ -78,11 +80,26 @@ function getAnimeNameFromUrl() {
           alert("Please Sign-up/Login first");
         }
         else{
-          alert("Product clicked:"+ figure.name);
+          document.getElementById("product-clicked").style.display ="block";
+          
+          openProduct(product);
+          ;
         }
-        // You can perform any action here when a product is clicked
       };
     });
+  }
+
+  
+  function openProduct(product){
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth' // Use smooth scrolling behavior
+    });
+    document.getElementById("name").textContent = product.name;
+    document.getElementById("anime").textContent = product.anime;
+    document.getElementById("price").textContent = product.price;
+    document.getElementById("description").textContent = product.description;
+    document.getElementById("image").src = product.location;
   }
   
   
