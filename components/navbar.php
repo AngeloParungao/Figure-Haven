@@ -17,6 +17,7 @@
                 <div id="anchors">
                     <a class="link" href="http://localhost/action-figure/index.php">Home</a>
                     <a class="link" href="http://localhost/action-figure/pages/catalog.php">Catalog</a>
+                    <a class="link" onclick="product()">Product</a>
                     <a class="link" href="#">About Us</a>
                     <a class="link" href="#">FAQs</a>
                 </div>
@@ -49,6 +50,10 @@
     else{
         document.getElementById('logged-in').style.display = 'none';
         document.getElementById('logged-out').style.display = 'block';
+    }
+
+    function product(){
+        window.location.href = 'http://localhost/action-figure/pages/products.php?anime=all';
     }
 </script>
 </html>
