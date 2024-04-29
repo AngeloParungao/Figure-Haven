@@ -22,6 +22,9 @@
                     <a class="link" href="#">FAQs</a>
                 </div>
                 <div>
+                    <div id="total-cart">
+                        <span id="cart"></span>
+                    </div>
                     <i class="fa-solid fa-cart-shopping"></i>
                 </div>
                 <div id="nav-profile">
@@ -55,6 +58,29 @@
     function product(){
         window.location.href = 'http://localhost/action-figure/pages/products.php?anime=all';
     }
+
+    let xhr = new XMLHttpRequest();
+    xhr.open("GET", "http://localhost/action-figure/backend/cart.php", true);
+    xhr.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            let cart = JSON.parse(xhr.responseText);
+            let count = 0; // Initialize count variable
+
+            // Loop through the cart array to count items
+            cart.forEach(function(item) {
+                if (item.user_id == userID) {
+                    count++; // Increment count for each item in the cart matching the user ID
+                }
+            });
+
+            // Update the cart count display
+            document.getElementById('cart').textContent = count;
+            if(count != 0){
+                document.getElementById('total-cart').style .visibility = "visible";
+            }
+
+        }
+    };
+    xhr.send();
 </script>
 </html>
-

@@ -36,14 +36,19 @@ function fetchUsers() {
                     userID = user.id; // Set the userID variable to the matched user's ID
                     // Store userID in localStorage
                     localStorage.setItem('userID', userID);
+                    localStorage.setItem('name', user.user_fullname);
+                    localStorage.setItem('contact', user.contact_number);
+                    localStorage.setItem('email', user.email);
+                    localStorage.setItem('address', user.address);
                     localStorage.setItem('username', user.username);
+                    
                 }
             });
 
             if (found) {
                 // Credentials are valid
                 alert("Login successful!");
-                window.open('../index.php','_self');
+                window.open('http://localhost/action-figure/index.php','_self');
 
             } else {
                 // Credentials are invalid

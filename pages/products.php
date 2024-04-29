@@ -21,8 +21,6 @@
                     <span id="price"></span>
                     <p id="description"></p>
                 </div>
-                <button id="addToCart">Add to Cart</button>
-                <button id="buyNow">Buy Now</button>
             </div>
             <div id="right">
                 <img id="image" src="" alt="">

@@ -34,7 +34,7 @@
                         <input type="text" name="fullname" placeholder="Fullname" required>
                         <input type="text" name="address" placeholder="Address" required>
                         <input type="email" name="email" placeholder="Email" required>
-                        <input type="text" name="contact" placeholder="Contact Number" required>
+                        <input type="number" name="contact" placeholder="Contact Number" required>
                         <input type="text" name="username" placeholder="Username" required>
                         <input type="password" name="password" placeholder="Password" required>
                         <input type="password" name="confirm_password" placeholder="Confirm Password" required>
