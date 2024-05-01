@@ -51,8 +51,10 @@
 .cart-container {
     display: none;
     position: absolute;
+    width: 26rem;
     margin-top: 2.5rem;
-    margin-left: 14.5rem;
+    margin-left: 11.5rem;
+    overflow: hidden;
 }
 
 /* Show the cart container when it has the 'show' class */
@@ -61,22 +63,35 @@
 }
 
 #cart-content {
-    width: 23rem;
-    height: 40rem;
-    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    padding: 0.3rem;
+    height: 100%;
+    max-height: 35rem;
+    background-color: rgb(70, 70, 70);
     border: 0.2rem solid orange;
     border-radius: 1rem;
-    overflow: auto;
+    overflow-y: auto;
 
     transition: 0.5s ease-in-out linear;
 }
 
+#cart-content::-webkit-scrollbar{
+    background-color: transparent;
+    width: 0.5rem;
+}
+
+#cart-content::-webkit-scrollbar-thumb{
+    background-color: rgb(196, 0, 0);
+    border-radius: 1rem;
+}
 
 #cart-content::before{
     content: '';
     position: absolute;
     transform: rotate(45deg);
-    margin-top: -0.6rem;
+    margin-top: -0.8rem;
     right: 3.5rem;
     height: 0.9rem;
     width: 0.9rem;
@@ -84,10 +99,15 @@
 }
 
 #cart-content .content{
-    display: flex;
+    display: flex;  
+    align-items: center;
     gap: 1rem;
-    background-color: red;
-    padding: 1.5rem;
+    border-top: 0.15rem solid white ;
+    border-left: 0.15rem solid white ;
+    background-color: rgba(221, 221, 221, 0.863);
+    backdrop-filter: blur(1em);
+    border-radius: 0.5rem;
+    padding: 1rem;
 }
 
 #cart-content .content img{
@@ -98,8 +118,48 @@
 #cart-content .content .details{
     display: flex;
     flex-direction: column;
+    color: white;
+    width: 50%;
 }
 
+#cart-content .content .details span{
+    font-family: 'Poppins', serif;
+    font-size: 1rem;
+}
+
+#cart-content .content .details span:nth-child(3){
+    font-size: 0.7rem;
+    color: rgb(228, 228, 228);
+}
+
+#cart-content .content .details span:nth-child(4){
+    color: rgb(182, 106, 35);
+}
+
+#cart-content .content .buttons{
+    display: flex;
+    align-items: end;
+    flex-direction: column;
+    gap: 2.5rem;
+    width: 50%;
+}
+
+#cart-content .content .buttons button:nth-child(1){
+    font-size: 1rem;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+#cart-content .content .buttons button:nth-child(2){
+    font-size: 1rem;
+    padding: 0.3rem 1rem 0.3rem 1rem;
+    color: white;
+    background-color: rgb(221, 154, 28);
+    border-radius: 0.5rem;
+    border: none;
+    cursor: pointer;
+}
 
 .navbar .bar{
     display: flex;

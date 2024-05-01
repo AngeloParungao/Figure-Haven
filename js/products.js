@@ -89,96 +89,130 @@ function getAnimeNameFromUrl() {
     });
   }
 
-  
-  function openProduct(product){
-    window.scrollTo({
+
+function openProduct(product) {
+  window.scrollTo({
       top: 0,
       behavior: 'smooth' // Use smooth scrolling behavior
-    });
-    document.getElementById("name").textContent = product.name;
-    document.getElementById("anime").textContent = product.anime;
-    document.getElementById("price").textContent = product.price;
-    document.getElementById("description").textContent = product.description;
-    document.getElementById("image").src = product.location;
+  });
 
-    let dom = document.querySelector("#left");
+  let total_price, items_number;
+  let dom = document.querySelector("#left");
 
-    let wrapper = document.createElement("div");
-    wrapper.classList.add("quantity-wrapper");
-    let addButton = document.createElement("button");
-    addButton.textContent = "+"
-    let minusButton = document.createElement("button");
-    minusButton.textContent = "-"
-    let span = document.createElement("span");
-    span.id = "quantity";
-    span.textContent = "1"
+  // Check if quantity wrapper already exists
+  let existingWrapper = document.querySelector(".quantity-wrapper");
+  if (!existingWrapper) {
+      // Create elements for quantity and buttons only if the wrapper doesn't exist
+      let wrapper = document.createElement("div");
+      wrapper.classList.add("quantity-wrapper");
+      let addButton = document.createElement("button");
+      addButton.textContent = "+";
+      let minusButton = document.createElement("button");
+      minusButton.textContent = "-";
+      let span = document.createElement("span");
+      span.id = "quantity";
+      span.textContent = "1";
 
+      // Append child elements to the wrapper
+      wrapper.appendChild(minusButton);
+      wrapper.appendChild(span);
+      wrapper.appendChild(addButton);
 
-    let counter = 1;
-    let priceString = product.price;
+      // Set event listeners for buttons
+      let temp = 1;
+      let counter = 1; // Initialize counter to 1
+      let priceString = product.price;
+      let Price = parseInt(priceString.replace(/[^0-9]/g, '')); // Parse price as integer
+      let total = Price;
 
-    // Remove all non-numeric characters
-    let Price = priceString.replace(/[^0-9]/g, '');
-    let total = Price;
+      addButton.onclick = function () {
+          temp++; // Increment temp
+          counter = temp; // Update counter
+          span.textContent = temp; // Update displayed quantity
+          total = counter * Price; // Update total price
+          total_price = total; // Update total_price variable
+          items_number = counter; // Update items_number variable
+      };
 
-    addButton.onclick = function() {
-        span.textContent = ++counter; // Increment counter and then display it
-        total = total * counter;
-    };
-    
-    minusButton.onclick = function() {
-        if (counter > 1) { // Check if counter is greater than 1 before decrementing
-            span.textContent = --counter; // Decrement counter and then display it
-            total = total - Price;
-        }
-    };
-
-
-
-    let addToCart = document.createElement("button");
-    let buyNow = document.createElement("button");
-
-    addToCart.id = "addToCart";
-    buyNow.id = "buyNow";
-
-    addToCart.textContent = "Add To Cart"
-    buyNow.textContent = "Buy Now"
-
-    wrapper.appendChild(minusButton);
-    wrapper.appendChild(span);
-    wrapper.appendChild(addButton);
-    dom.appendChild(wrapper);
-    dom.appendChild(addToCart);
-    dom.appendChild(buyNow);
-
-    addToCart.onclick = function() {
-      if (confirm("Are you sure you want to add this item to the cart?")) {
-        let product_name = product.name;
-        let product_image = product.location;
-        let userID = localStorage.getItem('userID') || '';
-        let name = localStorage.getItem('name') || '';
-        let contact = localStorage.getItem('contact') || '';
-        let email = localStorage.getItem('email') || '';
-        let address = localStorage.getItem('address') || '';
-        let username = localStorage.getItem('username') || '';
-        let status = 'cart';
-
-        let xhr = new XMLHttpRequest();
-        xhr.open("POST", "http://localhost/action-figure/backend/cart.php", true);
-        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-        xhr.onreadystatechange = function() {
-          if (xhr.readyState === 4 && xhr.status === 200) {
-              console.log(xhr.responseText); // Log the response
-              location.reload();
+      minusButton.onclick = function () {
+          if (temp > 1) {
+              temp--; // Decrement temp if greater than 1
+              counter = temp; // Update counter
+              span.textContent = temp; // Update displayed quantity
+              total = counter * Price; // Update total price
+              total_price = total; // Update total_price variable
+              items_number = counter; // Update items_number variable
           }
-        };
-        xhr.send("product_name=" + product_name + "&image=" + product_image + "&userID=" + userID + "&name=" + name + "&contact=" + contact + "&email=" + email + "&address=" + address + "&username=" + username + "&items=" + counter + "&total=" + total + "&status=" + status);
+      };
+      total = counter * Price;
+
+      total_price = total;
+      items_number = counter;
+
+
+      // Append the wrapper to the DOM
+      dom.appendChild(wrapper);
+  }
+
+  // Set product details
+  document.getElementById("name").textContent = product.name;
+  document.getElementById("anime").textContent = product.anime;
+  document.getElementById("price").textContent = product.price;
+  document.getElementById("description").textContent = product.description;
+  document.getElementById("image").src = product.location;
+
+  // Create and append buttons only if they don't already exist
+  let addToCart = document.getElementById("addToCart");
+  let buyNow = document.getElementById("buyNow");
+
+  if (!addToCart) {
+      addToCart = document.createElement("button");
+      addToCart.id = "addToCart";
+      addToCart.textContent = "Add To Cart";
+      dom.appendChild(addToCart);
+  }
+
+  if (!buyNow) {
+      buyNow = document.createElement("button");
+      buyNow.id = "buyNow";
+      buyNow.textContent = "Buy Now";
+      dom.appendChild(buyNow);
+  }
+
+  // Set click event for addToCart button
+  addToCart.onclick = function () {
+    if (confirm("Are you sure you want to add this item to the cart?")) {
+      let product_name = product.name;
+      let product_image = product.location;
+      let product_price = product.price.replace(/[^0-9]/g, '');
+      let userID = localStorage.getItem('userID') || '';
+      let name = localStorage.getItem('name') || '';
+      let contact = localStorage.getItem('contact') || '';
+      let email = localStorage.getItem('email') || '';
+      let address = localStorage.getItem('address') || '';
+      let username = localStorage.getItem('username') || '';
+      let status = 'cart';
+      
+      let xhr = new XMLHttpRequest();
+      xhr.open("POST", "http://localhost/action-figure/backend/cart.php", true);
+      xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+      xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+                  console.log(xhr.responseText); // Log the response
+                  location.reload();
+              }
+          };
+          xhr.send("product_name=" + product_name + "&image=" + product_image + "&price=" + product_price + "&userID=" + userID + "&name=" + name + "&contact=" + contact + "&email=" + email + "&address=" + address + "&username=" + username + "&items=" + items_number + "&total=" + total_price + "&status=" + status);
       } else {
           // Action canceled
           console.log("Action canceled");
       }
-    }
   }
+}
+
+
+
+
   
   
 
