@@ -7,6 +7,7 @@ $method = $_SERVER["REQUEST_METHOD"];
 switch($method) {
     case "POST":
         $product_name = $_POST['product_name'];
+        $product_image = $_POST['image'];
         $userID = $_POST['userID'];
         $name = $_POST['name'];
         $contact = $_POST['contact'];
@@ -23,8 +24,8 @@ switch($method) {
         }
 
         // Prepare SQL statement
-        $sql = "INSERT INTO cart (user_id, product_name, `name`, contact_number, email, `address`, username, number_of_items, total, `status`)
-                VALUES ('$userID', '$product_name', '$name', '$contact', '$email', '$address', '$username', '$items', '$total', '$status')";
+        $sql = "INSERT INTO cart (user_id, product_name, `image`, `name`, contact_number, email, `address`, username, number_of_items, total, `status`)
+                VALUES ('$userID', '$product_name', '$product_image', '$name', '$contact', '$email', '$address', '$username', '$items', '$total', '$status')";
 
         // Execute SQL statement
         if ($conn->query($sql) === TRUE) {

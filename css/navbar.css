@@ -48,6 +48,59 @@
     color: black;
 }
 
+.cart-container {
+    display: none;
+    position: absolute;
+    margin-top: 2.5rem;
+    margin-left: 14.5rem;
+}
+
+/* Show the cart container when it has the 'show' class */
+.cart-container.show {
+    display: block;
+}
+
+#cart-content {
+    width: 23rem;
+    height: 40rem;
+    background-color: rgb(255, 255, 255);
+    border: 0.2rem solid orange;
+    border-radius: 1rem;
+    overflow: auto;
+
+    transition: 0.5s ease-in-out linear;
+}
+
+
+#cart-content::before{
+    content: '';
+    position: absolute;
+    transform: rotate(45deg);
+    margin-top: -0.6rem;
+    right: 3.5rem;
+    height: 0.9rem;
+    width: 0.9rem;
+    background-color: orange;
+}
+
+#cart-content .content{
+    display: flex;
+    gap: 1rem;
+    background-color: red;
+    padding: 1.5rem;
+}
+
+#cart-content .content img{
+    height: 4rem;
+    width: 3rem;
+}
+
+#cart-content .content .details{
+    display: flex;
+    flex-direction: column;
+}
+
+
 .navbar .bar{
     display: flex;
     justify-content: space-between;

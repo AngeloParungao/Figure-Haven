@@ -154,6 +154,7 @@ function getAnimeNameFromUrl() {
     addToCart.onclick = function() {
       if (confirm("Are you sure you want to add this item to the cart?")) {
         let product_name = product.name;
+        let product_image = product.location;
         let userID = localStorage.getItem('userID') || '';
         let name = localStorage.getItem('name') || '';
         let contact = localStorage.getItem('contact') || '';
@@ -171,7 +172,7 @@ function getAnimeNameFromUrl() {
               location.reload();
           }
         };
-        xhr.send("product_name=" + product_name + "&userID=" + userID + "&name=" + name + "&contact=" + contact + "&email=" + email + "&address=" + address + "&username=" + username + "&items=" + counter + "&total=" + total + "&status=" + status);
+        xhr.send("product_name=" + product_name + "&image=" + product_image + "&userID=" + userID + "&name=" + name + "&contact=" + contact + "&email=" + email + "&address=" + address + "&username=" + username + "&items=" + counter + "&total=" + total + "&status=" + status);
       } else {
           // Action canceled
           console.log("Action canceled");
