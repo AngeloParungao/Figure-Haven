@@ -64,9 +64,9 @@ section #content h1{
 
 
 #top-selling {
-    height: 22rem;
+    height: 30rem;
     width: 100%;
-    padding: 1.5rem 4rem;
+    padding: 5.5rem 4rem ;
     display: flex;
     flex-direction: column;
     align-items: start;
@@ -114,110 +114,119 @@ section #content h1{
     border-radius: 0.6rem;
 }     
 
-
-#products{
-    padding: 4rem 4rem;
-    line-height: 3rem;
-    color: white;
-    background-color: black;
-}
-
-#products #search-bar{
-    display: flex;
-    align-items: center;
-}
-
-#products #search-bar i{
-    position: absolute;
-    font-size: 0.9rem;
-    color: rgb(92, 92, 92);
-    margin-left: 1rem;
-}
-
-#products #search-bar #search{
-    padding: 0 2.5rem;
-    height: 2.5rem;
-    width: 15rem;
-    border-radius: 1.5rem;
-    outline: none;
-    border: none;
-}
-
-#products #search-bar #search:focus{
-    outline: 0.16rem solid red;
-}
-
-#products .products-container{
+#heading{
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
-    border-top: 0.2rem solid rgb(27, 27, 27);
-    border-bottom: 0.2rem solid rgb(27, 27, 27);
-    margin-top: 1rem;
-    padding: 1.5rem 0 1.5rem 0;
-    gap: 0.7rem;
+    align-items: center;
+    font-family: 'Poppins', serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+    height: 5rem;
+    width: 100%;
+    background-color: rgb(219, 219, 219);
 }
 
-#products .products-container .product{
-    height: 18rem;
-    width: 13rem;
-    border-radius: 0.5rem;
+#catalog{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 3rem 3rem 5rem 3rem;
+    height:50rem;
+    color: white;
+    background-image: url(../images/japanese_bg.png);
+    background-size: cover;
+    background-position: center;
+}
+
+
+#catalog .catalog-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 3.5rem;
+    gap: 2rem;
+    height: 40rem;
+    width: 100%;
+    overflow: hidden;
+}
+
+#catalog .catalog-container .catalog{
+    height: 16rem;
+    width: 25rem;
+    border-radius: 0.4rem;
     background-color: white;
     border: 0.2rem solid rgba(71, 71, 71, 0.253);
     backdrop-filter: blur(1rem);
     cursor: pointer;
     overflow: hidden;
-    
-    transition: 0.3s ease-in-out;
-    opacity: 0;
-    animation: scroll 5s forwards;
-    animation-range-start: cover;
 }
+
+#catalog .catalog-container .catalog img{
+    height: 100%;
+    width: 100%;
+}
+
+
+#catalog .catalog-container .catalog div{
+    display: flex;
+    flex-direction: column;
+    color: black;
+    position: absolute;
+    margin-top: -5.7rem;
+    padding: 2rem 1.5rem;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(71, 71, 71, 0.253); 
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    color:white;
+    backdrop-filter: blur(1.5rem);
+
+    transition: 0.5s ease-in-out;
+}
+
+#catalog .catalog-container .catalog:hover div{
+    margin-top: -15rem;
+}
+
+
+#catalog .catalog-container .catalog div span{
+    height: 1rem;
+    font-size: 1rem;
+}
+
+#catalog .catalog-container .catalog div p{
+    font-size: 0.9rem;
+    margin-top: 3.5rem;
+    line-height: 1rem;
+}
+
+#catalog .catalog-container .catalog:hover div span{
+    font-size: 1.3rem;
+}
+
 @keyframes scroll {
     to{
         opacity: 1;
     }
 }
 
-#products .products-container .product:hover{
-    transform: scale(1.05);
-}
-
-#products .products-container .product img{
-    height: 100%;
-    width: 100%;
-}
-
-#products .products-container .product div{
+#catalog #see-catalog{
     display: flex;
-    flex-direction: column;
-    color: black;
-    position: absolute;
-    margin-top: -5.7rem;
-    padding: 0 0.5rem;
-    width: 13rem;
-    height: 5rem;
-    background-color: rgba(71, 71, 71, 0.253); 
-    border-bottom-left-radius: 0.5rem;
-    border-bottom-right-radius: 0.5rem;
-    color:white;
-    backdrop-filter: blur(1.5rem);
+    justify-content: end;
+    align-items: center;
+    height: 3.5rem;
+    width: 65%;
 }
 
-#products .products-container div span:nth-child(1){
-    height: 1rem;
-    font-size: 0.9rem;
+#catalog #see-catalog a{
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: rgb(255, 0, 0);
 }
 
-#products .products-container div span:nth-child(2){
-    height: 1rem;
-    font-size: 0.75rem;
-}
-
-#products .products-container div span:nth-child(3){
-    height: 1rem;
-    font-size: 0.6rem;
-}
 
 #description{
     display: flex;

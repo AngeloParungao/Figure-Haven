@@ -33,7 +33,7 @@
             <input type="text" id="search" placeholder="Search">
         </div>
 
-        <div>
+        <div id="dropdown">
             <select id="category">
                 <option value="All">All</option>
                 <option value="Resin">Resin</option>

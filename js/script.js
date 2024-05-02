@@ -64,6 +64,18 @@ function fetchUsers() {
 
 //------------CATALOG.PHP------------//
 function catalog(){
+  let search = document.getElementById("catalog-search");
+  if (search) {
+    search.addEventListener("keyup", function() {
+      // Your existing code for filtering the catalog
+      let value = search.value.trim().toLowerCase(); // Trim whitespace and convert the search value to lowercase for case-insensitive comparison
+      let filteredCatalog = catalog.filter(function(anime){
+        return anime.name.toLowerCase().includes(value); // Check if the anime name includes the search value
+      });
+      // Update the displayed catalog with the filtered catalog
+      displayCatalog(filteredCatalog);
+    });
+  }
   let catalog = [];
   let xml = new XMLHttpRequest();
 
@@ -88,17 +100,8 @@ function catalog(){
   }
   xml.open("GET","http://localhost/action-figure/catalog.xml",true);
   xml.send();
-
-  let search = document.getElementById("catalog-search");
-  search.addEventListener("keyup", function(){
-    let value = search.value.trim().toLowerCase(); // Trim whitespace and convert the search value to lowercase for case-insensitive comparison
-    let filteredCatalog = catalog.filter(function(anime){
-      return anime.name.toLowerCase().includes(value); // Check if the anime name includes the search value
-    });
-    // Update the displayed catalog with the filtered catalog
-    displayCatalog(filteredCatalog);
-  });
 }
+
 
 function displayCatalog(catalog){
   let dom = document.querySelector(".catalog-container");
@@ -125,7 +128,7 @@ function displayCatalog(catalog){
 
     container.onclick = function() {
       console.log("Product clicked:", anime.name);
-      window.location.href = 'products.php?anime=' + encodeURIComponent(anime.name);
+      window.location.href = 'http://localhost/action-figure/pages/products.php?anime=' + encodeURIComponent(anime.name);
       // You can perform any action here when a product is clicked
     };
   });
@@ -168,56 +171,28 @@ function getProduct(){
 
 
 
-function display(details){
+function display(details) {
   let top_sales = document.querySelector("#items");
-  let dom = document.querySelector(".products-container");
-
   // Loop through each product detail
-  details.forEach(function(figure){
-    let product = document.createElement("div");
-    product.classList.add('product');
+  details.forEach(function(figure) {
 
-    let top_product = document.createElement("div");
-    top_product.classList.add('top-selling-items');
+      let top_product = document.createElement("div");
+      top_product.classList.add('top-selling-items');
 
-    let img = document.createElement("img");
-    img.src = figure.location;
+      let img = document.createElement("img");
+      img.src = figure.location;
 
-    if(figure.sales>500){
-      let img_top_sales = document.createElement("img");
-      img_top_sales.src = figure.location;
+      if (figure.sales > 500 && top_sales && top_product) {
+          let img_top_sales = document.createElement("img");
+          img_top_sales.src = figure.location;
 
-      top_product.appendChild(img_top_sales);
-      top_sales.appendChild(top_product);
-    }
+          top_product.appendChild(img_top_sales);
+          top_sales.appendChild(top_product);
 
-    let div = document.createElement("div");
-    let name = document.createElement("span");
-    let price = document.createElement("span");
-    let anime = document.createElement("span");
-
-    name.textContent = figure.name;
-    price.textContent = figure.price;
-    anime.textContent = figure.anime;
-
-
-    div.appendChild(name);
-    div.appendChild(price);
-    div.appendChild(anime);
-    product.appendChild(img);
-    product.appendChild(div);
-    dom.appendChild(product);
-
-    product.onclick = function() {
-
-      if(localStorage.getItem('userID') == null){
-        window.open('http://localhost/action-figure/pages/login.php','_self');
-        alert("Please Sign-up/Login first");
+          top_product.onclick = function(){
+            console.log(figure.name);
+          }
       }
-      else{
-        alert("Product clicked:"+ figure.name);
-      }
-      // You can perform any action here when a product is clicked
-    };
-  });
+    });
 }
+

@@ -25,7 +25,7 @@ body::-webkit-scrollbar-thumb {
     padding: 5rem 4rem;
     line-height: 4rem;
     color: white;
-    background-color: black;
+    background-image: url(../images/japanese_bg.png);
 }
 
 #product-section #search-bar{
@@ -54,6 +54,17 @@ body::-webkit-scrollbar-thumb {
 }
 
 
+
+#product-section #dropdown #category,
+#product-section #dropdown #order{
+    margin-right: 1rem;
+    padding-left: 0.5rem;
+    border-radius: 0.5rem;
+    height: 1.8rem;
+    width: 7.5rem;
+    background-color: white;
+}
+
 #product-section .product-container{
     display: flex;
     justify-content: center;
@@ -62,7 +73,7 @@ body::-webkit-scrollbar-thumb {
     padding: 3rem 0 3rem 0;
     border-top: 0.2rem solid rgb(27, 27, 27);
     border-bottom: 0.2rem solid rgb(27, 27, 27);
-    gap: 1rem;
+    gap: 1.8rem;
 }
 
 
@@ -77,7 +88,7 @@ body::-webkit-scrollbar-thumb {
     overflow: hidden;
 
     opacity: 0;
-    animation: fade-in 0.2s ease-in-out forwards;
+    animation: fade-in 0.3s ease-in-out forwards;
 }
 
 @keyframes fade-in {
@@ -128,17 +139,16 @@ body::-webkit-scrollbar-thumb {
 
 #product-clicked{
     display: none;
-    color: white;
-    height: 36rem;
-    padding: 6rem;
+    color: rgb(0, 0, 0);
+    height: 100vh;
     background-color: black;
 }
 
 #product-clicked .product{
+    background-color: rgb(230, 230, 230);
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 2rem;
     gap: 5rem;
     height: 100%;
     width: 100%;
@@ -206,7 +216,7 @@ body::-webkit-scrollbar-thumb {
     height: 2rem;
     width: 8rem;
     border-radius: 2rem;
-    background-color: aliceblue;
+    background-color: rgb(177, 177, 177);
     margin-bottom: 2rem;
 }
 
@@ -222,7 +232,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 #product-clicked .product #left .quantity-wrapper span{
-    color: black;
+    color: rgb(0, 0, 0);
 }
 
 #product-clicked .product #right{
