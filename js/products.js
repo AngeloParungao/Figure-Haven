@@ -245,7 +245,10 @@ document.addEventListener('DOMContentLoaded', function() {
     xhr.onreadystatechange = function () {
       if (xhr.readyState === 4 && xhr.status === 200) {
                 console.log(xhr.responseText); // Log the response
-                location.reload();
+                createToast("success", "fa-solid fa-circle-check", "Success", "Added to Cart!");
+
+                setTimeout(function() {location.reload()}, 1000);
+                
             }
         };
         xhr.send("product_name=" + product_name + "&image=" + product_image + "&price=" + product_price + "&userID=" + userID + "&name=" + name + "&contact=" + contact + "&email=" + email + "&address=" + address + "&username=" + username + "&items=" + items_number + "&total=" + total_price + "&status=" + status);

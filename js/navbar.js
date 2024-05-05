@@ -1,59 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="http://localhost/action-figure/css/navbar.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
-<body>
-    <?php include 'toast.php'?>
-    <div class="navbar">
-        <div class="bar black">
-            <div id="logo">
-                <img src="http://localhost/action-figure/images/logo.png" alt=""/>
-                <h5>FigureHaven</h5>
-            </div>
-            <div class="links">
-                <div id="anchors">
-                    <a class="link" href="http://localhost/action-figure/index.php">Home</a>
-                    <a class="link" href="http://localhost/action-figure/pages/catalog.php">Catalog</a>
-                    <a class="link" onclick="product()">Product</a>
-                    <a class="link" href="#">About Us</a>
-                    <a class="link" href="#">FAQs</a>
-                </div>
-                <div id="cart-icon">
-                    <div id="total-cart">
-                        <span id="cart"></span>
-                    </div>
-                    <i class="fa-solid fa-cart-shopping"></i>
-                </div>
-                <div class="cart-container">
-                    <div id="cart-content">
-                        <!-- Your cart items or content here -->
-                    </div>
-                </div>   
-                <div id="nav-profile">
-                    <span>
-                        <a id="logged-out" class="link" href="http://localhost/action-figure/pages/login.php">Login</a>
-                    </span>
-                    <span id="logged-in"> 
-                        <a href=""></a>
-                    </span>
-                    <i class="fa-solid fa-user"></i>
-                    <div id="profile-links">
-                        <div>
-                            <button>Profile</button>
-                            <button onclick="logout()">Logout</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> 
-    </div> 
-</body>
-<script>
-    let xhr = new XMLHttpRequest();
+let xhr = new XMLHttpRequest();
     xhr.open("GET", "http://localhost/action-figure/backend/cart.php", true);
     xhr.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
@@ -146,8 +91,8 @@
     //Set userID in the navbar
     let userID = localStorage.getItem('userID') || '';
     let username = localStorage.getItem('username') || '';
-    let login = localStorage.getItem('login');
     let added = localStorage.getItem('addedUser');
+    let login = localStorage.getItem('login');
 
 
     if(userID !== ''){
@@ -160,16 +105,15 @@
         document.getElementById('logged-out').style.display = 'block';
     }
 
-    if(login == "true"){
-        createToast("success", "fa-solid fa-circle-check", "Success", "Login successful!");
-        localStorage.removeItem('login');
-    }
-
     if(added == "true"){
-        createToast("success", "fa-solid fa-circle-check", "Success", "Registration Successful!");
+        createToast("success", "fa-solid fa-circle-check", "Success", "Successful!");
         localStorage.removeItem('addedUser');
     }
 
+    if(login == "true"){
+        createToast("success", "fa-solid fa-circle-check", "Success", "successful!");
+        localStorage.removeItem('login');
+    }
 
     function product(){
         window.location.href = 'http://localhost/action-figure/pages/products.php?anime=all';
@@ -208,36 +152,28 @@
 
 
 
-    var cartIcon = document.getElementById("cart-icon");
-    if (cartIcon) {
-        cartIcon.addEventListener("click", function() {
-            // Toggle the 'show' class of the cart container
-            var cartContainer = document.querySelector(".cart-container");
-            cartContainer.classList.toggle("show");
-        });
-    }
+        var cartIcon = document.getElementById("cart-icon");
+        if (cartIcon) {
+            cartIcon.addEventListener("click", function() {
+                // Toggle the 'show' class of the cart container
+                var cartContainer = document.querySelector(".cart-container");
+                cartContainer.classList.toggle("show");
+            });
+        }
 
-    function createToast(type, icon, title, text){
-        let notifications = document.querySelector('.notifications');
-        let newToast = document.createElement('div');
-        newToast.innerHTML = `
-            <div class="toast ${type}">
-                <i class="${icon}"></i>
-                <div class="content">
-                    <div class="title">${title}</div>
-                    <span>${text}</span>
-                </div>
-                <i class="fa-solid fa-xmark" onclick="(this.parentElement).remove()"></i>
-            </div>`;
-        notifications.appendChild(newToast);
-        newToast.timeOut = setTimeout(
-            ()=>newToast.remove(), 5000);
-    }
-
-
-    function logout(){
-        localStorage.clear();
-        window.open("http://localhost/action-figure/pages/login.php", "_self");
-    }
-</script>
-</html>
+        function createToast(type, icon, title, text){
+            let notifications = document.querySelector('.notifications');
+            let newToast = document.createElement('div');
+            newToast.innerHTML = `
+                <div class="toast ${type}">
+                    <i class="${icon}"></i>
+                    <div class="content">
+                        <div class="title">${title}</div>
+                        <span>${text}</span>
+                    </div>
+                    <i class="fa-solid fa-xmark" onclick="(this.parentElement).remove()"></i>
+                </div>`;
+            notifications.appendChild(newToast);
+            newToast.timeOut = setTimeout(
+                ()=>newToast.remove(), 5000);
+        }

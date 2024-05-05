@@ -10,7 +10,6 @@
     <script src="../js/script.js"></script>
 </head>
 <body>
-
         <?php include '../components/navbar.php'?>
 
         <div id="video-background">
@@ -24,7 +23,7 @@
                     <form action="" method="GET" id="userForm">
                         <input type="text" name="username" placeholder="Username" id="username" required>
                         <input type="password" name="password" placeholder="Password" id="password" required>
-                        <button onclick="fetchUsers()">LOGIN</button>
+                        <button onclick="fetchUsers(event)">LOGIN</button>
                     </form>
                     <button id="create_account">Create Account</button>
                 </div>

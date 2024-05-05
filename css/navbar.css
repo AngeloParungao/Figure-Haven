@@ -230,10 +230,55 @@
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    color: white;
 }
 
 .navbar .bar .links #nav-profile span a{
-    color: white;
     font-size: 1rem;
+    color: white;
     text-decoration: none;
 }
+
+#profile-links {
+    position: absolute;
+    display: none;
+    margin-left: -4rem;
+    margin-top: 7rem;
+    transition: 0.5s ease-in-out;
+}
+
+#profile-links div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    background-color: gainsboro;
+}
+
+
+#profile-links::before {
+    content: '';
+    position: absolute;
+    height: 0.7rem;
+    width: 0.7rem;
+    background-color: gainsboro;
+    top: -0.2rem;
+    right: 0.5rem;
+    transform: rotate(45deg);
+}
+
+#profile-links button {
+    font-size: 0.9rem;
+    height: 2rem;
+    width: 6rem;
+    background-color: transparent;
+    border: none;
+}
+
+#nav-profile:hover #profile-links {
+    display: block;
+}
+

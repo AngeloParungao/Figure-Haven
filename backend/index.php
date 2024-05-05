@@ -22,6 +22,7 @@ switch($method) {
         } else {
             echo json_encode(["error" => $conn->error]);
         }
+
         break;
     case "GET":
         $sql = "SELECT * FROM users";
