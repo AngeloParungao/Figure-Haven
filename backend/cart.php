@@ -7,6 +7,7 @@ $method = $_SERVER["REQUEST_METHOD"];
 switch($method) {
     case "POST":
         $product_name = $_POST['product_name'];
+        $product_anime = $_POST['product_anime'];
         $product_image = $_POST['image'];
         $userID = $_POST['userID'];
         $name = $_POST['name'];
@@ -16,6 +17,7 @@ switch($method) {
         $username = $_POST['username'];
         $product_price = $_POST['price'];
         $items = $_POST['items'];
+        $shipping = $_POST['shipping'];
         $total = $_POST['total'];
         $status = $_POST['status'];
 
@@ -25,8 +27,8 @@ switch($method) {
         }
 
         // Prepare SQL statement
-        $sql = "INSERT INTO cart (user_id, product_name, `image`, `name`, contact_number, email, `address`, username, price, number_of_items, total, `status`)
-                VALUES ('$userID', '$product_name', '$product_image', '$name', '$contact', '$email', '$address', '$username', '$product_price', '$items', '$total', '$status')";
+        $sql = "INSERT INTO cart (user_id, product_name, anime,`image`, `name`, contact_number, email, `address`, username, price, number_of_items, shipping_fee, total, `status`)
+                VALUES ('$userID', '$product_name', '$product_anime','$product_image', '$name', '$contact', '$email', '$address', '$username', '$product_price', '$items', '$shipping', '$total', '$status')";
 
         // Execute SQL statement
         if ($conn->query($sql) === TRUE) {
@@ -47,6 +49,21 @@ switch($method) {
             echo json_encode($users);
         } else {
             echo json_encode(["message" => "No users found"]);
+        }
+        break;
+    case "PUT":
+        parse_str(file_get_contents("php://input"), $_PUT);
+        $productId = $_PUT['product_id'];
+        $status = $_PUT['status'];
+
+        $sql = "UPDATE cart SET `status` = '$status'
+                WHERE cart_id = $productId";
+
+        // Execute SQL statement
+        if ($conn->query($sql) === TRUE) {
+            echo "Record updated successfully";
+        } else {
+            echo "Error updating record: " . $conn->error;
         }
         break;
     case "DELETE":

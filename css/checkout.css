@@ -1,0 +1,158 @@
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 6rem 10%;
+    background-color: rgb(248, 248, 248);
+}
+
+.address_section{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 2rem;
+    background-color: rgb(250, 246, 217);
+}
+
+.address_section div:nth-child(1){
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 0.4rem;
+    color: rgb(255, 94, 0);
+    border-bottom: 0.1rem solid rgb(184, 184, 184);
+}
+
+.address_section div:nth-child(1) i{
+    font-size: 1.3rem;
+}
+
+.address_section div:nth-child(2){
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+}
+
+.product_section{
+    display: flex;
+    gap: 2rem;
+    padding: 3rem;
+    background-color: rgb(255, 255, 255);
+}
+
+.product_section img{
+    height:7rem;
+}
+.product_section div{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+
+#product{
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+#anime{
+    font-size: 1rem;
+    font-weight: 300;
+    color: rgb(156, 156, 156);
+}
+
+#price{
+    color: rgb(226, 147, 0);
+}
+
+#items{
+    font-size: 1rem;
+    font-weight: 300;
+    color: rgb(156, 156, 156);
+}
+
+.payment_option{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem 2rem;
+    background-color: white;
+}
+
+.payment_option #option{
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 0.4rem;
+    color: rgb(255, 187, 0);
+    border-bottom: 0.1rem solid rgb(184, 184, 184);
+}
+
+.payment_option .mode{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    gap: 2rem;
+}
+
+.payment_option .mode #cod{
+    display: flex;
+    gap: 2rem;
+}
+
+.payment_option .mode #online{
+    display: flex;
+    gap: 2rem;
+}
+
+.payment_option .mode div input{
+    height:1.3rem; 
+    width: 1.3rem;
+    accent-color: orange;
+}
+
+.payment_details{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem 2rem;
+    background-color: white;
+}
+
+.payment_details #payment{
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 0.4rem;
+    color: green;
+    border-bottom: 0.1rem solid rgb(184, 184, 184);
+}
+.payment_details div:nth-child(2){
+    display: flex;
+    padding: 1rem 2rem;
+    width: 100%;
+}
+
+.payment_details div:nth-child(2) .total_desc{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+}
+
+.payment_details div:nth-child(2) .total{
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+}
+
+.wrapper button{
+    padding: 0.7rem;
+    background-color: rgb(253, 179, 40);
+    border: none;
+    font-size: 1.1rem;
+    color: white;
+    cursor: pointer;
+}

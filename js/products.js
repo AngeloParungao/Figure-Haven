@@ -229,6 +229,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   if (confirm("Are you sure you want to add this item to the cart?")) {
     let product_name = product.name;
+    let product_anime = product.anime;
     let product_image = product.location;
     let product_price = product.price.replace(/[^0-9]/g, '');
     let userID = localStorage.getItem('userID') || '';
@@ -251,7 +252,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 
             }
         };
-        xhr.send("product_name=" + product_name + "&image=" + product_image + "&price=" + product_price + "&userID=" + userID + "&name=" + name + "&contact=" + contact + "&email=" + email + "&address=" + address + "&username=" + username + "&items=" + items_number + "&total=" + total_price + "&status=" + status);
+        xhr.send("product_name=" + product_name + "&product_anime=" + product_anime + "&image=" + product_image + "&price=" + product_price + "&userID=" + userID + "&name=" + name + "&contact=" + contact + "&email=" + email + "&address=" + address + "&username=" + username + "&items=" + items_number + "&shipping= 40"  + "&total=" + total_price + "&status=" + status);
       } else {
         // Action canceled
         console.log("Action canceled");
