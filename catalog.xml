@@ -27,6 +27,54 @@
     </anime>
 
     <anime>
+        <name>Black Clover</name>
+        <description>Set in a world where everyone is given the ability to use magic, the story 
+        follows Asta, a young boy born without any magic power who is given a rare grimoire that grants 
+        him anti-magic abilities. With his fellow mages from the Black Bulls, Asta plans to become the next Wizard King.</description>
+        <location>http://localhost/action-figure/catalog-image/black clover.png</location>
+    </anime>
+
+    <anime>
+        <name>Hunter x Hunter</name>
+        <description>The show centers around Gon Freecss, a 12-year-old boy who goes on an adventure 
+        to become a Hunter in hopes of finding his father. The Hunters Association holds an annual exam 
+        to determine if applicants are worthy of a Hunter's license which is for elite humans with extraordinary abilities.</description>
+        <location>http://localhost/action-figure/catalog-image/hunter x hunter.png</location>
+    </anime>
+
+    <anime>
+        <name>Kaguya-sama: Love is War</name>
+        <description>The proudly privileged top two students of an elite school each makes it their mission to be the
+         first to extract a confession of love from the other. Shuchiin Academy is home to students from Japan's most 
+         successful and wealthy families, as well the nation's most brilliant young scholars.</description>
+        <location>http://localhost/action-figure/catalog-image/love is war.png</location>
+    </anime>
+
+    <anime>
+        <name>My Hero Academia</name>
+        <description>A superhero-admiring boy enrolls in a prestigious hero academy and learns
+         what it really means to be a hero, after the strongest superhero grants him his own powers.</description>
+        <location>http://localhost/action-figure/catalog-image/my hero academia.png</location>
+    </anime>
+
+    <anime>
+        <name>My Dress-Up Darling</name>
+        <description>A loner boy and a flashy girl find common ground via cosplay in this sweet and 
+        spicy romcom! Wakana has cosplay to thank for many things, but as it turns out, he's not alone.
+         When he and Marin meet crossplayer Amane at an event, their new friend shares his story about finding himself through cosplay!</description>
+        <location>http://localhost/action-figure/catalog-image/my dress up darling.png</location>
+    </anime>
+
+    <anime>
+        <name>Chainsaw Man</name>
+        <description>Chainsaw Man follows the story of Denji, an impoverished teenager who makes a 
+        contract that fuses his body with that of a dog-like Devil named Pochita, granting him the ability 
+        to transform parts of his body into chainsaws.</description>
+        <location>http://localhost/action-figure/catalog-image/chainsaw man.png</location>
+    </anime>
+
+
+    <anime>
         <name>Naruto</name>
         <description>It tells the story of Naruto Uzumaki, a young ninja who seeks recognition 
         from his peers and dreams of becoming the Hokage, the leader of his village</description>
