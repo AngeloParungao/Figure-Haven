@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <figures>
     <figure>
         <name>Denji</name>
         <price>₱ 10000</price>
         <category>Resin</category>
         <anime>Chainsaw Man</anime>
-        <sales>400</sales>
+        <sales>405</sales>
         <location>http://localhost/action-figure/products-images/denji.jpg</location>
         <description>hi</description>
-        <stock>10</stock>
-    </figure>
+        <stock>5</stock>
+     </figure>
 
     <figure>
         <name>Luffy Gear 5</name>

@@ -1,5 +1,6 @@
 let checkout = document.getElementById("checkout");
 let number, cartId;
+let items, productName;
 
 const cart = getCartIdFromUrl();
 
@@ -35,6 +36,8 @@ function getProduct(id) {
                     document.getElementById("total").innerHTML = "₱ " + total;
                     number = product.contact_number;
                     cartId = product.cart_id;
+                    items = product.number_of_items;
+                    productName = product.product_name;
                 }
             });
         }
@@ -62,7 +65,7 @@ checkout.addEventListener("click", function(){
         const topPosition = (window.innerHeight - 550) / 2; // Assuming a height of 300 pixels for the popup window
 
         // Open the popup window with both vertical and horizontal centering
-        window.open("http://localhost/action-figure/components/online_payment.php?number=" + number + "&id=" + cartId , "Popup", "width=500,height=550,top=" + topPosition + ",left=" + leftPosition + ",menubar=no,toolbar=no,location=no,resizable=no,scrollbars=no,status=no");
+        window.open("http://localhost/action-figure/components/online_payment.php?number=" + number + "&id=" + cartId + "&product_name=" + productName + "&items=" + items, "Popup", "width=500,height=550,top=" + topPosition + ",left=" + leftPosition + ",menubar=no,toolbar=no,location=no,resizable=no,scrollbars=no,status=no");
     }
     else if(selectedMode === "cod"){
         let xhr = new XMLHttpRequest();
@@ -74,7 +77,7 @@ checkout.addEventListener("click", function(){
             }
         };
         xhr.open("PUT", "http://localhost/action-figure/backend/cart.php", true);
-        xhr.send("product_id=" + cartId + "&status=pending");
+        xhr.send("product_id=" + cartId + "&status=pending" + "&product_name=" + productName + "&items=" + items);
     }
     else{
         alert("Please choose a payment mode");

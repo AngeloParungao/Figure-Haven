@@ -265,7 +265,7 @@ document.getElementById("order").addEventListener("change", function() {
                 
             }
         };
-        xhr.send("product_name=" + product_name + "&product_anime=" + product_anime + "&image=" + product_image + "&price=" + product_price + "&userID=" + userID + "&name=" + name + "&contact=" + contact + "&email=" + email + "&address=" + address + "&username=" + username + "&items=" + items_number + "&shipping= 40"  + "&total=" + total_price + "&status=" + status);
+        xhr.send("cart=true" + "&product_name=" + product_name + "&product_anime=" + product_anime + "&image=" + product_image + "&price=" + product_price + "&userID=" + userID + "&name=" + name + "&contact=" + contact + "&email=" + email + "&address=" + address + "&username=" + username + "&items=" + items_number + "&shipping= 40"  + "&total=" + total_price + "&status=" + status);
       } else {
         // Action canceled
         console.log("Action canceled");
@@ -285,7 +285,7 @@ document.getElementById("order").addEventListener("change", function() {
         let username = localStorage.getItem('username') || '';
         let status = 'pending';
     
-        window.open("http://localhost/action-figure/pages/directCheckout.php?product_name=" + product_name + "&product_anime=" + product_anime + "&image=" + product_image + "&price=" + product_price + "&userID=" + userID + "&name=" + name + "&contact=" + contact + "&email=" + email + "&address=" + address + "&username=" + username + "&items=" + items_number + "&shipping= 40"  + "&total=" + total_price + "&status=" + status, '_self');
+        window.open("http://localhost/action-figure/pages/directCheckout.php?product_name=" + product_name + "&product_anime=" + product_anime + "&image=" + product_image + "&price=" + product_price + "&userID=" + userID + "&name=" + name + "&contact=" + contact + "&email=" + email + "&address=" + address + "&username=" + username + "&items=" + items_number + "&shipping= 40"  + "&total=" + total_price + "&status=" + status + "&cart=false", '_self');
     }
   }
 });

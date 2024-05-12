@@ -21,6 +21,22 @@ switch($method) {
         $total = $_POST['total'];
         $status = $_POST['status'];
 
+        if($_POST["cart"] == false){
+            $xml = simplexml_load_file('../figures.xml');
+    
+            // Find the product in the XML data and update its stock and sales
+            foreach ($xml->figure as $figure) {
+                if ($figure->name == $product_name) {
+                    $figure->stock = (int)$figure->stock - (int)$items;
+                    $figure->sales = (int)$figure->sales + (int)$items;
+                    break;
+                }
+            }
+    
+            // Save the updated XML content back to the file
+            $xml->asXML('../figures.xml');
+        }
+
         // Check connection
         if ($conn->connect_error) {
             die("Connection failed: " . $conn->connect_error);
@@ -55,6 +71,22 @@ switch($method) {
         parse_str(file_get_contents("php://input"), $_PUT);
         $productId = $_PUT['product_id'];
         $status = $_PUT['status'];
+        $product_name = $_PUT['product_name'];
+        $items = $_PUT['items'];
+
+        $xml = simplexml_load_file('../figures.xml');
+
+        // Find the product in the XML data and update its stock and sales
+        foreach ($xml->figure as $figure) {
+            if ($figure->name == $product_name) {
+                $figure->stock = (int)$figure->stock - (int)$items;
+                $figure->sales = (int)$figure->sales + (int)$items;
+                break;
+            }
+        }
+
+        // Save the updated XML content back to the file
+        $xml->asXML('../figures.xml');
 
         $sql = "UPDATE cart SET `status` = '$status'
                 WHERE cart_id = $productId";
