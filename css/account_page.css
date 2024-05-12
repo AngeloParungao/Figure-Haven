@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.account-user-wrapper{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding: 2rem 1rem 2rem 5rem;    
+    height: 100vh;
+    width: 100%;
+}
+
+.accounts{
+    width: 90%;
+    height: 100%;
+    padding: 0 2rem;
+}
+
+.accounts span{
+    font-size: 1.5rem;
+}
+
+.accounts .table{
+    padding: 2rem 1rem;
+}
+
+.table table{
+    width: 100%;
+}
+
+.table table, tr, th, td{
+    border: 0.1rem solid black;
+    border-collapse: collapse;
+    padding: 0.8rem 1rem;
+}
+
+.table tr{
+    font-size: 0.9rem;
+    text-align: center;
+}
+
