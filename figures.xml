@@ -118,7 +118,7 @@
         <category>Resin</category>
         <anime>Jujutsu kaisen</anime>
         <sales>700</sales>
-        <location>http://localhost/action-figure/products-images/Jujutsu Kaisen - Hero Collectible Studio Toji Fushiguro.jpg</location>
+        <location>http://localhost/action-figure/products-images/Toji Fushiguro.jpg</location>
         <description>hi</description>
         <stock>8</stock>
     </figure>
@@ -145,7 +145,7 @@
         <category>PVC</category>
         <anime>One Piece</anime>
         <sales>500</sales>
-        <location>http://localhost/action-figure/products-images/One Piece FiguartsZERO Extra Battle Marshall D. Teach 2.jpg</location>
+        <location>http://localhost/action-figure/products-images/Teach.jpg</location>
         <description>From the FiguartsZERO [Extra Battle] series comes Marshall D. Teach! The captain of the Blackbeard 
         Pirates and one of the New Four Emperors is recreated in an incredibly impressive three-dimensional form!</description>
         <stock>10</stock>
@@ -168,7 +168,7 @@
         <category>PVC</category>
         <anime>One Piece</anime>
         <sales>200</sales>
-        <location>http://localhost/action-figure/products-images/One Piece Portrait of Pirates Nami (Ver.BB_SP 20th Anniversary) Limited Edition.jpg</location>
+        <location>http://localhost/action-figure/products-images/One Piece Portrait of Pirates Nami.jpg</location>
         <description>2024 marks the 20th anniversary of the P.O.P One Piece figure series! To commemorate 
         the occasion MegaHouse is releasing an all new sculpt BB (Bathing Beauty) figure of the popular Straw Hat 
         Pirates navigator, Nami! This time around she has been sculpted wearing a bright blue bikini designed by crimin!
@@ -194,7 +194,7 @@
         <category>PVC</category>
         <anime>Quintessential Quintuplets</anime>
         <sales>250</sales>
-        <location>http://localhost/action-figure/products-images/The Quintessential Quintuplets Specials Trio-Try-iT Figure Nakano Nino Marine Look ver. front.jpg</location>
+        <location>http://localhost/action-figure/products-images/Nakano Nino Marine.jpg</location>
         <description>Be captivated by the stunning Nakano Nino Marine Look ver. figure from The Quintessential Quintuplets Specials Trio-Try-iT! With intricate details and a vibrant color palette, this figure perfectly captures Nino's charm. A must-have for any fan, this figure brings the beloved character to life and adds a touch of elegance to any collection.
         </description>
         <stock>15</stock>
@@ -206,7 +206,7 @@
         <category>PVC</category>
         <anime>One Piece</anime>
         <sales>500</sales>
-        <location>http://localhost/action-figure/products-images/One Piece World Figure Colosseum 3 Super Master Stars Monkey D. Luffy Gear 4 (Two Dimensions).jpg</location>
+        <location>http://localhost/action-figure/products-images/gear four.jpg</location>
         <description>Banpresto brings us the new One Piece World Figure Colosseum 3 Super Master Stars Monkey D. Luffy Gear 4 figure! This version of the character features a two-dimensional drawing look.
         </description>
         <stock>15</stock>

@@ -44,21 +44,40 @@ function getProduct(id) {
 }
 
 checkout.addEventListener("click", function(){
-    let mode = document.getElementsByName("payment");
-    for (i = 0; i < mode.length; i++) {
-        if (mode[i].checked && mode[i].value === "gcash"){
-            // Calculate the left position to center the window horizontally
-            const leftPosition = (window.innerWidth - 500) / 2; // Assuming a width of 400 pixels for the popup window
-            // Calculate the top position to center the window vertically
-            const topPosition = (window.innerHeight - 550) / 2; // Assuming a height of 300 pixels for the popup window
+    let modes = document.getElementsByName("payment");
+    let selectedMode = null;
 
-            // Open the popup window with both vertical and horizontal centering
-            window.open("http://localhost/action-figure/components/online_payment.php?number=" + number + "&id=" + cartId , "Popup", "width=500,height=550,top=" + topPosition + ",left=" + leftPosition + ",menubar=no,toolbar=no,location=no,resizable=no,scrollbars=no,status=no");
-
-
-        }
-        else if(mode[i].checked && mode[i].value === "cod"){
-                alert("cod");
+    // Loop through the NodeList to find the checked radio button
+    for (let i = 0; i < modes.length; i++) {
+        if (modes[i].checked) {
+            selectedMode = modes[i].value;
+            break;
         }
     }
+
+    if (selectedMode === "gcash"){
+        // Calculate the left position to center the window horizontally
+        const leftPosition = (window.innerWidth - 500) / 2; // Assuming a width of 400 pixels for the popup window
+        // Calculate the top position to center the window vertically
+        const topPosition = (window.innerHeight - 550) / 2; // Assuming a height of 300 pixels for the popup window
+
+        // Open the popup window with both vertical and horizontal centering
+        window.open("http://localhost/action-figure/components/online_payment.php?number=" + number + "&id=" + cartId , "Popup", "width=500,height=550,top=" + topPosition + ",left=" + leftPosition + ",menubar=no,toolbar=no,location=no,resizable=no,scrollbars=no,status=no");
+    }
+    else if(selectedMode === "cod"){
+        let xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+                console.log(xhr.responseText); // Log the response
+                // Reload the parent window
+                window.open("http://localhost/action-figure/pages/products.php?anime=all","_self");
+            }
+        };
+        xhr.open("PUT", "http://localhost/action-figure/backend/cart.php", true);
+        xhr.send("product_id=" + cartId + "&status=pending");
+    }
+    else{
+        alert("Please choose a payment mode");
+    }
 });
+
