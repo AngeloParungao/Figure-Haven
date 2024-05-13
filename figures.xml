@@ -318,4 +318,16 @@
         </description>
         <stock>15</stock>
     </figure>
+    <figure>
+        <name>FUMIKAGE TOKOYAMI</name>
+        <price>500</price>
+        <category>Funko Pop</category>
+        <anime>My Hero Academia</anime>
+        <sales>0</sales>
+        <location>http://localhost/action-figure/products-images/POP! FUMIKAGE TOKOYAMI.png</location>
+        <description>Tokoyami harnesses his super move Black Adyss for this exclusive Pop! figure. Add one 
+        of U.A. High School’s class 1-A students to your ranks of heroes-in-training. Think twice about leaving 
+        Tokoyami in the dark in your My Hero Academia collection. Vinyl figure is approximately 4.25-inches tall</description>
+        <stock>10</stock>
+    </figure>
 </figures>

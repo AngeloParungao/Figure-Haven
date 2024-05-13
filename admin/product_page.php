@@ -17,19 +17,22 @@
             <i class="fa-solid fa-magnifying-glass"></i>
             <input type="text" id="product-search" placeholder="Search by product">
         </div>
-      <div class="table">
-      <div id="dropdown">
-            <select id="category">
-                <option value="All">All</option>
-                <option value="Resin">Resin</option>
-                <option value="Funko Pop">Funko Pop</option>
-                <option value="PVC">PVC</option>
-            </select>
-            <select id="order">
-                <option value="descending">Descending</option>
-                <option value="ascending">Ascending</option>
-            </select>
+        <div class="buttons">
+          <div id="dropdown">
+                <select id="category">
+                    <option value="All">All</option>
+                    <option value="Resin">Resin</option>
+                    <option value="Funko Pop">Funko Pop</option>
+                    <option value="PVC">PVC</option>
+                </select>
+                <select id="order">
+                    <option value="descending">Descending</option>
+                    <option value="ascending">Ascending</option>
+                </select>
+            </div>
+          <button onclick="addProduct()">ADD</button>
         </div>
+      <div class="table">
         <table id="product-table">
           <tr>
             <th>Image</th>
@@ -45,5 +48,5 @@
     </div>
   </div>
   <script src="../js/product_page.js"></script>
+  </html>
 </body>
-</html>

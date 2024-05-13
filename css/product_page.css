@@ -13,6 +13,12 @@
     width: 100%;
 }
 
+.buttons{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
 .product{
     width: 90%;
     height: 100%;

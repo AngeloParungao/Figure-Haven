@@ -1,10 +1,6 @@
-
-// Array to store the product data
 let products = [];
 
-// Function to load products when the page loads
 function loadProducts() {
-    // Simulated data for demonstration
     let xml = new XMLHttpRequest();
   
   xml.onreadystatechange = function(){
@@ -58,6 +54,7 @@ function filterProducts() {
     displayProducts(filteredProducts);
 }
 
+
 // Function to display products in the table
 function displayProducts(products) {
     let table = document.getElementById("product-table");
@@ -84,3 +81,13 @@ function displayProducts(products) {
 document.getElementById("product-search").addEventListener("input", filterProducts);
 document.getElementById("category").addEventListener("change", filterProducts);
 document.getElementById("order").addEventListener("change", filterProducts);
+
+function addProduct(){
+    const leftPosition = (window.innerWidth - 500) / 2;
+    const topPosition = (window.innerHeight - 550) / 2;
+
+    const popup = window.open("http://localhost/action-figure/components/add_product.php", "Popup", "width=500,height=550,top=" + topPosition + ",left=" + leftPosition + ",menubar=no,toolbar=no,location=no,resizable=no,scrollbars=no,status=no");
+
+    // Focus on the popup window
+    popup.focus();
+}
