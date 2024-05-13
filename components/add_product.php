@@ -27,11 +27,11 @@
         let categorySelect = document.getElementById("category");
 
         let xhr = new XMLHttpRequest();
-        xhr.open("GET", "../figures.xml", true);
+        xhr.open("GET", "../Catalog.xml", true);
         xhr.onreadystatechange = function() {
             if (this.readyState === 4 && this.status === 200) {
                 let xmlDoc = xhr.responseXML;
-                let animeNodes = xmlDoc.getElementsByTagName("anime");
+                let animeNodes = xmlDoc.getElementsByTagName("name");
                 let animeSet = new Set();
                 for (let i = 0; i < animeNodes.length; i++) {
                     let animeName = animeNodes[i].textContent;

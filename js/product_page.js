@@ -73,6 +73,7 @@ function displayProducts(products) {
             <td>${product.category}</td>
             <td>${product.sales}</td>
             <td>${product.stock}</td>
+            <td><button id='delete' onclick= "deleteProduct('${product.name}')">delete</button></td>
         `;
     });
 }
@@ -91,3 +92,19 @@ function addProduct(){
     // Focus on the popup window
     popup.focus();
 }
+
+
+function deleteProduct(name){
+let xml = new XMLHttpRequest();
+  
+  xml.onreadystatechange = function(){
+      if(this.readyState == 4 && this.status == 200){
+          // Show alert
+          alert("Product deleted successfully.");
+          location.reload();
+      }
+  }
+  xml.open("DELETE","http://localhost/action-figure/backend/CRUDS_products.php?productName="+name,true);
+  xml.send();
+}
+
