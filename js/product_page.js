@@ -20,6 +20,7 @@ function loadProducts() {
                 sales: figure[i].getElementsByTagName("sales")[0].childNodes[0].nodeValue,
                 location : figure[i].getElementsByTagName("location")[0].childNodes[0].nodeValue,
                 stock : figure[i].getElementsByTagName("stock")[0].childNodes[0].nodeValue,
+                description : figure[i].getElementsByTagName("description")[0].childNodes[0].nodeValue,
               };
             products.push(detail);
           }
@@ -65,6 +66,7 @@ function displayProducts(products) {
     // Add each product to the table
     products.forEach(product => {
         let row = table.insertRow();
+        let description = product.description.replace(/'/g, "\\'").replace(/"/g, '\\"');
         row.innerHTML = `
             <td><img id="image" src="${product.location}" alt="Product Image"></td>
             <td>${product.name}</td>
@@ -73,6 +75,7 @@ function displayProducts(products) {
             <td>${product.category}</td>
             <td>${product.sales}</td>
             <td>${product.stock}</td>
+            <td><button id='update' onclick="updateProduct('${product.name}', '${product.anime}', '${product.location}', '${product.price}', '${product.category}', '${product.stock}', '${description}')">update</button></td>
             <td><button id='delete' onclick= "deleteProduct('${product.name}')">delete</button></td>
         `;
     });
@@ -100,11 +103,23 @@ let xml = new XMLHttpRequest();
   xml.onreadystatechange = function(){
       if(this.readyState == 4 && this.status == 200){
           // Show alert
-          alert("Product deleted successfully.");
           location.reload();
+          alert("Product deleted successfully.");
       }
   }
   xml.open("DELETE","http://localhost/action-figure/backend/CRUDS_products.php?productName="+name,true);
   xml.send();
+}
+
+function updateProduct(name, anime, location, price, category, stock, description) {
+    const leftPosition = (window.innerWidth - 500) / 2;
+    const topPosition = (window.innerHeight - 550) / 2; 
+
+    description = description.replace(/'/g, "\\'").replace(/"/g, '\\"');
+
+
+    console.log(description);
+    
+    window.open("http://localhost/action-figure/components/update_product.php?product_name=" + name + "&description=" + description +"&product_anime=" + anime + "&image=" + location + "&price=" + price + "&category=" + category + "&stock=" + stock, "Popup", "width=500,height=550,top=" + topPosition + ",left=" + leftPosition + ",menubar=no,toolbar=no,location=no,resizable=no,scrollbars=no,status=no");
 }
 

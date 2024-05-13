@@ -88,17 +88,7 @@
         <stock>15</stock>
     </figure>
 
-    <figure>
-        <name>Uzui Tengen</name>
-        <price>₱ 60000</price>
-        <category>Resin</category>
-        <anime>Demon Slayer</anime>
-        <description>hi</description>
-        <sales>1000</sales>
-        <location>http://localhost/action-figure/products-images/Uzui tengen.jpg</location>
-        <description>hi</description>
-        <stock>5</stock>
-    </figure>
+    
 
     <figure>
         <name>Yuji Itadori</name>
@@ -129,12 +119,7 @@
         <anime>Demon Slayer</anime>
         <sales>700</sales>
         <location>http://localhost/action-figure/products-images/nezuko.jpg</location>
-        <description>Step into the realm of unparalleled craftsmanship with Infinity Studios' magnificent creation, crafted from a fusion 
-        of Resin, PU, Polystone, and enhanced with LED illumination. In an impressive 1/4 scale, this masterpiece stands majestically at 
-        an estimated H60 * D58 * L45cm, commanding attention with its sheer presence.Limited to a mere 199 pieces worldwide, each meticulously
-         crafted to perfection, this masterpiece promises to be a prized possession for the discerning collector. Set to embark on its journey 
-         in Q1 (March) 2025, secure your opportunity to own a piece of artistry that transcends boundaries and captivates the senses with Infinity 
-         Studios' unparalleled creation.</description>
+        <description>Step into the realm of unparalleled craftsmanship with Infinity Studios magnificent creation, crafted from a fusion of Resin, PU, Polystone, and enhanced with LED illumination. In an impressive 1/4 scale, this masterpiece stands majestically at an estimated H60 * D58 * L45cm, commanding attention with its sheer presence.Limited to a mere 199 pieces worldwide, each meticulouslycrafted to perfection, this masterpiece promises to be a prized possession for the discerning collector. Set to embark on its journey in Q1 (March) 2025, secure your opportunity to own a piece of artistry that transcends boundaries and captivates the senses with Infinity Studios unparalleled creation.</description>
         <stock>20</stock>
     </figure>
 
@@ -142,11 +127,10 @@
         <name>Marshall D. Teach</name>
         <price>₱ 9184</price>
         <category>PVC</category>
-        <anime>One Piece</anime>
+        <anime>One Piece</anime>    
         <sales>500</sales>
         <location>http://localhost/action-figure/products-images/Teach.jpg</location>
-        <description>From the FiguartsZERO [Extra Battle] series comes Marshall D. Teach! The captain of the Blackbeard 
-        Pirates and one of the New Four Emperors is recreated in an incredibly impressive three-dimensional form!</description>
+        <description>From the FiguartsZERO [Extra Battle] series comes Marshall D. Teach! The captain of the Blackbeard Pirates and one of the New Four Emperors is recreated in an incredibly impressive three-dimensional form!</description>
         <stock>10</stock>
     </figure>
 
@@ -157,7 +141,7 @@
         <anime>My Dress-Up Darling</anime>
         <sales>200</sales>
         <location>http://localhost/action-figure/products-images/My Dress-Up Darling.jpg</location>
-        <description>From the hit anime series “My Dress Up Darling” comes Marine Kitagawa </description>
+        <description>From the hit anime series 'My Dress Up Darling' comes Marine Kitagawa </description>
         <stock>10</stock>
     </figure>
 
@@ -168,10 +152,7 @@
         <anime>One Piece</anime>
         <sales>200</sales>
         <location>http://localhost/action-figure/products-images/One Piece Portrait of Pirates Nami.jpg</location>
-        <description>2024 marks the 20th anniversary of the P.O.P One Piece figure series! To commemorate 
-        the occasion MegaHouse is releasing an all new sculpt BB (Bathing Beauty) figure of the popular Straw Hat 
-        Pirates navigator, Nami! This time around she has been sculpted wearing a bright blue bikini designed by crimin!
-        </description>
+        <description>2024 marks the 20th anniversary of the P.O.P One Piece figure series! To commemorate the occasion MegaHouse is releasing an all new sculpt BB (Bathing Beauty) figure of the popular Straw Hat Pirates navigator, Nami! This time around she has been sculpted wearing a bright blue bikini designed by crimin!</description>
         <stock>15</stock>
     </figure>
 
@@ -182,8 +163,7 @@
         <anime>Kaguya-sama: Love is War</anime>
         <sales>400</sales>
         <location>http://localhost/action-figure/products-images/Pop Up Parade Chika Fujiwara.jpg</location>
-        <description>From the anime series "Kaguya-sama: Love is War?" comes a POP UP PARADE figure of the student council secretary of Shuchiin Academy, Chika Fujiwara! Kaguya has been captured in figure form in a lively pose.
-        </description>
+        <description>From the anime series 'Kaguya-sama: Love is War?' comes a POP UP PARADE figure of the student council secretary of Shuchiin Academy, Chika Fujiwara! Kaguya has been captured in figure form in a lively pose.</description>
         <stock>15</stock>
     </figure>
 
@@ -194,8 +174,7 @@
         <anime>Quintessential Quintuplets</anime>
         <sales>250</sales>
         <location>http://localhost/action-figure/products-images/Nakano Nino Marine.jpg</location>
-        <description>Be captivated by the stunning Nakano Nino Marine Look ver. figure from The Quintessential Quintuplets Specials Trio-Try-iT! With intricate details and a vibrant color palette, this figure perfectly captures Nino's charm. A must-have for any fan, this figure brings the beloved character to life and adds a touch of elegance to any collection.
-        </description>
+        <description>Be captivated by the stunning Nakano Nino Marine Look ver. figure from The Quintessential Quintuplets Specials Trio-Try-iT! With intricate details and a vibrant color palette, this figure perfectly captures Nino's charm. A must-have for any fan, this figure brings the beloved character to life and adds a touch of elegance to any collection.</description>
         <stock>15</stock>
     </figure>
 
@@ -206,8 +185,7 @@
         <anime>One Piece</anime>
         <sales>500</sales>
         <location>http://localhost/action-figure/products-images/gear four.jpg</location>
-        <description>Banpresto brings us the new One Piece World Figure Colosseum 3 Super Master Stars Monkey D. Luffy Gear 4 figure! This version of the character features a two-dimensional drawing look.
-        </description>
+        <description>Banpresto brings us the new One Piece World Figure Colosseum 3 Super Master Stars Monkey D. Luffy Gear 4 figure! This version of the character features a two-dimensional drawing look.</description>
         <stock>15</stock>
     </figure>
 
@@ -218,8 +196,7 @@
         <anime>My Hero Academia</anime>
         <sales>100</sales>
         <location>http://localhost/action-figure/products-images/POP! DABI WITH FLAMES BOX.png</location>
-        <description>The elder brother of Shoto Todoroki, Toya Todoroki, has joined the League of Villains as a means of achieving vengeance against their father, Pro Hero Endeavor. As Dabi, Toya Todoroki has risen to become a powerful, flame-wielding villain, aiding the League of Villains in their plans to eliminate the top-ranking Pro Hero, All Might. This plan extends to attacking U.A. High School in attempt to end the 
-        </description>
+        <description>The elder brother of Shoto Todoroki, Toya Todoroki, has joined the League of Villains as a means of achieving vengeance against their father, Pro Hero Endeavor. As Dabi, Toya Todoroki has risen to become a powerful, flame-wielding villain, aiding the League of Villains in their plans to eliminate the top-ranking Pro Hero, All Might. This plan extends to attacking U.A. High School in attempt to end the </description>
         <stock>15</stock>
     </figure>
 
@@ -230,8 +207,7 @@
         <anime>Black Clover</anime>
         <sales>650</sales>
         <location>http://localhost/action-figure/products-images/POP! BLACK ASTA (GLOW).png</location>
-        <description>In his quest to become the next Wizard King, Pop! Asta has harnessed demonic power! Wield your magic alongside this Royal Knight of the Clover Kingdoms Black Bulls when you welcome this exclusive, glow-in-the-dark Pop! Black Asta into your into your Black Clover collection! Vinyl figure is approximately 4.55-inches tall.
-        </description>
+        <description>In his quest to become the next Wizard King, Pop! Asta has harnessed demonic power! Wield your magic alongside this Royal Knight of the Clover Kingdoms Black Bulls when you welcome this exclusive, glow-in-the-dark Pop! Black Asta into your into your Black Clover collection! Vinyl figure is approximately 4.55-inches tall.</description>
         <stock>15</stock>
     </figure>
 
@@ -242,8 +218,7 @@
         <anime>My Hero Academia</anime>
         <sales>150</sales>
         <location>http://localhost/action-figure/products-images/POP! FATGUM (SLIM FORM) box.png</location>
-        <description>Heat up your My Hero Academia collection with Pop! Fatgum (Skinny Form). Pop! Fatgum looks ready to use his strength to fight to the finish. Fatgum is the Pro Hero name of Taishiro Toyomitsu. Add Pop! Fatgum to help the heroes-in-training in your My Hero Academia collection. Vinyl figure is approximately 4.89-inches tall.
-        </description>
+        <description>Heat up your My Hero Academia collection with Pop! Fatgum (Skinny Form). Pop! Fatgum looks ready to use his strength to fight to the finish. Fatgum is the Pro Hero name of Taishiro Toyomitsu. Add Pop! Fatgum to help the heroes-in-training in your My Hero Academia collection. Vinyl figure is approximately 4.89-inches tall.</description>
         <stock>15</stock>
     </figure>
 
@@ -254,8 +229,7 @@
         <anime>Black Clover</anime>
         <sales>670</sales>
         <location>http://localhost/action-figure/products-images/POP! YUNO WITH SPIRIT OF ZEPHYR (GLOW) box.png</location>
-        <description>Arriving from the outskirts of the Clover Kingdom is Pop! Yuno. This exclusive, glow-in-the-dark Pop! Yuno has summoned Wind Magic to create the Spirit of Zephyr sword. Save your magic and jump on the chance to complete your Black Clover collection with Pop! Yuno with Spirit of Zephyr! Vinyl figure is approximately 4.8-inches tall.
-        </description>
+        <description>Arriving from the outskirts of the Clover Kingdom is Pop! Yuno. This exclusive, glow-in-the-dark Pop! Yuno has summoned Wind Magic to create the Spirit of Zephyr sword. Save your magic and jump on the chance to complete your Black Clover collection with Pop! Yuno with Spirit of Zephyr! Vinyl figure is approximately 4.8-inches tall.</description>
         <stock>15</stock>
     </figure>
 
@@ -266,8 +240,7 @@
         <anime>Black Clover</anime>
         <sales>300</sales>
         <location>http://localhost/action-figure/products-images/POP! YAMI no box.png</location>
-        <description>Arriving from the outskirts of the Clover Kingdom is Pop! Yami. Strengthen your team with one of the most powerful Magic Knights, the Captain of the Black Bulls! Save your magic and jump on the chance to complete your Black Clover collection with Pop! Yami! Vinyl figure is approximately 4.8-inches tall.
-        </description>
+        <description>Arriving from the outskirts of the Clover Kingdom is Pop! Yami. Strengthen your team with one of the most powerful Magic Knights, the Captain of the Black Bulls! Save your magic and jump on the chance to complete your Black Clover collection with Pop! Yami! Vinyl figure is approximately 4.8-inches tall.</description>
         <stock>15</stock>
     </figure>
 
@@ -278,8 +251,7 @@
         <anime>Hunter x Hunter</anime>
         <sales>900</sales>
         <location>http://localhost/action-figure/products-images/POP! GON FREECSS (FISHING) box.png</location>
-        <description>Embark on a journey with Pop! Gon Freecss as he searches for his father, Ging, and strives to become a skilled Hunter! Complete your Hunter X Hunter set by reeling in this exclusive, fishing Pop! Gon Freecss to your collection. Vinyl figure is approximately 4.35-inches tall
-        </description>
+        <description>Embark on a journey with Pop! Gon Freecss as he searches for his father, Ging, and strives to become a skilled Hunter! Complete your Hunter X Hunter set by reeling in this exclusive, fishing Pop! Gon Freecss to your collection. Vinyl figure is approximately 4.35-inches tall</description>
         <stock>15</stock>
     </figure>
 
@@ -290,8 +262,7 @@
         <anime>Hunter x Hunter</anime>
         <sales>1000</sales>
         <location>http://localhost/action-figure/products-images/POP! KILLUA ZOLDYCK WITH YO-YO box.png</location>
-        <description>Killua runs away from his family to become a hunter instead of following the family tradition of becoming an assassin. Assemble your Hunter X Hunter collection with the exclusive Pop! Killua Zoldyck with yo-yo. Vinyl figure is approximately 3.75-inches tall.
-        </description>
+        <description>Killua runs away from his family to become a hunter instead of following the family tradition of becoming an assassin. Assemble your Hunter X Hunter collection with the exclusive Pop! Killua Zoldyck with yo-yo. Vinyl figure is approximately 3.75-inches tall.</description>
         <stock>15</stock>
     </figure>
 
@@ -302,8 +273,7 @@
         <anime>Hunter x Hunter</anime>
         <sales>100</sales>
         <location>http://localhost/action-figure/products-images/POP! SHIZUKU WITH BLINKY.png</location>
-        <description>Assemble the Phantom Troupe with Pop! Shizuku with Blinky! This 8th member of the troupe will make for a powerful asset in your Hunter X Hunter collection. Vinyl figure is approximately 3.65-inches tall.
-        </description>
+        <description>Assemble the Phantom Troupe with Pop! Shizuku with Blinky! This 8th member of the troupe will make for a powerful asset in your Hunter X Hunter collection. Vinyl figure is approximately 3.65-inches tall.</description>
         <stock>15</stock>
     </figure>
 
@@ -314,9 +284,8 @@
         <anime>Black Clover</anime>
         <sales>510</sales>
         <location>http://localhost/action-figure/products-images/POP! NOELLE WITH VALKYRIE ARMOR (DIAMOND) box.png</location>
-        <description>Arriving from the heart of the Clover Kingdom is Pop! Noelle. This exclusive, Diamond Collection Pop! Noelle has summoned Water Creation Magic, creating her own suit of Valkyrie Armor! Save your magic and jump on the chance to complete your Black Clover collection with Pop! Noelle with Valkyrie Armor! Vinyl figure is approximately 5.05-inches tall.
-        </description>
+        <description>Arriving from the heart of the Clover Kingdom is Pop! Noelle. This exclusive, Diamond Collection Pop! Noelle has summoned Water Creation Magic, creating her own suit of Valkyrie Armor! Save your magic and jump on the chance to complete your Black Clover collection with Pop! Noelle with Valkyrie Armor! Vinyl figure is approximately 5.05-inches tall.</description>
         <stock>15</stock>
     </figure>
     
-</figures>
+<figure><name>FUMIKAGE TOKOYAMI</name><price>₱ 600</price><category>Funko Pop</category><anime>My Hero Academia</anime><sales>0</sales><location>../products-images/POP! FUMIKAGE TOKOYAMI.png</location><description>Tokoyami harnesses his super move Black Adyss for this exclusive Pop! figure. Add one of U.A. High School’s class 1-A students to your ranks of heroes-in-training. Think twice about leaving Tokoyami in the dark in your My Hero Academia collection. Vinyl figure is approximately 4.25-inches tall</description><stock>20</stock></figure></figures>

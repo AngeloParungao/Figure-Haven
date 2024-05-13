@@ -24,7 +24,6 @@
     </form>
     <script>
         let animeSelect = document.getElementById("anime");
-        let categorySelect = document.getElementById("category");
 
         let xhr = new XMLHttpRequest();
         xhr.open("GET", "../Catalog.xml", true);

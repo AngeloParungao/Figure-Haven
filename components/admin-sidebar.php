@@ -25,6 +25,12 @@
             </a>
           </div>
           <div class="dashboard-button">
+            <a href="product_page.php">
+              <i class="fas fa-shopping-cart"></i>
+              <span>Orders</span>
+            </a>
+          </div>
+          <div class="dashboard-button">
             <a href="sales_page.php">
               <i class="fas fa-chart-line"></i>
               <span>Sales</span>
