@@ -25,7 +25,7 @@
             </a>
           </div>
           <div class="dashboard-button">
-            <a href="product_page.php">
+            <a href="orders_page.php">
               <i class="fas fa-shopping-cart"></i>
               <span>Orders</span>
             </a>
