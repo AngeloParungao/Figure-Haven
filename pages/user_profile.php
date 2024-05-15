@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/user_profile.css">
     <link rel="icon" href="../images/logo.png" type="image/png">
-    <title>profile</title>
+    <title>Profile</title>
 </head>
 <body>
 <?php include '../components/navbar.php'?>
@@ -19,7 +19,7 @@
                         <div class="details">
                             <div class="detail">
                                 <span class="label">Name</span>
-                                <input type=text" id="name" />
+                                <input type="text" id="name" />
                             </div>
                             <div class="detail">
                                 <span class="label">Username</span>
