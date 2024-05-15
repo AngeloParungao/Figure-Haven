@@ -73,7 +73,7 @@ function displayOrders(orders) {
             <td>${order.number_of_items}</td>
             <td>${order.total}</td>
             <td><button onclick="getUsers('${order.image}','${order.product_name}','${order.price}','${order.anime}')">Orders</button></td>
-            <td><button>Out for Delivery</button></td>
+            <td><button onclick="updateStatus('${order.product_name}')">Out for Delivery</button></td>
         `;
     });
 }
@@ -85,6 +85,22 @@ document.getElementById("order").addEventListener("change", filterOrders);
 // Load orders when the page loads
 window.onload = loadOrders;
 
-function getUsers(image,product_name,price,anime) {
+function getUsers(image, product_name, price, anime) {
     window.open("http://localhost/action-figure/admin/user_orders_page.php?image=" + image + "&product_name=" + product_name + "&product_price=" + price + "&product_anime=" + anime, "_self");
+}
+
+function updateStatus(product_name) {
+    // Ask for confirmation before updating status
+    if (confirm("Are you sure you want to mark this order as Out for Delivery?")) {
+        let xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                // Reload the orders to reflect the changes
+                loadOrders();
+            }
+        };
+        xhr.open("POST", "../backend/update_status.php", true); // Endpoint for updating status
+        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        xhr.send("product_name=" + encodeURIComponent(product_name) + "&status=delivered");
+    }
 }

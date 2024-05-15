@@ -5,6 +5,7 @@ $method = $_SERVER["REQUEST_METHOD"];
 
 switch($method) {
     case "POST":
+        $profile = "http://localhost/action-figure/user-profile/default.png";
         $fullname = $_POST['fullname'];
         $address = $_POST['address'];
         $email = $_POST['email'];
@@ -13,17 +14,11 @@ switch($method) {
         $password = $_POST['password'];
         $account_type = "user";
 
-        $sql = "INSERT INTO users (user_fullname, address, email, contact_number, username, password, account_type) VALUES (?, ?, ?, ?, ?, ?, ?)";
+        $sql = "INSERT INTO users (profile, user_fullname, address, email, contact_number, username, password, account_type) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
         $stmt = $conn->prepare($sql);
-        $stmt->bind_param("sssssss", $fullname, $address, $email, $contact, $username, $password, $account_type);
+        $stmt->bind_param("ssssssss", $profile, $fullname, $address, $email, $contact, $username, $password, $account_type);
 
-        if ($stmt->execute()) {
-            echo json_encode(["message" => "success"]);
-        } else {
-            echo json_encode(["error" => $conn->error]);
-        }
-
-        break;
+        $stmt->execute();
     case "GET":
         $sql = "SELECT * FROM users";
         $result = $conn->query($sql);

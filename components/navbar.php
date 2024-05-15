@@ -37,14 +37,11 @@
                     <span>
                         <a id="logged-out" class="link" href="http://localhost/action-figure/pages/login.php">Login</a>
                     </span>
-                    <span id="logged-in"> 
-                        <a href=""></a>
-                    </span>
-                    <i class="fa-solid fa-user"></i>
-                    <div id="profile-links">
+                    <div id="logged-in"> 
                         <div>
-                            <button>Profile</button>
-                            <button onclick="logout()">Logout</button>
+                            <a href="http://localhost/action-figure/pages/user_profile.php" id="user"></a>
+                            <img src="" id="profile" alt="">
+                            <button id="logout" onclick="logout()">Logout</button>
                         </div>
                     </div>
                 </div>
@@ -152,6 +149,7 @@
 
     //Set userID in the navbar
     let userID = localStorage.getItem('userID') || '';
+    let profile = localStorage.getItem('profile') || '';
     let username = localStorage.getItem('username') || '';
     let login = localStorage.getItem('login');
     let added = localStorage.getItem('addedUser');
@@ -160,7 +158,8 @@
     if(userID !== ''){
         document.getElementById('logged-in').style.display = 'block';
         document.getElementById('logged-out').style.display = 'none';
-        document.getElementById('logged-in').innerHTML = username;
+        document.getElementById('profile').src = profile;
+        document.getElementById('user').innerHTML = username;
     }
     else{
         document.getElementById('logged-in').style.display = 'none';
@@ -197,8 +196,8 @@
             document.querySelector("#logo > h5").classList.add("font-change");
             document.querySelector(".links > div > i").style.color = "black";
             document.querySelector("#logged-out").style.color = "black";
-            document.querySelector("#logged-in").style.color = "black";
-            document.querySelector("#nav-profile > i").style.color = "black";
+            document.querySelector("#user").style.color = "black";
+            document.querySelector("#logout").style.color = "black";
         } else {
             document.querySelector(".navbar").classList.remove("scrolled");
             document.querySelectorAll(".links > #anchors > .link").forEach(function(item) {
@@ -208,8 +207,8 @@
             document.querySelector("#logo > h5").classList.remove("font-change");
             document.querySelector(".links > div > i").style.color = "white";
             document.querySelector("#logged-out").style.color = "white";
-            document.querySelector("#logged-in").style.color = "white";
-            document.querySelector("#nav-profile > i").style.color = "white";
+            document.querySelector("#user").style.color = "white";
+            document.querySelector("#logout").style.color = "white";
         }
     };
 

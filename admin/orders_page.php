@@ -14,15 +14,15 @@
     <div class="product">
       <span>Orders</span>
       <div id="search-bar">
-            <i class="fa-solid fa-magnifying-glass"></i>
-            <input type="text" id="product-search" placeholder="Search by product">
-        </div>
-        <div id="dropdown">
-            <select id="order">
-                <option value="descending">Descending</option>
-                <option value="ascending">Ascending</option>
-            </select>
-        </div>
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" id="product-search" placeholder="Search by product">
+      </div>
+      <div id="dropdown">
+        <select id="order">
+          <option value="descending">Descending</option>
+          <option value="ascending">Ascending</option>
+        </select>
+      </div>
       <div class="table">
         <table id="order-table">
           <tr>
@@ -38,5 +38,5 @@
     </div>
   </div>
   <script src="../js/order_page.js"></script>
-  </html>
 </body>
+</html>

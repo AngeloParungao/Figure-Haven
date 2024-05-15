@@ -22,7 +22,7 @@ function getUsers() {
 
 // Function to display user data in the table
 function displayUser(users) {
-    let table = document.querySelector(".table table");
+    let table = document.querySelector(".table table"); 
     // Clear existing table rows
     table.innerHTML = "<tr><th>Username</th><th>Full name</th><th>Address</th><th>Email</th><th>Contact</th><th>Orders</th></tr>";
     

@@ -30,18 +30,18 @@ function fetchUsers() {
   }
   else{
     let xhr = new XMLHttpRequest();
-    xhr.open("GET", "../backend/index.php", true);
     xhr.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
+      if (this.readyState == 4 && this.status == 200) {
             let users = JSON.parse(xhr.responseText);
             let found = false;
             // Loop through the users array to check for matching credentials
             for (let i = 0; i < users.length; i++) {
               let user = users[i];
-              if (user.username === username && user.password === password) {
+              if (user.username == username && user.password == password) {
                   found = true;
                   userID = user.id;
                   localStorage.setItem('userID', userID);
+                  localStorage.setItem('profile', user.profile);
                   localStorage.setItem('name', user.user_fullname);
                   localStorage.setItem('contact', user.contact_number);
                   localStorage.setItem('email', user.email);
@@ -50,20 +50,21 @@ function fetchUsers() {
                   localStorage.setItem("login", 'true');
                   window.open("http://localhost/action-figure/index.php", "_self");
                   break;
+                }
+                else{
+                  found = false;
+                }
               }
-              else{
-                found = false;
-              }
-          }
-
-            if (!found) {
+              
+              if (!found) {
                 // Credentials are invalid
                 createToast("warning", "fa-solid fa-triangle-exclamation", "Warning", "Invalid username or password.");
+              }
             }
-        }
-    };
-    xhr.send();
-  } 
+          };
+          xhr.open("GET", "../backend/index.php", true);
+          xhr.send();
+        } 
 }
 
 

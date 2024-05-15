@@ -194,7 +194,7 @@
 
 .navbar .bar .links{
     display: flex;
-    gap: 5rem;
+    gap: 4rem;
 }
 
 .navbar .bar .links div i{
@@ -239,46 +239,30 @@
     text-decoration: none;
 }
 
-#profile-links {
-    position: absolute;
-    display: none;
-    margin-left: -4rem;
-    margin-top: 7rem;
-    transition: 0.5s ease-in-out;
-}
 
-#profile-links div{
+#logged-in div{
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
     gap: 0.5rem;
-    padding: 0.5rem;
-    border-radius: 0.5rem;
-    background-color: gainsboro;
 }
 
-
-#profile-links::before {
-    content: '';
-    position: absolute;
-    height: 0.7rem;
-    width: 0.7rem;
-    background-color: gainsboro;
-    top: -0.2rem;
-    right: 0.5rem;
-    transform: rotate(45deg);
+#logged-in div a{
+    font-size: 1rem;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
 }
 
-#profile-links button {
-    font-size: 0.9rem;
-    height: 2rem;
-    width: 6rem;
+#profile{
+    width: 1.5rem;
+    margin-right: 0.6rem;
+}
+
+#logout{
     background-color: transparent;
     border: none;
+    color: white;
+    font-size: 0.9rem;
+    cursor: pointer;
 }
-
-#nav-profile:hover #profile-links {
-    display: block;
-}
-
