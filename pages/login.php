@@ -37,7 +37,7 @@
                         <input type="text" name="username" placeholder="Username" required>
                         <input type="password" name="password" placeholder="Password" required>
                         <input type="password" name="confirm_password" placeholder="Confirm Password" required>
-                        <button onclick="addUser()">REGISTER</button>
+                        <button onclick="addUser(event)">REGISTER</button>
                     </form>
                     <button id="login_account">Already have an account</button>
                 </div>

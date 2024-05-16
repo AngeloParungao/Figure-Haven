@@ -100,7 +100,6 @@ function updateUser(profilePicture) {
 
   xhr.onreadystatechange = function () {
     if (xhr.readyState == 4) {
-        console.log("Response from server:", xhr.responseText); // Log the response
         if (xhr.status == 200) {
             
                 // Update localStorage with the new data if needed
@@ -120,5 +119,66 @@ function updateUser(profilePicture) {
 
 
   xhr.send(updateData);
+}
+
+function getOrders(){
+    let user_id = localStorage.getItem("userID");
+    let dom = document.getElementById("orders");
+    let xhr = new XMLHttpRequest();
+    xhr.open("GET", "../backend/cart.php", true);
+  
+    xhr.onreadystatechange = function () {
+      if (xhr.readyState == 4) {
+            if (xhr.status == 200) {
+                let myOrders = JSON.parse(xhr.responseText);
+                
+                for(let i = 0; i < 2; i++){
+                    if (myOrders[i].user_id == user_id && myOrders[i].status == "cart") {
+                        let div = document.createElement("div");
+                        div.classList.add("order-content");
+                        let image_div = document.createElement("div");
+                        let details_left = document.createElement("div");
+                        details_left.classList.add("left");
+                        let details_right = document.createElement("div");
+                        details_right.classList.add("right");
+                        let image = document.createElement("img");
+                        let product_name = document.createElement("span");
+                        let product_price = document.createElement("span");
+                        let items = document.createElement("span");
+                        let anime = document.createElement("span");
+                        let total = document.createElement("span");
+                        let status = document.createElement("span");
+
+
+                       image.src = myOrders[i].image;
+                       product_name.textContent = myOrders[i].product_name;
+                       product_price.textContent = "Price : " + myOrders[i].price;
+                       items.textContent = "Items : " + myOrders[i].number_of_items;
+                       anime.textContent = myOrders[i].anime;
+                       total.textContent = "Total : " + myOrders[i].total;
+                       status.textContent = "Status : " + myOrders[i].status;
+
+                        image_div.appendChild(image);
+                        details_left.appendChild(product_name);
+                        details_left.appendChild(product_price);
+                        details_left.appendChild(items);
+                        details_right.appendChild(anime);
+                        details_right.appendChild(total);
+                        details_right.appendChild(status);
+
+                        div.appendChild(image_div);
+                        div.appendChild(details_left);
+                        div.appendChild(details_right);
+
+                        dom.appendChild(div);
+                    }
+                }
+             
+            } else {
+                console.error("Error occurred while processing the request. HTTP status:", xhr.status);
+            }
+        }
+    }
+    xhr.send();
 }
   

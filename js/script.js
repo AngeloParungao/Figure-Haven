@@ -1,21 +1,30 @@
 
 //---------REGISTER---------//
-function addUser() {
+function addUser(event) {
+  event.preventDefault();
+
   let form = document.getElementById("registerForm");
   let formData = new FormData(form);
 
-  let xhr = new XMLHttpRequest();
-  xhr.open("POST", "../backend/index.php", true);
+  let password = formData.get('password');
+  let confirmPassword = formData.get('confirm_password');
 
-  xhr.onreadystatechange = function() {
+  if (password != confirmPassword) {
+    createToast("error", "fa-solid fa-xmark", "Error", "Passwords do not match.");
+  } else {
+    let xhr = new XMLHttpRequest();
+    xhr.open("POST", "../backend/index.php", true);
+
+    xhr.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
-          console.log("User added successfully");
-          localStorage.setItem("addedUser" , 'true');
+        console.log("User added successfully");
+        localStorage.setItem("addedUser", 'true');
+        window.location.reload();
       }
-  };
-  xhr.send(formData);
+    };
+    xhr.send(formData);
+  }
 }
-  
 
 
 //--------LOGIN---------//

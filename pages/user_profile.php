@@ -7,7 +7,7 @@
     <link rel="icon" href="../images/logo.png" type="image/png">
     <title>Profile</title>
 </head>
-<body>
+<body onload="getOrders()">
 <?php include '../components/navbar.php'?>
 <div class="content">
         <!-- Account -->
@@ -48,9 +48,17 @@
                 </div>
             </div>
         </div>
+        <div class="my-orders-container">
+            <div class="my-orders">
+                <div class="my-orders-title">
+                    <h2>My Orders</h2>
+                </div>
+                <div id="orders">
+    
+                </div>
+            </div>
+        </div>
     </div>
-    </div>
-
     <?php include '../components/footer.php'?>
 
     <script src="../js/user_profile.js"></script>
