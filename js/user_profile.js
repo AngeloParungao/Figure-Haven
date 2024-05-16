@@ -77,7 +77,7 @@ function updateUser(profilePicture) {
 
   if (file) {
       // If a file is selected, concatenate the directory path with the filename
-      profilePicture = "../user-profile/" + file.name;
+      profilePicture = "http://localhost/action-figure/user-profile/" + file.name;
   } else {
       // If no file is selected, use the existing profile picture
       profilePicture = profile_picture;

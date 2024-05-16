@@ -29,6 +29,10 @@
                     <i class="fa-solid fa-cart-shopping"></i>
                 </div>
                 <div class="cart-container">
+                    <div id="cart-header">
+                        <h4>Cart</h4>
+                        <i class='fa-solid fa-xmark' id="exit-cart" onclick="exit()"></i>
+                    </div>
                     <div id="cart-content">
                         <!-- Your cart items or content here -->
                     </div>
@@ -69,9 +73,9 @@
                         
                         // Create elements for the cart item
                         let div = document.createElement("div");
-                        div.classList.add("content");
+                        div.classList.add("cart-content");
                         let details = document.createElement("div")
-                        details.classList.add("details");
+                        details.classList.add("cart-details");
                         let buttons = document.createElement("div");
                         buttons.classList.add("buttons")
                         let image = document.createElement("img");
@@ -244,6 +248,11 @@
     function logout(){
         localStorage.clear();
         window.open("http://localhost/action-figure/pages/login.php", "_self");
+    }
+
+    function exit(){
+        var cartContainer = document.querySelector(".cart-container");
+        cartContainer.classList.toggle("show");
     }
 </script>
 </html>
