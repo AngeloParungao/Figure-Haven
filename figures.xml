@@ -5,10 +5,10 @@
         <price>₱ 10000</price>
         <category>Resin</category>
         <anime>Chainsaw Man</anime>
-        <sales>405</sales>
+        <sales>407</sales>
         <location>http://localhost/action-figure/products-images/denji.jpg</location>
         <description>hi</description>
-        <stock>5</stock>
+        <stock>3</stock>
      </figure>
 
     <figure>
@@ -16,10 +16,10 @@
         <price>₱ 683</price>
         <category>Funko Pop</category>
         <anime>One Piece</anime>
-        <sales>1000</sales>
+        <sales>1003</sales>
         <location>http://localhost/action-figure/products-images/POP! LUFFY GEAR 5.png</location>
         <description>hi</description>
-        <stock>20</stock>
+        <stock>17</stock>
     </figure>
 
     <figure>
@@ -27,10 +27,10 @@
         <price>₱ 20021</price>
         <category>Resin</category>
         <anime>One Piece</anime>
-        <sales>600</sales>
+        <sales>601</sales>
         <location>http://localhost/action-figure/products-images/One Piece - MY Studio Nico Robin Devil Form.jpg</location>
         <description>hi</description>
-        <stock>15</stock>
+        <stock>14</stock>
     </figure>
 
     <figure>
@@ -49,10 +49,10 @@
         <price>₱ 21840</price>
         <category>Resin</category>
         <anime>Jujutsu Kaisen</anime>
-        <sales>1500</sales>
+        <sales>1501</sales>
         <location>http://localhost/action-figure/products-images/megumi Fushiguro.jpg</location>
         <description>hi</description>
-        <stock>18</stock>
+        <stock>17</stock>
     </figure>
 
     <figure>
@@ -60,10 +60,10 @@
         <price>₱ 853</price>
         <category>Funko Pop</category>
         <anime>One Piece</anime>
-        <sales>900</sales>
+        <sales>901</sales>
         <location>http://localhost/action-figure/products-images/POP! RORONOA ZORO (GLOW).png</location>
         <description>hi</description>
-        <stock>20</stock>
+        <stock>19</stock>
     </figure>
 
     <figure>
@@ -71,10 +71,10 @@
         <price>₱ 7750</price>
         <category>PVC</category>
         <anime>My Dress-Up Darling</anime>
-        <sales>800</sales>
+        <sales>802</sales>
         <location>http://localhost/action-figure/products-images/uniform ver. marin kitagawa.jpg</location>
         <description>hi</description>
-        <stock>10</stock>
+        <stock>8</stock>
     </figure>
 
     <figure>
@@ -95,10 +95,10 @@
         <price>₱ 853</price>
         <category>Funko Pop</category>
         <anime>Jujutsu kaisen</anime>
-        <sales>700</sales>
+        <sales>703</sales>
         <location>http://localhost/action-figure/products-images/POP! YUJI ITADORI WITH DIVERGENT FISTS (GLOW) BOX.png</location>
         <description>hi</description>
-        <stock>15</stock>
+        <stock>12</stock>
     </figure>
 
     <figure>
@@ -106,10 +106,10 @@
         <price>₱ 25742</price>
         <category>Resin</category>
         <anime>Jujutsu kaisen</anime>
-        <sales>701</sales>
+        <sales>705</sales>
         <location>http://localhost/action-figure/products-images/Toji Fushiguro.jpg</location>
         <description>hi</description>
-        <stock>7</stock>
+        <stock>3</stock>
     </figure>
 
     <figure>
@@ -117,10 +117,10 @@
         <price>₱ 53299</price>
         <category>Resin</category>
         <anime>Demon Slayer</anime>
-        <sales>703</sales>
+        <sales>708</sales>
         <location>http://localhost/action-figure/products-images/nezuko.jpg</location>
         <description>Step into the realm of unparalleled craftsmanship with Infinity Studios magnificent creation, crafted from a fusion of Resin, PU, Polystone, and enhanced with LED illumination. In an impressive 1/4 scale, this masterpiece stands majestically at an estimated H60 * D58 * L45cm, commanding attention with its sheer presence.Limited to a mere 199 pieces worldwide, each meticulouslycrafted to perfection, this masterpiece promises to be a prized possession for the discerning collector. Set to embark on its journey in Q1 (March) 2025, secure your opportunity to own a piece of artistry that transcends boundaries and captivates the senses with Infinity Studios unparalleled creation.</description>
-        <stock>17</stock>
+        <stock>12</stock>
     </figure>
 
     <figure>
@@ -128,10 +128,10 @@
         <price>₱ 9184</price>
         <category>PVC</category>
         <anime>One Piece</anime>    
-        <sales>500</sales>
+        <sales>501</sales>
         <location>http://localhost/action-figure/products-images/Teach.jpg</location>
         <description>From the FiguartsZERO [Extra Battle] series comes Marshall D. Teach! The captain of the Blackbeard Pirates and one of the New Four Emperors is recreated in an incredibly impressive three-dimensional form!</description>
-        <stock>10</stock>
+        <stock>9</stock>
     </figure>
 
     <figure>
@@ -139,10 +139,10 @@
         <price>₱ 14340</price>
         <category>PVC</category>
         <anime>My Dress-Up Darling</anime>
-        <sales>202</sales>
+        <sales>205</sales>
         <location>http://localhost/action-figure/products-images/My Dress-Up Darling.jpg</location>
         <description>From the hit anime series 'My Dress Up Darling' comes Marine Kitagawa </description>
-        <stock>8</stock>
+        <stock>0</stock>
     </figure>
 
     
@@ -152,10 +152,10 @@
         <price>₱ 1750</price>
         <category>PVC</category>
         <anime>Kaguya-sama: Love is War</anime>
-        <sales>400</sales>
+        <sales>402</sales>
         <location>http://localhost/action-figure/products-images/Pop Up Parade Chika Fujiwara.jpg</location>
         <description>From the anime series 'Kaguya-sama: Love is War?' comes a POP UP PARADE figure of the student council secretary of Shuchiin Academy, Chika Fujiwara! Kaguya has been captured in figure form in a lively pose.</description>
-        <stock>15</stock>
+        <stock>13</stock>
     </figure>
 
     <figure>
@@ -163,10 +163,10 @@
         <price>₱ 792</price>
         <category>PVC</category>
         <anime>Quintessential Quintuplets</anime>
-        <sales>250</sales>
+        <sales>251</sales>
         <location>http://localhost/action-figure/products-images/Nakano Nino Marine.jpg</location>
         <description>Be captivated by the stunning Nakano Nino Marine Look ver. figure from The Quintessential Quintuplets Specials Trio-Try-iT! With intricate details and a vibrant color palette, this figure perfectly captures Nino's charm. A must-have for any fan, this figure brings the beloved character to life and adds a touch of elegance to any collection.</description>
-        <stock>15</stock>
+        <stock>14</stock>
     </figure>
 
     <figure>
@@ -174,10 +174,10 @@
         <price>₱ 3845</price>
         <category>PVC</category>
         <anime>One Piece</anime>
-        <sales>500</sales>
+        <sales>503</sales>
         <location>http://localhost/action-figure/products-images/gear four.jpg</location>
         <description>Banpresto brings us the new One Piece World Figure Colosseum 3 Super Master Stars Monkey D. Luffy Gear 4 figure! This version of the character features a two-dimensional drawing look.</description>
-        <stock>15</stock>
+        <stock>12</stock>
     </figure>
 
     <figure>
@@ -196,10 +196,10 @@
         <price>₱ 1000</price>
         <category>Funko Pop</category>
         <anime>Black Clover</anime>
-        <sales>650</sales>
+        <sales>653</sales>
         <location>http://localhost/action-figure/products-images/POP! BLACK ASTA (GLOW).png</location>
         <description>In his quest to become the next Wizard King, Pop! Asta has harnessed demonic power! Wield your magic alongside this Royal Knight of the Clover Kingdoms Black Bulls when you welcome this exclusive, glow-in-the-dark Pop! Black Asta into your into your Black Clover collection! Vinyl figure is approximately 4.55-inches tall.</description>
-        <stock>15</stock>
+        <stock>12</stock>
     </figure>
 
     <figure>
@@ -218,10 +218,10 @@
         <price>₱ 980</price>
         <category>Funko Pop</category>
         <anime>Black Clover</anime>
-        <sales>670</sales>
+        <sales>675</sales>
         <location>http://localhost/action-figure/products-images/POP! YUNO WITH SPIRIT OF ZEPHYR (GLOW) box.png</location>
         <description>Arriving from the outskirts of the Clover Kingdom is Pop! Yuno. This exclusive, glow-in-the-dark Pop! Yuno has summoned Wind Magic to create the Spirit of Zephyr sword. Save your magic and jump on the chance to complete your Black Clover collection with Pop! Yuno with Spirit of Zephyr! Vinyl figure is approximately 4.8-inches tall.</description>
-        <stock>15</stock>
+        <stock>10</stock>
     </figure>
 
     <figure>
@@ -240,10 +240,10 @@
         <price>₱ 1100</price>
         <category>Funko Pop</category>
         <anime>Hunter x Hunter</anime>
-        <sales>904</sales>
+        <sales>909</sales>
         <location>http://localhost/action-figure/products-images/POP! GON FREECSS (FISHING) box.png</location>
         <description>Embark on a journey with Pop! Gon Freecss as he searches for his father, Ging, and strives to become a skilled Hunter! Complete your Hunter X Hunter set by reeling in this exclusive, fishing Pop! Gon Freecss to your collection. Vinyl figure is approximately 4.35-inches tall</description>
-        <stock>11</stock>
+        <stock>6</stock>
     </figure>
 
     <figure>
@@ -279,4 +279,4 @@
         <stock>15</stock>
     </figure>
     
-<figure><name>FUMIKAGE TOKOYAMI</name><price>₱ 500</price><category>Funko Pop</category><anime>My Hero Academia</anime><sales>2</sales><location>../products-images/POP! FUMIKAGE TOKOYAMI.png</location><description>Tokoyami harnesses his super move Black Adyss for this exclusive Pop! figure. Add one of U.A. High School’s class 1-A students to your ranks of heroes-in-training. Think twice about leaving Tokoyami in the dark in your My Hero Academia collection. Vinyl figure is approximately 4.25-inches tall</description><stock>18</stock></figure></figures>
+<figure><name>FUMIKAGE TOKOYAMI</name><price>₱ 500</price><category>Funko Pop</category><anime>My Hero Academia</anime><sales>3</sales><location>../products-images/POP! FUMIKAGE TOKOYAMI.png</location><description>Tokoyami harnesses his super move Black Adyss for this exclusive Pop! figure. Add one of U.A. High School’s class 1-A students to your ranks of heroes-in-training. Think twice about leaving Tokoyami in the dark in your My Hero Academia collection. Vinyl figure is approximately 4.25-inches tall</description><stock>17</stock></figure></figures>

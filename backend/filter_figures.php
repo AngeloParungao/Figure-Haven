@@ -18,6 +18,7 @@ if (isset($_GET['anime'])) {
                 'anime' => (string) $figure->anime,
                 'location' => (string) $figure->location,
                 'description' => (string) $figure->description,
+                'stock' => (string) $figure->stock,
 
             ];
         }
@@ -34,6 +35,7 @@ if (isset($_GET['anime'])) {
                     'anime' => (string) $figure->anime,
                     'location' => (string) $figure->location,
                     'description' => (string) $figure->description,
+                    'stock' => (string) $figure->stock,
     
                 ];
             }

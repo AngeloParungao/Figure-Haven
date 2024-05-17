@@ -13,7 +13,7 @@
         <?php include '../components/navbar.php'?>
 
         <div id="video-background">
-            <video src="../video/Enemy「AMV」Anime Mix.mp4" autoplay muted></video>
+            <video src="../video/Anime Mix.mp4" autoplay muted></video>
         </div>
 
         <div id="wrapper">

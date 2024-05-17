@@ -79,15 +79,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }
 
-  function applySearchFilter() {
-    let searchQuery = document.getElementById("search").value.trim().toLowerCase();
-    if (searchQuery === '') {
-        filteredSearchProducts = []; // Reset search filter
-    } else {
-        filteredSearchProducts = filterProductsBySearch(filteredCategoryProducts, searchQuery);
-    }
-  }
-
   document.getElementById("category").addEventListener("change", function() {
     let category = this.value;
     let sortingOrder = document.getElementById("order").value;
@@ -240,11 +231,13 @@ document.getElementById("order").addEventListener("change", function() {
 
     // Set click event for addToCart button
     addToCart.onclick = function () {
+      let stock = product.stock;
+      if(stock > 0){
       if (confirm("Are you sure you want to add this item to the cart?")) {
         let product_name = product.name;
         let product_anime = product.anime;
         let product_image = product.location;
-        let product_price = product.price.replace(/[^0-9]/g, '');
+        let product_price = product.price.replace('₱ ', '');
         let userID = localStorage.getItem('userID') || '';
         let name = localStorage.getItem('name') || '';
         let contact = localStorage.getItem('contact') || '';
@@ -252,23 +245,27 @@ document.getElementById("order").addEventListener("change", function() {
         let address = localStorage.getItem('address') || '';
         let username = localStorage.getItem('username') || '';
         let status = 'cart';
-    
-        let xhr = new XMLHttpRequest();
-        xhr.open("POST", "http://localhost/action-figure/backend/cart.php", true);
-        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-        xhr.onreadystatechange = function () {
-          if (xhr.readyState === 4 && xhr.status === 200) {
-            console.log(xhr.responseText); // Log the response
-            createToast("success", "fa-solid fa-circle-check", "Success", "Added to Cart!");
-
-            setTimeout(function() {location.reload()}, 1000);
-                
-            }
-        };
-        xhr.send("cart=true" + "&product_name=" + product_name + "&product_anime=" + product_anime + "&image=" + product_image + "&price=" + product_price + "&userID=" + userID + "&name=" + name + "&contact=" + contact + "&email=" + email + "&address=" + address + "&username=" + username + "&items=" + items_number + "&shipping= 40"  + "&total=" + total_price + "&status=" + status);
-      } else {
-        // Action canceled
-        console.log("Action canceled");
+        
+          let xhr = new XMLHttpRequest();
+          xhr.open("POST", "http://localhost/action-figure/backend/cart.php", true);
+          xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+          xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+              console.log(xhr.responseText); // Log the response
+              createToast("success", "fa-solid fa-circle-check", "Success", "Added to Cart!");
+  
+              setTimeout(function() {location.reload()}, 1000);
+                  
+              }
+          };
+          xhr.send("cart=true" + "&product_name=" + product_name + "&product_anime=" + product_anime + "&image=" + product_image + "&price=" + product_price + "&userID=" + userID + "&name=" + name + "&contact=" + contact + "&email=" + email + "&address=" + address + "&username=" + username + "&items=" + items_number + "&shipping= 40"  + "&total=" + total_price + "&status=" + status);
+        } else {
+          // Action canceled
+          console.log("Action canceled");
+        }
+      }
+      else{
+        alert("Product isn't available");
       }
     }
 
@@ -277,6 +274,7 @@ document.getElementById("order").addEventListener("change", function() {
         let product_anime = product.anime;
         let product_image = product.location;
         let product_price = product.price.replace(/[^0-9]/g, '');
+        let stock = product.stock;
         let userID = localStorage.getItem('userID') || '';
         let name = localStorage.getItem('name') || '';
         let contact = localStorage.getItem('contact') || '';
@@ -284,8 +282,13 @@ document.getElementById("order").addEventListener("change", function() {
         let address = localStorage.getItem('address') || '';
         let username = localStorage.getItem('username') || '';
         let status = 'pending';
-    
-        window.open("http://localhost/action-figure/pages/directCheckout.php?product_name=" + product_name + "&product_anime=" + product_anime + "&image=" + product_image + "&price=" + product_price + "&userID=" + userID + "&name=" + name + "&contact=" + contact + "&email=" + email + "&address=" + address + "&username=" + username + "&items=" + items_number + "&shipping= 40"  + "&total=" + total_price + "&status=" + status + "&cart=false", '_self');
+
+        if(stock > 0){
+          window.open("http://localhost/action-figure/pages/directCheckout.php?product_name=" + product_name + "&product_anime=" + product_anime + "&image=" + product_image + "&price=" + product_price + "&userID=" + userID + "&name=" + name + "&contact=" + contact + "&email=" + email + "&address=" + address + "&username=" + username + "&items=" + items_number + "&shipping= 40"  + "&total=" + total_price + "&status=" + status + "&cart=false", '_self');     
+        }
+        else{
+          alert("Product isn't available");
+        }
     }
   }
 });

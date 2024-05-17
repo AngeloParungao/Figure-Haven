@@ -7,7 +7,7 @@
     <link rel="icon" href="../images/logo.png" type="image/png">
     <title>Profile</title>
 </head>
-<body onload="getOrders()">
+<body>
 <?php include '../components/navbar.php'?>
 <div class="content">
         <!-- Account -->

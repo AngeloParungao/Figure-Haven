@@ -1,6 +1,6 @@
 let checkout = document.getElementById("checkout");
 let number, cartId;
-let items, productName;
+let items, productName, total;
 
 const cart = getCartIdFromUrl();
 
@@ -22,7 +22,7 @@ function getProduct(id) {
             let Products = JSON.parse(xhr.responseText);
 
             Products.forEach(product => {
-                let total = parseInt(product.shipping_fee) + parseInt(product.total);
+                total = parseInt(product.shipping_fee) + parseInt(product.total);
                 if (product.cart_id == id) {
                     document.getElementById("username").innerHTML = product.name;
                     document.getElementById("address").innerHTML = product.address;
@@ -65,7 +65,7 @@ checkout.addEventListener("click", function(){
         const topPosition = (window.innerHeight - 550) / 2; // Assuming a height of 300 pixels for the popup window
 
         // Open the popup window with both vertical and horizontal centering
-        window.open("http://localhost/action-figure/components/online_payment.php?number=" + number + "&id=" + cartId + "&product_name=" + productName + "&items=" + items, "Popup", "width=500,height=550,top=" + topPosition + ",left=" + leftPosition + ",menubar=no,toolbar=no,location=no,resizable=no,scrollbars=no,status=no");
+        window.open("http://localhost/action-figure/components/online_payment.php?number=" + number + "&id=" + cartId + "&product_name=" + productName + "&items=" + items + "&total=" + total, "Popup", "width=500,height=550,top=" + topPosition + ",left=" + leftPosition + ",menubar=no,toolbar=no,location=no,resizable=no,scrollbars=no,status=no");
     }
     else if(selectedMode === "cod"){
         let xhr = new XMLHttpRequest();
@@ -77,7 +77,7 @@ checkout.addEventListener("click", function(){
             }
         };
         xhr.open("PUT", "http://localhost/action-figure/backend/cart.php", true);
-        xhr.send("product_id=" + cartId + "&status=pending" + "&product_name=" + productName + "&items=" + items);
+        xhr.send("product_id=" + cartId + "&status=pending" + "&product_name=" + productName + "&items=" + items + "&total=" + total);
     }
     else{
         alert("Please choose a payment mode");

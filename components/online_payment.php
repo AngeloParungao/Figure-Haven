@@ -55,6 +55,7 @@
         const id = getCartFromUrl();
         let productName = "<?php echo $_GET['product_name']?>";
         let items = "<?php echo $_GET['items']?>";
+        let total = "<?php echo $_GET['total']?>";
 
 
         document.getElementById("number").value = number;
@@ -82,7 +83,7 @@
                 }
             };
             xhr.open("PUT", "http://localhost/action-figure/backend/cart.php", true);
-            xhr.send("product_id=" + id + "&status= pending" + "&product_name=" + productName + "&items=" + items);
+            xhr.send("product_id=" + id + "&status=pending" + "&product_name=" + productName + "&items=" + items + "&total=" + total);
         }
     </script>
 </body>
