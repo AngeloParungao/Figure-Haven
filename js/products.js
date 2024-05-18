@@ -243,41 +243,57 @@ document.getElementById("order").addEventListener("change", function() {
     addToCart.onclick = function () {
       let stock = product.stock;
       if(stock > 0){
-      if (confirm("Are you sure you want to add this item to the cart?")) {
-        let product_name = product.name;
-        let product_anime = product.anime;
-        let product_image = product.location;
-        let product_price = product.price.replace('₱ ', '');
-        let userID = localStorage.getItem('userID') || '';
-        let name = localStorage.getItem('name') || '';
-        let contact = localStorage.getItem('contact') || '';
-        let email = localStorage.getItem('email') || '';
-        let address = localStorage.getItem('address') || '';
-        let username = localStorage.getItem('username') || '';
-        let status = 'cart';
-        
-          let xhr = new XMLHttpRequest();
-          xhr.open("POST", "http://localhost/action-figure/backend/cart.php", true);
-          xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-          xhr.onreadystatechange = function () {
-            if (xhr.readyState === 4 && xhr.status === 200) {
-              console.log(xhr.responseText); // Log the response
-              createToast("success", "fa-solid fa-circle-check", "Success", "Added to Cart!");
-  
-              setTimeout(function() {location.reload()}, 1000);
-                  
-              }
-          };
-          xhr.send("cart=true" + "&product_name=" + product_name + "&product_anime=" + product_anime + "&image=" + product_image + "&price=" + product_price + "&userID=" + userID + "&name=" + name + "&contact=" + contact + "&email=" + email + "&address=" + address + "&username=" + username + "&items=" + items_number + "&shipping= 40"  + "&total=" + total_price + "&paid=" + "&status=" + status);
-        } else {
-          // Action canceled
-          console.log("Action canceled");
+          if (confirm("Are you sure you want to add this item to the cart?")) {
+              let product_name = product.name;
+              let userID = localStorage.getItem('userID') || '';
+              
+              // Check if product is already in cart
+              let xhrCheck = new XMLHttpRequest();
+              xhrCheck.open("POST", "http://localhost/action-figure/backend/check_cart.php", true);
+              xhrCheck.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+              xhrCheck.onreadystatechange = function () {
+                  if (xhrCheck.readyState === 4 && xhrCheck.status === 200) {
+                      let response = JSON.parse(xhrCheck.responseText);
+                      if (response.exists) {
+                          alert("Product is already in the cart.");
+                      } else {
+                          // If not in cart, proceed to add it
+                          addProductToCart();
+                      }
+                  }
+              };
+              xhrCheck.send("userID=" + userID + "&product_name=" + product_name);
+          }
+      } else {
+          alert("Product isn't available");
+      }
+  }
+
+  function addProductToCart() {
+    let product_name = product.name;
+    let product_anime = product.anime;
+    let product_image = product.location;
+    let product_price = product.price.replace('₱ ', '');
+    let userID = localStorage.getItem('userID') || '';
+    let name = localStorage.getItem('name') || '';
+    let contact = localStorage.getItem('contact') || '';
+    let email = localStorage.getItem('email') || '';
+    let address = localStorage.getItem('address') || '';
+    let username = localStorage.getItem('username') || '';
+    let status = 'cart';
+
+    let xhr = new XMLHttpRequest();
+    xhr.open("POST", "http://localhost/action-figure/backend/cart.php", true);
+    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+            console.log(xhr.responseText); // Log the response
+            createToast("success", "fa-solid fa-circle-check", "Success", "Added to Cart!");
+            setTimeout(function() { location.reload() }, 1000);
         }
-      }
-      else{
-        alert("Product isn't available");
-      }
-    }
+    };
+    xhr.send("cart=true" + "&product_name=" + product_name + "&product_anime=" + product_anime + "&image=" + product_image + "&price=" + product_price + "&userID=" + userID + "&name=" + name + "&contact=" + contact + "&email=" + email + "&address=" + address + "&username=" + username + "&items=1" + "&shipping=40"  + "&total=" + (parseFloat(product_price) + 40) + "&paid=" + "&status=" + status);
+}
 
     buyNow.onclick = function(){
         let product_name = product.name;

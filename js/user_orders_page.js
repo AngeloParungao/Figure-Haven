@@ -40,7 +40,7 @@ function displayUser(users) {
             let paidCell = row.insertCell(7);
             let modeCell = row.insertCell(8);
 
-            if(userData.paid == ""){
+            if(userData.online_payment == ""){
                 paidCell.textContent = "No";
                 modeCell.textContent = "COD";
             }

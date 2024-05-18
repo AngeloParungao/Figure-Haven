@@ -71,10 +71,10 @@
         <price>₱ 7750</price>
         <category>PVC</category>
         <anime>My Dress-Up Darling</anime>
-        <sales>803</sales>
+        <sales>804</sales>
         <location>http://localhost/action-figure/products-images/uniform ver. marin kitagawa.jpg</location>
         <description>hi</description>
-        <stock>7</stock>
+        <stock>6</stock>
     </figure>
 
     <figure>
@@ -82,10 +82,10 @@
         <price>₱ 683</price>
         <category>Funko Pop</category>
         <anime>One Piece</anime>
-        <sales>300</sales>
+        <sales>301</sales>
         <location>http://localhost/action-figure/products-images/POP! SANGORO IN WANO OUTFIT.png</location>
         <description>hi</description>
-        <stock>15</stock>
+        <stock>14</stock>
     </figure>
 
     
@@ -174,10 +174,10 @@
         <price>₱ 3845</price>
         <category>PVC</category>
         <anime>One Piece</anime>
-        <sales>503</sales>
+        <sales>504</sales>
         <location>http://localhost/action-figure/products-images/gear four.jpg</location>
         <description>Banpresto brings us the new One Piece World Figure Colosseum 3 Super Master Stars Monkey D. Luffy Gear 4 figure! This version of the character features a two-dimensional drawing look.</description>
-        <stock>12</stock>
+        <stock>11</stock>
     </figure>
 
     <figure>
@@ -218,10 +218,10 @@
         <price>₱ 980</price>
         <category>Funko Pop</category>
         <anime>Black Clover</anime>
-        <sales>675</sales>
+        <sales>676</sales>
         <location>http://localhost/action-figure/products-images/POP! YUNO WITH SPIRIT OF ZEPHYR (GLOW) box.png</location>
         <description>Arriving from the outskirts of the Clover Kingdom is Pop! Yuno. This exclusive, glow-in-the-dark Pop! Yuno has summoned Wind Magic to create the Spirit of Zephyr sword. Save your magic and jump on the chance to complete your Black Clover collection with Pop! Yuno with Spirit of Zephyr! Vinyl figure is approximately 4.8-inches tall.</description>
-        <stock>10</stock>
+        <stock>9</stock>
     </figure>
 
     <figure>
@@ -240,10 +240,10 @@
         <price>₱ 1100</price>
         <category>Funko Pop</category>
         <anime>Hunter x Hunter</anime>
-        <sales>909</sales>
+        <sales>910</sales>
         <location>http://localhost/action-figure/products-images/POP! GON FREECSS (FISHING) box.png</location>
         <description>Embark on a journey with Pop! Gon Freecss as he searches for his father, Ging, and strives to become a skilled Hunter! Complete your Hunter X Hunter set by reeling in this exclusive, fishing Pop! Gon Freecss to your collection. Vinyl figure is approximately 4.35-inches tall</description>
-        <stock>6</stock>
+        <stock>5</stock>
     </figure>
 
     <figure>

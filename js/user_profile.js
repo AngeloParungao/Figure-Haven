@@ -159,7 +159,7 @@ function getOrders() {
                         total.textContent = "Total: ₱ " + order.total;
                         date.textContent = "Date Ordered : " + order.date_ordered;
                         
-                        if(order.paid == "yes"){
+                        if(order.online_payment == "yes"){
                             mode.textContent = "Payment Mode : GCash";
                         }
                         else{
