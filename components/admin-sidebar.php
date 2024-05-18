@@ -7,7 +7,7 @@
   <hr>
   <div class="dashboard-buttons">
     <div class="dashboard-button">
-      <a href="manager_dashboard_page.php" data-page="dashboard">
+      <a href="dashboard.php" data-page="dashboard">
         <i class="fas fa-tachometer-alt"></i>
         <span>Dashboard</span>
       </a>
