@@ -71,10 +71,10 @@
         <price>₱ 7750</price>
         <category>PVC</category>
         <anime>My Dress-Up Darling</anime>
-        <sales>802</sales>
+        <sales>803</sales>
         <location>http://localhost/action-figure/products-images/uniform ver. marin kitagawa.jpg</location>
         <description>hi</description>
-        <stock>8</stock>
+        <stock>7</stock>
     </figure>
 
     <figure>
@@ -106,10 +106,10 @@
         <price>₱ 25742</price>
         <category>Resin</category>
         <anime>Jujutsu kaisen</anime>
-        <sales>705</sales>
+        <sales>706</sales>
         <location>http://localhost/action-figure/products-images/Toji Fushiguro.jpg</location>
         <description>hi</description>
-        <stock>3</stock>
+        <stock>2</stock>
     </figure>
 
     <figure>
@@ -117,10 +117,10 @@
         <price>₱ 53299</price>
         <category>Resin</category>
         <anime>Demon Slayer</anime>
-        <sales>708</sales>
+        <sales>720</sales>
         <location>http://localhost/action-figure/products-images/nezuko.jpg</location>
         <description>Step into the realm of unparalleled craftsmanship with Infinity Studios magnificent creation, crafted from a fusion of Resin, PU, Polystone, and enhanced with LED illumination. In an impressive 1/4 scale, this masterpiece stands majestically at an estimated H60 * D58 * L45cm, commanding attention with its sheer presence.Limited to a mere 199 pieces worldwide, each meticulouslycrafted to perfection, this masterpiece promises to be a prized possession for the discerning collector. Set to embark on its journey in Q1 (March) 2025, secure your opportunity to own a piece of artistry that transcends boundaries and captivates the senses with Infinity Studios unparalleled creation.</description>
-        <stock>12</stock>
+        <stock>0</stock>
     </figure>
 
     <figure>
@@ -152,10 +152,10 @@
         <price>₱ 1750</price>
         <category>PVC</category>
         <anime>Kaguya-sama: Love is War</anime>
-        <sales>402</sales>
+        <sales>405</sales>
         <location>http://localhost/action-figure/products-images/Pop Up Parade Chika Fujiwara.jpg</location>
         <description>From the anime series 'Kaguya-sama: Love is War?' comes a POP UP PARADE figure of the student council secretary of Shuchiin Academy, Chika Fujiwara! Kaguya has been captured in figure form in a lively pose.</description>
-        <stock>13</stock>
+        <stock>10</stock>
     </figure>
 
     <figure>
@@ -163,10 +163,10 @@
         <price>₱ 792</price>
         <category>PVC</category>
         <anime>Quintessential Quintuplets</anime>
-        <sales>251</sales>
+        <sales>252</sales>
         <location>http://localhost/action-figure/products-images/Nakano Nino Marine.jpg</location>
         <description>Be captivated by the stunning Nakano Nino Marine Look ver. figure from The Quintessential Quintuplets Specials Trio-Try-iT! With intricate details and a vibrant color palette, this figure perfectly captures Nino's charm. A must-have for any fan, this figure brings the beloved character to life and adds a touch of elegance to any collection.</description>
-        <stock>14</stock>
+        <stock>13</stock>
     </figure>
 
     <figure>
@@ -196,10 +196,10 @@
         <price>₱ 1000</price>
         <category>Funko Pop</category>
         <anime>Black Clover</anime>
-        <sales>653</sales>
+        <sales>658</sales>
         <location>http://localhost/action-figure/products-images/POP! BLACK ASTA (GLOW).png</location>
         <description>In his quest to become the next Wizard King, Pop! Asta has harnessed demonic power! Wield your magic alongside this Royal Knight of the Clover Kingdoms Black Bulls when you welcome this exclusive, glow-in-the-dark Pop! Black Asta into your into your Black Clover collection! Vinyl figure is approximately 4.55-inches tall.</description>
-        <stock>12</stock>
+        <stock>7</stock>
     </figure>
 
     <figure>
@@ -229,10 +229,10 @@
         <price>₱ 860</price>
         <category>Funko Pop</category>
         <anime>Black Clover</anime>
-        <sales>301</sales>
+        <sales>302</sales>
         <location>http://localhost/action-figure/products-images/POP! YAMI no box.png</location>
         <description>Arriving from the outskirts of the Clover Kingdom is Pop! Yami. Strengthen your team with one of the most powerful Magic Knights, the Captain of the Black Bulls! Save your magic and jump on the chance to complete your Black Clover collection with Pop! Yami! Vinyl figure is approximately 4.8-inches tall.</description>
-        <stock>14</stock>
+        <stock>13</stock>
     </figure>
 
      <figure>
@@ -269,14 +269,14 @@
     </figure>
 
     <figure>
-        <name>NOELLE WITH VALKYRIE ARMOR (DIAMOND)</name>
+        <name>NOELLE WITH VALKYRIE ARMOR</name>
         <price>₱ 650</price>
         <category>Funko Pop</category>
         <anime>Black Clover</anime>
-        <sales>510</sales>
+        <sales>512</sales>
         <location>http://localhost/action-figure/products-images/POP! NOELLE WITH VALKYRIE ARMOR (DIAMOND) box.png</location>
         <description>Arriving from the heart of the Clover Kingdom is Pop! Noelle. This exclusive, Diamond Collection Pop! Noelle has summoned Water Creation Magic, creating her own suit of Valkyrie Armor! Save your magic and jump on the chance to complete your Black Clover collection with Pop! Noelle with Valkyrie Armor! Vinyl figure is approximately 5.05-inches tall.</description>
-        <stock>15</stock>
+        <stock>13</stock>
     </figure>
     
-<figure><name>FUMIKAGE TOKOYAMI</name><price>₱ 500</price><category>Funko Pop</category><anime>My Hero Academia</anime><sales>3</sales><location>../products-images/POP! FUMIKAGE TOKOYAMI.png</location><description>Tokoyami harnesses his super move Black Adyss for this exclusive Pop! figure. Add one of U.A. High School’s class 1-A students to your ranks of heroes-in-training. Think twice about leaving Tokoyami in the dark in your My Hero Academia collection. Vinyl figure is approximately 4.25-inches tall</description><stock>17</stock></figure></figures>
+<figure><name>FUMIKAGE TOKOYAMI</name><price>₱ 500</price><category>Funko Pop</category><anime>My Hero Academia</anime><sales>5</sales><location>../products-images/POP! FUMIKAGE TOKOYAMI.png</location><description>Tokoyami harnesses his super move Black Adyss for this exclusive Pop! figure. Add one of U.A. High School’s class 1-A students to your ranks of heroes-in-training. Think twice about leaving Tokoyami in the dark in your My Hero Academia collection. Vinyl figure is approximately 4.25-inches tall</description><stock>15</stock></figure></figures>

@@ -22,18 +22,20 @@ function displayUser(users) {
     
     // Loop through each user and create table rows
     users.forEach(userData => {
-        let row = table.insertRow();
-        let usernameCell = row.insertCell(0);
-        let fullNameCell = row.insertCell(1);
-        let addressCell = row.insertCell(2);
-        let emailCell = row.insertCell(3);
-        let contactCell = row.insertCell(4);
-
-        usernameCell.textContent = userData.username;
-        fullNameCell.textContent = userData.user_fullname;
-        addressCell.textContent = userData.address;
-        emailCell.textContent = userData.email;
-        contactCell.textContent = userData.contact_number;
+        if(userData.account_type == "user"){
+            let row = table.insertRow();
+            let usernameCell = row.insertCell(0);
+            let fullNameCell = row.insertCell(1);
+            let addressCell = row.insertCell(2);
+            let emailCell = row.insertCell(3);
+            let contactCell = row.insertCell(4);
+    
+            usernameCell.textContent = userData.username;
+            fullNameCell.textContent = userData.user_fullname;
+            addressCell.textContent = userData.address;
+            emailCell.textContent = userData.email;
+            contactCell.textContent = userData.contact_number;
+        }
     });
 }
 

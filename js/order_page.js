@@ -69,11 +69,11 @@ function displayOrders(orders) {
             <td><img id="image" src="${order.image}" alt="Product Image"></td>
             <td>${order.product_name}</td>
             <td>${order.anime}</td>
-            <td>${order.price}</td>
+            <td>₱ ${order.price}</td>
             <td>${order.number_of_items}</td>
-            <td>${order.total}</td>
-            <td><button onclick="getUsers('${order.image}','${order.product_name}','${order.price}','${order.anime}')">Orders</button></td>
-            <td><button onclick="updateStatus('${order.product_name}')">Out for Delivery</button></td>
+            <td>₱ ${order.total}</td>
+            <td><button id="orders" onclick="getUsers('${order.image}','${order.product_name}','${order.price}','${order.anime}')">Orders</button></td>
+            <td><button id="delivery" onclick="updateStatus('${order.product_name}')">Out for Delivery</button></td>
         `;
     });
 }

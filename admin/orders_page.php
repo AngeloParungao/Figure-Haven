@@ -18,6 +18,7 @@
         <input type="text" id="product-search" placeholder="Search by product">
       </div>
       <div id="dropdown">
+        <span>Price:</span>
         <select id="order">
           <option value="descending">Descending</option>
           <option value="ascending">Ascending</option>

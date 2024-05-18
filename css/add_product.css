@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,700&display=swap');
+
+
+*{
+    font-family: 'Poppins', serif;
+}
+
+body{
+    height: 95vh;
+}
+
+.form-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+#productForm{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0 2rem;
+    height: 35rem;
+    width: 35rem;
+}
+
+.content{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: 0.7rem;
+}
+
+.content label{
+    font-size: 1rem;
+}
+
+.content input, .content select{
+    height: 1.5rem;
+    padding-left: 1rem;
+}
+
+#productForm button{
+    padding: 0.5rem;
+    font-size: 1rem;
+    border-radius: 0.4rem;
+    border: none;
+    background-color: rgb(255, 221, 159);
+}

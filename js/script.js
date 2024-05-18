@@ -46,7 +46,7 @@ function fetchUsers() {
             // Loop through the users array to check for matching credentials
             for (let i = 0; i < users.length; i++) {
               let user = users[i];
-              if (user.username == username && user.password == password) {
+                if (user.username == username && user.password == password && user.account_type == "user") {
                   found = true;
                   userID = user.id;
                   localStorage.setItem('userID', userID);
@@ -59,6 +59,10 @@ function fetchUsers() {
                   localStorage.setItem("login", 'true');
                   window.open("http://localhost/action-figure/index.php", "_self");
                   break;
+                }
+                else if (user.username == username && user.password == password && user.account_type == "admin") {
+                  found = true;
+                  window.open("http://localhost/action-figure/admin/dashboard.php","_self");
                 }
                 else{
                   found = false;

@@ -58,7 +58,7 @@ checkout.addEventListener("click", function(){
         }
     }
 
-    if (selectedMode === "gcash"){
+    if (selectedMode == "gcash"){
         // Calculate the left position to center the window horizontally
         const leftPosition = (window.innerWidth - 500) / 2; // Assuming a width of 400 pixels for the popup window
         // Calculate the top position to center the window vertically
@@ -67,7 +67,7 @@ checkout.addEventListener("click", function(){
         // Open the popup window with both vertical and horizontal centering
         window.open("http://localhost/action-figure/components/online_payment.php?number=" + number + "&id=" + cartId + "&product_name=" + productName + "&items=" + items + "&total=" + total, "Popup", "width=500,height=550,top=" + topPosition + ",left=" + leftPosition + ",menubar=no,toolbar=no,location=no,resizable=no,scrollbars=no,status=no");
     }
-    else if(selectedMode === "cod"){
+    else if(selectedMode == "cod"){
         let xhr = new XMLHttpRequest();
         xhr.onreadystatechange = function () {
             if (xhr.readyState === 4 && xhr.status === 200) {
@@ -77,7 +77,7 @@ checkout.addEventListener("click", function(){
             }
         };
         xhr.open("PUT", "http://localhost/action-figure/backend/cart.php", true);
-        xhr.send("product_id=" + cartId + "&status=pending" + "&product_name=" + productName + "&items=" + items + "&total=" + total);
+        xhr.send("product_id=" + cartId + "&status=pending" + "&product_name=" + productName + "&items=" + items + "&paid=" + "&total=" + total);
     }
     else{
         alert("Please choose a payment mode");

@@ -147,15 +147,23 @@ function getOrders() {
                         const items = document.createElement("span");
                         const anime = document.createElement("span");
                         const total = document.createElement("span");
+                        const mode = document.createElement("span");
                         const status = document.createElement("span");
 
                         image.src = order.image;
                         product_name.textContent = order.product_name;
-                        product_price.textContent = "Price: " + order.price;
+                        product_price.textContent = "Price: ₱ " + order.price;
                         items.textContent = "Items: " + order.number_of_items;
                         anime.textContent = order.anime;
-                        total.textContent = "Total: " + order.total;
+                        total.textContent = "Total: ₱ " + order.total;
                         
+                        if(order.paid == "yes"){
+                            mode.textContent = "Payment Mode : GCash";
+                        }
+                        else{
+                            mode.textContent = "Payment Mode : COD";
+                        }
+
                         if(order.status == "pending"){
                             status.textContent = "Status: Pending";
                         }
@@ -170,6 +178,7 @@ function getOrders() {
                         details_right.appendChild(anime);
                         details_right.appendChild(total);
                         details_right.appendChild(status);
+                        details_right.appendChild(mode);
 
                         div.appendChild(image_div);
                         div.appendChild(details_left);

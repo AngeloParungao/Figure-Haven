@@ -19,6 +19,7 @@ switch($method) {
         $items = $_POST['items'];
         $shipping = $_POST['shipping'];
         $total = $_POST['total'];
+        $paid = $_POST['paid'];
         $status = $_POST['status'];
 
         if($_POST["cart"] == false){
@@ -43,8 +44,8 @@ switch($method) {
         }
 
         // Prepare SQL statement
-        $stmt = $conn->prepare("INSERT INTO cart (user_id, product_name, anime, image, name, contact_number, email, address, username, price, number_of_items, shipping_fee, total, status) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
-        $stmt->bind_param("isssssssssidis", $userID, $product_name, $product_anime, $product_image, $name, $contact, $email, $address, $username, $product_price, $items, $shipping, $total, $status);
+        $stmt = $conn->prepare("INSERT INTO cart (user_id, product_name, anime, image, name, contact_number, email, address, username, price, number_of_items, shipping_fee, total, paid, status) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+        $stmt->bind_param("isssssssssidiss", $userID, $product_name, $product_anime, $product_image, $name, $contact, $email, $address, $username, $product_price, $items, $shipping, $total, $paid, $status);
 
         // Execute SQL statement
         if ($stmt->execute()) {
@@ -74,6 +75,7 @@ switch($method) {
         $status = $_PUT['status'];
         $product_name = $_PUT['product_name'];
         $items = $_PUT['items'];
+        $paid = $_PUT['paid'];
         $total = $_PUT['total'];
 
         $xml = simplexml_load_file('../figures.xml');
@@ -90,8 +92,8 @@ switch($method) {
         // Save the updated XML content back to the file
         $xml->asXML('../figures.xml');
 
-        $stmt = $conn->prepare("UPDATE cart SET total =? ,status = ? WHERE cart_id = ?");
-        $stmt->bind_param("isi", $total, $status, $productId);
+        $stmt = $conn->prepare("UPDATE cart SET total =?, paid = ?,status = ? WHERE cart_id = ?");
+        $stmt->bind_param("issi", $total, $paid, $status, $productId);
 
         // Execute SQL statement
         if ($stmt->execute()) {

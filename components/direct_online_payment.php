@@ -83,7 +83,7 @@
             };
             xhr.open("POST", "http://localhost/action-figure/backend/cart.php", true);
             xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-            xhr.send("product_name=" + product_name + "&product_anime=" + product_anime + "&image=" + product_image + "&price=" + product_price + "&userID=" + userID + "&name=" + name + "&contact=" + contact + "&email=" + email + "&address=" + address + "&username=" + username + "&items=" + items + "&shipping= 40"  + "&total=" + total + "&status=" + status);
+            xhr.send("product_name=" + product_name + "&product_anime=" + product_anime + "&image=" + product_image + "&price=" + product_price + "&userID=" + userID + "&name=" + name + "&contact=" + contact + "&email=" + email + "&address=" + address + "&username=" + username + "&items=" + items + "&shipping= 40"  + "&total=" + total + "&paid=yes" + "&status=" + status);
         }
     </script>
 </body>

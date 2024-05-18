@@ -24,24 +24,39 @@ function getUsers() {
 function displayUser(users) {
     let table = document.querySelector(".table table"); 
     // Clear existing table rows
-    table.innerHTML = "<tr><th>Username</th><th>Full name</th><th>Address</th><th>Email</th><th>Contact</th><th>Orders</th></tr>";
+    table.innerHTML = "<tr><th>Username</th><th>Name</th><th>Address</th><th>Email</th><th>Contact</th><th>Orders</th><th>Total</th><th>Paid</th><th>Mode</th></tr>";
     
     // Loop through each user and create table rows
     users.forEach(userData => {
-        let row = table.insertRow();
-        let usernameCell = row.insertCell(0);
-        let fullNameCell = row.insertCell(1);
-        let addressCell = row.insertCell(2);
-        let emailCell = row.insertCell(3);
-        let contactCell = row.insertCell(4);
-        let orderCell = row.insertCell(5);
+        if(userData.status == "pending"){
+            let row = table.insertRow();
+            let usernameCell = row.insertCell(0);
+            let fullNameCell = row.insertCell(1);
+            let addressCell = row.insertCell(2);
+            let emailCell = row.insertCell(3);
+            let contactCell = row.insertCell(4);
+            let orderCell = row.insertCell(5);
+            let totalCell = row.insertCell(6);
+            let paidCell = row.insertCell(7);
+            let modeCell = row.insertCell(8);
 
-        usernameCell.textContent = userData.username;
-        fullNameCell.textContent = userData.name;
-        addressCell.textContent = userData.address;
-        emailCell.textContent = userData.email;
-        contactCell.textContent = userData.contact_number;
-        orderCell.textContent = userData.number_of_items;
+            if(userData.paid == ""){
+                paidCell.textContent = "No";
+                modeCell.textContent = "COD";
+            }
+            else{
+                paidCell.textContent = "Yes";
+                modeCell.textContent = "GCash";
+            }
+    
+            usernameCell.textContent = userData.username;
+            fullNameCell.textContent = userData.name;
+            addressCell.textContent = userData.address;
+            emailCell.textContent = userData.email;
+            contactCell.textContent = userData.contact_number;
+            orderCell.textContent = userData.number_of_items;
+            totalCell.textContent = "₱"+userData.total;
+        }
     });
 }
 

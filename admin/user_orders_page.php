@@ -12,13 +12,15 @@
   <?php include '../components/admin-sidebar.php'?>
   <div class="account-user-wrapper">
     <div class="accounts">
-      <div>
+      <div class="product">
         <div>
           <img src="<?php echo $_GET['image'];?>" alt="">
         </div>
-        <span><?php echo $_GET['product_name'];?></span>
-        <span><?php echo $_GET['product_anime'];?></span>
-        <span><?php echo $_GET['product_price'];?></span>
+        <div class="details">
+          <span><?php echo $_GET['product_name'];?></span>
+          <span><?php echo $_GET['product_anime'];?></span>
+          <span>₱ <?php echo $_GET['product_price'];?></span>
+        </div>
       </div>
       <div class="table">
         <table>

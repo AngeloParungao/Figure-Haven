@@ -83,7 +83,7 @@
                 }
             };
             xhr.open("PUT", "http://localhost/action-figure/backend/cart.php", true);
-            xhr.send("product_id=" + id + "&status=pending" + "&product_name=" + productName + "&items=" + items + "&total=" + total);
+            xhr.send("product_id=" + id + "&status=pending" + "&product_name=" + productName + "&items=" + items + "&paid=yes" + "&total=" + total);
         }
     </script>
 </body>

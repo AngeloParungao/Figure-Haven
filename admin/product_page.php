@@ -19,18 +19,20 @@
         </div>
         <div class="buttons">
           <div id="dropdown">
-                <select id="category">
-                    <option value="All">All</option>
-                    <option value="Resin">Resin</option>
-                    <option value="Funko Pop">Funko Pop</option>
-                    <option value="PVC">PVC</option>
-                </select>
-                <select id="order">
-                    <option value="descending">Descending</option>
-                    <option value="ascending">Ascending</option>
-                </select>
-            </div>
-          <button onclick="addProduct()">ADD</button>
+            <span>Category: </span>
+              <select id="category">
+                  <option value="All">All</option>
+                  <option value="Resin">Resin</option>
+                  <option value="Funko Pop">Funko Pop</option>
+                  <option value="PVC">PVC</option>
+              </select>
+              <span>Price: </span>
+              <select id="order">
+                  <option value="descending">Descending</option>
+                  <option value="ascending">Ascending</option>
+              </select>
+          </div>
+          <button onclick="addProduct()"><i class="fa-solid fa-plus"></i></button>
         </div>
       <div class="table">
         <table id="product-table">

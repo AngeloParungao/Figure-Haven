@@ -75,8 +75,8 @@ function displayProducts(products) {
             <td>${product.category}</td>
             <td>${product.sales}</td>
             <td>${product.stock}</td>
-            <td><button id='update' onclick="updateProduct('${product.name}', '${product.anime}', '${product.location}', '${product.price}', '${product.category}', '${product.stock}', '${description}')">update</button></td>
-            <td><button id='delete' onclick= "deleteProduct('${product.name}')">delete</button></td>
+            <td><button id='update' onclick="updateProduct('${product.name}', '${product.anime}', '${product.location}', '${product.price}', '${product.category}', '${product.stock}', '${description}')"><i class="fa-solid fa-pen"></i></button></td>
+            <td><button id='delete' onclick= "deleteProduct('${product.name}')"><i class="fa-solid fa-trash"></i></button></td>
         `;
     });
 }

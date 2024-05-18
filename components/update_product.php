@@ -3,26 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="icon" href="../images/logo.png" type="image/png">
+    <link rel="stylesheet" href="../css/add_product.css">
+    <title>Update Product</title>
 </head>
 <body>
-    <form id="productForm" enctype="multipart/form-data">
-        <input type="file" id="productImage" name="productImage">
-        <input id="product_name" type="text" name="productName" placeholder="Product Name" required>
-        <select id="category" name="category" required>
-            <option value="Resin">Resin</option>
-            <option value="Funko Pop">Funko Pop</option>
-            <option value="PVC">PVC</option>
-        </select>
-        <select id="anime" name="anime" required>
-            <!-- Add options dynamically from XML using JavaScript -->
-        </select>
-        <input id="price" name="price" type="number" placeholder="Price" required>
-        <input id="stock" name="stock" type="number" placeholder="Stock" required>
-        <textarea id="description" name="description" placeholder="Description"></textarea>
-        <input type="hidden" name="_method" value="PUT"> <!-- Add this hidden field -->
-        <button type="button" onclick="updateProduct()">Update Product</button>
-    </form>
+    <div class="form-wrapper">
+        <form id="productForm" enctype="multipart/form-data">
+            <div class="content">
+                <label for="ProductImage">Image</label>
+                <input type="file" name="productImage" id="ProductImage">
+            </div>
+            <div class="content">
+                <label for="product_name">Product Name</label>
+                <input id="product_name" type="text" name="productName" placeholder="Product Name" required>
+            </div>
+            <div class="content">
+                <label for="category">Category</label>
+                <select id="category" name="category" required>
+                    <option value="Resin">Resin</option>
+                    <option value="Funko Pop">Funko Pop</option>
+                    <option value="PVC">PVC</option>
+                </select>
+            </div>
+            <div class="content">
+                <label for="anime">Anime</label>
+                <select id="anime" name="anime" required>
+                    <!-- Add options dynamically from XML using JavaScript -->
+                </select>
+            </div>
+            <div class="content">
+                <label for="price">Price</label>
+                <input id="price" name="price" type="number" placeholder="Price" required>
+            </div>
+            <div class="content">
+                <label for="stock">Stock</label>
+                <input id="stock" name="stock" type="number" placeholder="Stock" required>
+            </div>
+            <div class="content">
+                <label for="description">Description</label>
+                <textarea id="description" name="description" placeholder="Description" required></textarea>
+            </div>
+            <input type="hidden" name="_method" value="PUT"> <!-- Add this hidden field -->
+            <button type="button" onclick="updateProduct()">Update Product</button>
+        </form>
+    </div>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             // Retrieve data from URL parameters

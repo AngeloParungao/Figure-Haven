@@ -5,16 +5,26 @@ document.addEventListener('DOMContentLoaded', function() {
   let filteredSearchProducts = []; // Array to store products filtered by search
 
   const animeName = getAnimeNameFromUrl();
+
+  
   if (animeName) {
-      filterByCatalog(animeName);
+    filterByCatalog(animeName);
   } else {
-      console.error('Anime name not found in URL');
+    console.error('Anime name not found in URL');
   }
 
   function getAnimeNameFromUrl() {
     const urlParams = new URLSearchParams(window.location.search);
     return urlParams.get('anime');
   }
+
+  if(animeName == 'all'){
+    document.getElementById("type").innerHTML = "All Products";
+  }
+  else{
+    document.getElementById("type").innerHTML = animeName;
+  }
+  
 
   function filterByCatalog(animeName) {
     let category = document.getElementById("category").value;
@@ -258,7 +268,7 @@ document.getElementById("order").addEventListener("change", function() {
                   
               }
           };
-          xhr.send("cart=true" + "&product_name=" + product_name + "&product_anime=" + product_anime + "&image=" + product_image + "&price=" + product_price + "&userID=" + userID + "&name=" + name + "&contact=" + contact + "&email=" + email + "&address=" + address + "&username=" + username + "&items=" + items_number + "&shipping= 40"  + "&total=" + total_price + "&status=" + status);
+          xhr.send("cart=true" + "&product_name=" + product_name + "&product_anime=" + product_anime + "&image=" + product_image + "&price=" + product_price + "&userID=" + userID + "&name=" + name + "&contact=" + contact + "&email=" + email + "&address=" + address + "&username=" + username + "&items=" + items_number + "&shipping= 40"  + "&total=" + total_price + "&paid=" + "&status=" + status);
         } else {
           // Action canceled
           console.log("Action canceled");

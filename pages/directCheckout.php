@@ -154,7 +154,7 @@
         // Set appropriate headers if needed
         xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
         // Send the request with data
-        xhr.send("product_name=" + encodeURIComponent(product_name) + "&product_anime=" + encodeURIComponent(product_anime) + "&image=" + encodeURIComponent(product_image) + "&price=" + encodeURIComponent(product_price) + "&userID=" + encodeURIComponent(userID) + "&name=" + encodeURIComponent(name) + "&contact=" + encodeURIComponent(contact) + "&email=" + encodeURIComponent(email) + "&address=" + encodeURIComponent(address) + "&username=" + encodeURIComponent(username) + "&items=" + encodeURIComponent(items_number) + "&shipping=40"  + "&total=" + encodeURIComponent(total_price) + "&status=" + encodeURIComponent(status));
+        xhr.send("product_name=" + encodeURIComponent(product_name) + "&product_anime=" + encodeURIComponent(product_anime) + "&image=" + encodeURIComponent(product_image) + "&price=" + encodeURIComponent(product_price) + "&userID=" + encodeURIComponent(userID) + "&name=" + encodeURIComponent(name) + "&contact=" + encodeURIComponent(contact) + "&email=" + encodeURIComponent(email) + "&address=" + encodeURIComponent(address) + "&username=" + encodeURIComponent(username) + "&items=" + encodeURIComponent(items_number) + "&shipping=40"  + "&total=" + encodeURIComponent(total_price) + "&paid=" +"&status=" + encodeURIComponent(status));
     }
     else{
         alert("Please choose a payment mode");
