@@ -81,7 +81,7 @@ function updateUser(profilePicture) {
         profilePicture = "http://localhost/action-figure/user-profile/" + file.name;
     } else {
         // If no file is selected, use the existing profile picture
-        profilePicture = profile_picture;
+        profilePicture = profilePicture;
     }
 
     const updateData = JSON.stringify({
