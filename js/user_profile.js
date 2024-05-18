@@ -149,6 +149,7 @@ function getOrders() {
                         const total = document.createElement("span");
                         const mode = document.createElement("span");
                         const status = document.createElement("span");
+                        const date = document.createElement("span");
 
                         image.src = order.image;
                         product_name.textContent = order.product_name;
@@ -156,6 +157,7 @@ function getOrders() {
                         items.textContent = "Items: " + order.number_of_items;
                         anime.textContent = order.anime;
                         total.textContent = "Total: ₱ " + order.total;
+                        date.textContent = "Date Ordered : " + order.date_ordered;
                         
                         if(order.paid == "yes"){
                             mode.textContent = "Payment Mode : GCash";
@@ -173,12 +175,13 @@ function getOrders() {
 
                         image_div.appendChild(image);
                         details_left.appendChild(product_name);
+                        details_left.appendChild(anime);
                         details_left.appendChild(product_price);
                         details_left.appendChild(items);
-                        details_right.appendChild(anime);
                         details_right.appendChild(total);
                         details_right.appendChild(status);
                         details_right.appendChild(mode);
+                        details_right.appendChild(date);
 
                         div.appendChild(image_div);
                         div.appendChild(details_left);
