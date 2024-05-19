@@ -63,6 +63,7 @@ function fetchUsers() {
                 else if (user.username == username && user.password == password && user.account_type == "admin") {
                   found = true;
                   window.open("http://localhost/action-figure/admin/dashboard.php","_self");
+                  break;
                 }
                 else{
                   found = false;

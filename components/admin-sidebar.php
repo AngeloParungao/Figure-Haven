@@ -31,6 +31,12 @@
       </a>
     </div>
     <div class="dashboard-button">
+      <a href="history.php" data-page="history">
+        <i class="fa-solid fa-clock-rotate-left"></i>
+        <span>History</span>
+      </a>
+    </div>
+    <div class="dashboard-button">
       <a href="../pages/login.php" data-page="logout">
         <i class="fa-solid fa-right-from-bracket"></i>
         <span>Logout</span>
