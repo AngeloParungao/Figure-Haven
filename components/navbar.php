@@ -20,7 +20,7 @@
                     <a class="link" href="http://localhost/action-figure/pages/catalog.php">Catalog</a>
                     <a class="link" onclick="product()">Product</a>
                     <a class="link" href="#">About Us</a>
-                    <a class="link" href="#">FAQs</a>
+                    <a class="link" href="http://localhost/action-figure/pages/faqs.php">FAQs</a>
                 </div>
                 <div id="cart-icon">
                     <div id="total-cart">

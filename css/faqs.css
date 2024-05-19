@@ -1,0 +1,30 @@
+.wrapper{
+    height: 100%;
+    width: 100%;
+}
+
+.wrapper h2{
+    margin-top: -2rem;
+    font-size: 3rem;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 8rem;
+}
+
+.question{
+    font-size: 2rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color: rgb(235, 235, 235);
+}
+
+.answer{
+    font-size: 1rem;
+    padding: 0 2rem;
+    text-align: justify;
+    margin-bottom: 3rem;
+}
