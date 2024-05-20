@@ -155,7 +155,7 @@ document.getElementById("order").addEventListener("change", function() {
         behavior: 'smooth' // Use smooth scrolling behavior
     });
 
-    let total_price, items_number;
+    let total_price, items_number = 1;
     let dom = document.querySelector("#left");
 
     // Check if quantity wrapper already exists
@@ -292,7 +292,7 @@ document.getElementById("order").addEventListener("change", function() {
             setTimeout(function() { location.reload() }, 1000);
         }
     };
-    xhr.send("cart=true" + "&product_name=" + product_name + "&product_anime=" + product_anime + "&image=" + product_image + "&price=" + product_price + "&userID=" + userID + "&name=" + name + "&contact=" + contact + "&email=" + email + "&address=" + address + "&username=" + username + "&items=1" + "&shipping=40"  + "&total=" + (parseFloat(product_price) + 40) + "&paid=" + "&status=" + status);
+    xhr.send("cart=true" + "&product_name=" + product_name + "&product_anime=" + product_anime + "&image=" + product_image + "&price=" + product_price + "&userID=" + userID + "&name=" + name + "&contact=" + contact + "&email=" + email + "&address=" + address + "&username=" + username + "&items=" + items_number + "&shipping=40"  + "&total=" + (parseFloat(total_price)) + "&paid=" + "&status=" + status);
 }
 
     buyNow.onclick = function(){

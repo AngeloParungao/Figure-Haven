@@ -1,5 +1,4 @@
 <?php
-
 include_once 'connect.php';
 
 $method = $_SERVER["REQUEST_METHOD"];
@@ -18,24 +17,28 @@ switch ($method) {
             $stock = $_POST['stock'];
             $description = $_POST['description'];
             $anime = $_POST['anime'];
-        
-            // Check if the product name exists
+            
+            $oldProductName = $_POST['oldName'];
+
+            // Check if the old product name exists
             $found = false;
             foreach ($xml->figure as $product) {
-                if ($product->name == $productName) {
+                // Check if the product name matches the old product name from the URL
+                if (strcasecmp($product->name, $oldProductName) === 0) {
+                    // Update the product name if it's changed
+                    $product->name = $productName;
                     // Update other fields
                     $product->price = $price;
                     $product->category = $category;
-                    $product->anime = $anime; // Update anime
+                    $product->anime = $anime;
                     $product->description = $description;
                     $product->stock = $stock;
-        
+
                     // Update image path if new image provided
                     if (!empty($_FILES["productImage"]["tmp_name"])) {
                         $targetDir = "../products-images/";
                         $targetFile = $targetDir . basename($_FILES["productImage"]["name"]);
                         $imageFileType = strtolower(pathinfo($targetFile, PATHINFO_EXTENSION));
-        
                         // Allow certain file formats
                         $allowedExtensions = array("jpg", "jpeg", "png", "gif");
                         if (!in_array($imageFileType, $allowedExtensions)) {
@@ -43,7 +46,6 @@ switch ($method) {
                             echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
                             exit;
                         }
-        
                         // Upload file
                         if (move_uploaded_file($_FILES["productImage"]["tmp_name"], $targetFile)) {
                             // Update image path
@@ -54,10 +56,8 @@ switch ($method) {
                             exit;
                         }
                     }
-        
                     // Save the updated XML content back to the XML file
                     $xml->asXML('../figures.xml');
-        
                     // Send a success response
                     http_response_code(200);
                     echo "Product updated successfully.";
@@ -92,6 +92,7 @@ switch ($method) {
                 if ($product->name == $productName) {
                     http_response_code(400); // Bad request
                     echo "Product with the same name already exists.";
+                    echo "<script>alert('Product name already exixts.');";
                     exit;
                 }
             }
@@ -137,7 +138,8 @@ switch ($method) {
             $xml->asXML('../figures.xml');
 
             http_response_code(201); // Created
-            echo '<script>alert("Product updated successfully."); window.close(); window.opener.location.reload();</script>';
+            echo "Product updated successfully.";
+            echo "<script>alert('Product added successfully.'); window.close(); window.opener.location.reload();</script>";
         }
         break;
 
@@ -171,6 +173,4 @@ switch ($method) {
         http_response_code(405);
         echo "Method Not Allowed";
 }
-
-
 ?>

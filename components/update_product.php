@@ -108,6 +108,8 @@
         function updateProduct() {
             let formData = new FormData(document.getElementById("productForm"));
 
+            formData.append("oldName", "<?php echo $product_name; ?>");
+
             console.log(formData);
             let xhr = new XMLHttpRequest();
             xhr.onreadystatechange = function() {

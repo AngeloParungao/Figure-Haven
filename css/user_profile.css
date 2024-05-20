@@ -221,23 +221,23 @@ body::-webkit-scrollbar-thumb {
   }
 
   .left span:nth-child(1){
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     font-weight: 500;
   }
 
   .left span:nth-child(2){
-    font-size: 1rem;
+    font-size: 0.78rem;
     font-weight: 400;
   }
 
   .left span:nth-child(3){
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-weight: 400;
     color: orange;
   }
 
   .left span:nth-child(4){
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-weight: 400;
     color: rgb(179, 179, 179);
   }
@@ -250,19 +250,24 @@ body::-webkit-scrollbar-thumb {
   }
 
   .right span:nth-child(1){
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-weight: 400;
   }
 
   .right span:nth-child(2){
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-weight: 400;
     color: orange;
   }
 
   .right span:nth-child(3){
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-weight: 400;
     color: rgb(179, 179, 179);
-  
+  }
+
+  .right span:nth-child(4){
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: rgb(179, 179, 179);
   }

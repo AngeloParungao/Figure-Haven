@@ -189,7 +189,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 #product-clicked .product #left #details #name{
-    font-size: 2.5rem;
+    font-size: 2rem;
 }
 
 #product-clicked .product #left #details #anime{
@@ -198,14 +198,14 @@ body::-webkit-scrollbar-thumb {
 }
 
 #product-clicked .product #left #details #price{
-    font-size: 2rem;
+    font-size: 1.6rem;
     color: #e0a72b;
     font-weight: 600;
 }
 
 #product-clicked .product #left #details #description{
-    font-size: 0.9rem;
-    padding: 1rem;
+    font-size: 0.89rem;
+    padding: 0.5rem;
     text-align: justify;
 }
 
