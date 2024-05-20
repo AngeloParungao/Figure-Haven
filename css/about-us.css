@@ -1,0 +1,54 @@
+.about-section{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 5rem 7rem;
+    background-color: rgb(240, 240, 240);
+}
+
+.about-section h2{
+    font-size: 2rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    background-color: rgb(219, 219, 219);
+}
+
+.header{
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-left: 2rem;
+}
+
+p{
+    padding: 0 2.5rem;
+    text-align: justify;
+}
+
+.catalog-image{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: -5rem;
+    height: 30rem;
+    color: white;
+}
+
+.catalog-image div{
+    width: 30rem;
+    height: 20rem;
+}
+
+.catalog-image div img{
+    width: 100%;
+    height: 100%;
+    border-radius: 0.8rem;
+}
+
+.catalog-image div span{
+    position: absolute;
+    font-size: 2.5rem;
+    font-weight: 600;
+    text-shadow: 5px 5px 3px black;
+    margin-left: -24rem;
+    margin-top: 7rem;
+}
