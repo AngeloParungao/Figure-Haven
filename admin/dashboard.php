@@ -22,10 +22,11 @@
 
                 <label for="year">Year:</label>
                 <select id="year"></select>
-            </div>
-            <div>
 
+                <button id="generate-monthly-report">Generate Monthly Report</button>
+                <button id="generate-daily-report">Generate Daily Report</button>
             </div>
+            
             <div class="box-container">
                 <div class="box">
                     <span>Total Accounts</span>
@@ -47,5 +48,7 @@
         </div>
     </div>
     <script src="../js/admin-dashboard.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.20/jspdf.plugin.autotable.min.js"></script>
 </body>
 </html>
