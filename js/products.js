@@ -201,6 +201,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         document.getElementById("name").textContent = product.name;
         document.getElementById("anime").textContent = product.anime;
+        document.getElementById("stock").textContent = "Stocks: " + product.stock;
         document.getElementById("price").textContent = product.price;
         document.getElementById("description").textContent = product.description;
         document.getElementById("image").src = product.location;

@@ -17,6 +17,7 @@
                 <div id="details">
                     <span id="name"></span>
                     <span id="anime"></span>
+                    <span id="stock"></span>
                     <span id="price"></span>
                     <p id="description"></p>
                 </div>
