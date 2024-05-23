@@ -39,6 +39,10 @@
                         <input type="password" name="confirm_password" placeholder="Confirm Password" required>
                         <button onclick="addUser(event)">REGISTER</button>
                     </form>
+                    <div id="checkbox">
+                        <input type="checkbox" id="terms-conditions">
+                        <label for="terms-conditions">I agree to the <a href="#" onclick="openTermsPopup()">Terms & Condition</a></label>
+                    </div>
                     <button id="login_account">Already have an account</button>
                 </div>
             </div>

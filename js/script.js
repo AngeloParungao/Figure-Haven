@@ -1,3 +1,9 @@
+function openTermsPopup() {
+  const leftPosition = (window.innerWidth - 500) / 2;
+  const topPosition = (window.innerHeight - 550) / 2; 
+  window.open("Terms-Condition.php", "Terms and Conditions", "width=500,height=550,top=" + topPosition + ",left=" + leftPosition);
+}
+
 
 //---------REGISTER---------//
 function addUser(event) {
@@ -8,6 +14,12 @@ function addUser(event) {
 
   let password = formData.get('password');
   let confirmPassword = formData.get('confirm_password');
+  let termsConditions = document.getElementById("terms-conditions").checked;
+
+  if (!termsConditions) {
+    createToast("error", "fa-solid fa-xmark", "Error", "You must agree to the terms and conditions.");
+    return;
+  }
 
   if (password != confirmPassword) {
     createToast("error", "fa-solid fa-xmark", "Error", "Passwords do not match.");

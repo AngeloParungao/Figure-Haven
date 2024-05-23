@@ -122,6 +122,30 @@ video{
     border: none;
 }
 
+#checkbox{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+    width: 20rem;
+    height: 0.6rem;
+}
+
+#checkbox #terms-conditions{
+    height: 1rem;
+    width: 1rem;
+}
+
+#checkbox label{
+    font-size: 0.7rem;
+    color: white;
+}
+
+#checkbox a{
+    font-size: 0.7rem;
+    color: white;
+}
+
 .form-container #register-form #registerForm input:focus{
     outline-color: red;
 }

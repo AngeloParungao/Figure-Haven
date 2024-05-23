@@ -53,6 +53,13 @@
                 <div class="my-orders-title">
                     <h2>My Orders</h2>
                 </div>
+                <div class="order-filter">
+                    <select id="orderFilter">
+                        <option value="all">All</option>
+                        <option value="pending">Pending</option>
+                        <option value="delivered">Complete</option>
+                    </select>
+                </div>
                 <div id="orders">
     
                 </div>

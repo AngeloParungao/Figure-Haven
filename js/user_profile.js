@@ -120,6 +120,7 @@ function updateUser(profilePicture) {
 function getOrders() {
     const user_id = localStorage.getItem("userID");
     const dom = document.getElementById("orders");
+    const orderFilter = document.getElementById("orderFilter");
 
     const xhr = new XMLHttpRequest();
     xhr.open("GET", "../backend/cart.php", true);
@@ -128,8 +129,25 @@ function getOrders() {
         if (xhr.readyState === 4) {
             if (xhr.status === 200) {
                 const myOrders = JSON.parse(xhr.responseText);
+                
+                // Sort the orders by status (pending first, delivered last)
+                function customSort(a, b) {
+                    if (a.status === "delivered" && b.status !== "delivered") {
+                        return -1; // Move "delivered" to the beginning
+                    } else if (a.status !== "delivered" && b.status === "delivered") {
+                        return 1; // Move "delivered" to the beginning
+                    } else {
+                        return 0; // Maintain order for other cases
+                    }
+                }
+
+                // Sort the orders using the custom sort function
+                myOrders.sort(customSort);
+
+                dom.innerHTML = "";
+
                 myOrders.forEach(order => {
-                    if (order.user_id == user_id && (order.status == "pending" || order.status == "delivered")) {
+                    if (order.user_id == user_id && (order.status == orderFilter.value || orderFilter.value == "all")) {
                         console.log();
 
                         const div = document.createElement("div");
@@ -198,3 +216,11 @@ function getOrders() {
 
     xhr.send();
 }
+
+
+// Add event listener to the orderFilter dropdown
+const orderFilter = document.getElementById("orderFilter");
+orderFilter.addEventListener("change", getOrders);
+
+// Call getOrders initially to load orders based on the default selection
+getOrders();

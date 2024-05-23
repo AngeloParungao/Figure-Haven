@@ -180,6 +180,18 @@ body::-webkit-scrollbar-thumb {
     color: white;
   }
 
+  .order-filter{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+  }
+
+  #orderFilter{
+    height: 2rem;
+    padding-left: 1rem;
+    border-radius: 0.4rem;
+  }
+
   #orders{
     display: flex;
     flex-direction: column;
