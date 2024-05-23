@@ -25,7 +25,7 @@
                         <input type="password" name="password" placeholder="Password" id="password" required>
                         <button onclick="fetchUsers(event)">LOGIN</button>
                     </form>
-                    <button id="forgot">forgot password?</button>
+                    <button id="forgot" onclick="forgotPassword()">forgot password?</button>
                     <button id="create_account">Create Account</button>
                 </div>
                 <div id="register-form">

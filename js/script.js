@@ -94,6 +94,39 @@ function fetchUsers() {
 }
 
 
+//-----------FORGOT PASSWORD-------------//
+
+function forgotPassword(){
+  let username = document.getElementById("username");
+
+  if(username.value == ""){
+    createToast("error", "fa-solid fa-xmark", "Error", "input your username");
+    return;
+  }
+  else{
+    let xhr = new XMLHttpRequest();
+    xhr.open("GET", "../backend/index.php", true);
+
+    xhr.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        let users = JSON.parse(xhr.responseText);
+        let found = users.find(user => user.username === username.value);
+
+        if (found) {
+          const leftPosition = (window.innerWidth - 400) / 2;
+          const topPosition = (window.innerHeight - 450) / 2;
+          window.open(`forrgot-password.php?username=${encodeURIComponent(found.username)}&email=${encodeURIComponent(found.email)}&id=${encodeURIComponent(found.id)}`, "_self");
+        } else {
+          createToast("warning", "fa-solid fa-triangle-exclamation", "Warning", "Username not found");
+        }
+      }
+    };
+    xhr.send();
+
+  }
+}
+
+
 
 //------------CATALOG.PHP------------//
 function catalog(){
@@ -230,7 +263,6 @@ function display(details) {
       }
     });
 }
-
 
 
 
