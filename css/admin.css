@@ -54,6 +54,16 @@ body{
     margin-right: 2.5rem;
 }
 
+#generate-monthly-report{
+    margin-top: 1rem;
+    padding: 0.4rem;
+}
+
+#generate-daily-report{
+    margin-top: 1rem;
+    padding: 0.4rem;
+}
+
 .box-container{
     display: flex;
     justify-content: space-between;
