@@ -88,13 +88,13 @@ switch ($method) {
             }
 
             // Check if the product name already exists
-            foreach ($xml->children() as $product) {
-                if ($product->name == $productName) {
-                    http_response_code(400); // Bad request
-                    echo "Product with the same name already exists.";
-                    echo "<script>alert('Product name already exixts.');";
-                    exit;
-                }
+            $existingProduct = $xml->xpath("//figure[name='$productName']");
+
+            if ($existingProduct) {
+                http_response_code(400); // Bad request
+                echo "Product with the same name already exists.";
+                echo "<script>alert('Product name already exists.');</script>";
+                exit;
             }
 
             // Handle file upload

@@ -12,9 +12,26 @@ function addUser(event) {
   let form = document.getElementById("registerForm");
   let formData = new FormData(form);
 
+  let fullname = formData.get('fullname');
+  let address = formData.get('address');
+  let email = formData.get('email');
+  let contact = formData.get('contact');
+  let username = formData.get('username');
   let password = formData.get('password');
   let confirmPassword = formData.get('confirm_password');
   let termsConditions = document.getElementById("terms-conditions").checked;
+
+  // Check if all fields are filled
+  if (!fullname || !address || !email || !contact || !username || !password || !confirmPassword) {
+    createToast("error", "fa-solid fa-xmark", "Error", "All fields are required.");
+    return;
+  }
+
+  // Check if passwords meet the minimum length requirement
+  if (password.length < 8 || confirmPassword.length < 8) {
+    createToast("error", "fa-solid fa-xmark", "Error", "Passwords must be at least 8 characters long.");
+    return;
+}
 
   if (!termsConditions) {
     createToast("error", "fa-solid fa-xmark", "Error", "You must agree to the terms and conditions.");

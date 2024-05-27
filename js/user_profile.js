@@ -147,7 +147,7 @@ function getOrders() {
                 dom.innerHTML = "";
 
                 myOrders.forEach(order => {
-                    if (order.user_id == user_id && (order.status == orderFilter.value || orderFilter.value == "all")) {
+                    if (order.user_id == user_id && order.status !== "cart" && (order.status == orderFilter.value || orderFilter.value == "all")) {
                         console.log();
 
                         const div = document.createElement("div");

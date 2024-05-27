@@ -22,7 +22,7 @@
                     <span>LOGIN</span>
                     <form action="" method="GET" id="userForm">
                         <input type="text" name="username" placeholder="Username" id="username" required>
-                        <input type="password" name="password" placeholder="Password" id="password" required>
+                        <input type="password" name="password" placeholder="Password" id="password" min="8" required>
                         <button onclick="fetchUsers(event)">LOGIN</button>
                     </form>
                     <button id="forgot" onclick="forgotPassword()">forgot password?</button>
@@ -36,8 +36,8 @@
                         <input type="email" name="email" placeholder="Email" required>
                         <input type="number" name="contact" placeholder="Contact Number" required>
                         <input type="text" name="username" placeholder="Username" required>
-                        <input type="password" name="password" placeholder="Password" required>
-                        <input type="password" name="confirm_password" placeholder="Confirm Password" required>
+                        <input type="password" name="password" placeholder="Password" min="8" required >
+                        <input type="password" name="confirm_password" placeholder="Confirm Password" min="8" required>
                         <button onclick="addUser(event)">REGISTER</button>
                     </form>
                     <div id="checkbox">

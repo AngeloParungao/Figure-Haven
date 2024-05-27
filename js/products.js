@@ -226,16 +226,19 @@ document.addEventListener('DOMContentLoaded', function() {
         addToCart.onclick = function () {
             let stock = product.stock;
             if(stock > 0){
-                if(stock > items_number){
+                if(stock >= items_number){
                     if (confirm("Are you sure you want to add this item to the cart?")) {
                         let product_name = product.name;
                         let userID = localStorage.getItem('userID') || '';
+                        
+                        console.log("Checking if product is in cart for userID: ", userID);
                         
                         let xhrCheck = new XMLHttpRequest();
                         xhrCheck.open("POST", "http://localhost/action-figure/backend/check_cart.php", true);
                         xhrCheck.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
                         xhrCheck.onreadystatechange = function () {
                             if (xhrCheck.readyState === 4 && xhrCheck.status === 200) {
+                                console.log("Check cart response: ", xhrCheck.responseText);
                                 let response = JSON.parse(xhrCheck.responseText);
                                 if (response.exists) {
                                     alert("Product is already in the cart.");
@@ -276,9 +279,13 @@ document.addEventListener('DOMContentLoaded', function() {
                     console.log(xhr.responseText);
                     createToast("success", "fa-solid fa-circle-check", "Success", "Added to Cart!");
                     setTimeout(function() { location.reload() }, 1000);
+                } else if (xhr.readyState === 4) {
+                    console.error("Error adding product to cart: ", xhr.status, xhr.responseText);
                 }
             };
-            xhr.send("cart=true" + "&product_name=" + product_name + "&product_anime=" + product_anime + "&image=" + product_image + "&price=" + product_price + "&userID=" + userID + "&name=" + name + "&contact=" + contact + "&email=" + email + "&address=" + address + "&username=" + username + "&items=" + items_number + "&shipping=40"  + "&total=" + (parseFloat(total_price)) + "&paid=" + "&status=" + status);
+            let params = `cart=true&product_name=${product_name}&product_anime=${product_anime}&image=${product_image}&price=${product_price}&userID=${userID}&name=${name}&contact=${contact}&email=${email}&address=${address}&username=${username}&items=${items_number}&shipping=40&total=${parseFloat(total_price)}&paid=&status=${status}`;
+            console.log("Sending cart params: ", params);
+            xhr.send(params);
         }
 
         buyNow.onclick = function(){
@@ -296,8 +303,8 @@ document.addEventListener('DOMContentLoaded', function() {
             let status = 'pending';
 
             if(stock > 0){
-                if(stock > items_number){
-                    window.open("http://localhost/action-figure/pages/directCheckout.php?product_name=" + product_name + "&product_anime=" + product_anime + "&image=" + product_image + "&price=" + product_price + "&userID=" + userID + "&name=" + name + "&contact=" + contact + "&email=" + email + "&address=" + address + "&username=" + username + "&items=" + items_number + "&shipping=40"  + "&total=" + total_price + "&status=" + status + "&cart=false", '_self');     
+                if(stock >= items_number){
+                    window.open(`http://localhost/action-figure/pages/directCheckout.php?product_name=${product_name}&product_anime=${product_anime}&image=${product_image}&price=${product_price}&userID=${userID}&name=${name}&contact=${contact}&email=${email}&address=${address}&username=${username}&items=${items_number}&shipping=40&total=${total_price}&status=${status}&cart=false`, '_self');     
                 }
                 else{
                     alert("Items exceed to available stock");
@@ -308,4 +315,4 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
     }
-    });
+});
